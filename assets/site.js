@@ -174,14 +174,33 @@
     c.querySelector('[data-next]').onclick = () => track.scrollBy({ left: step(), behavior: 'smooth' });
   });
 
-  /* ---------- mailto forms ---------- */
-  document.querySelectorAll('form[data-mail]').forEach(f => f.addEventListener('submit', e => {
+  /* ---------- contact form: send to e-mail (FormSubmit), mailto as fallback ---------- */
+  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/andrei.jasinski@gmail.com';
+  document.querySelectorAll('form[data-mail]').forEach(f => f.addEventListener('submit', async e => {
     e.preventDefault();
-    const name = f.name.value.trim(), contact = f.contact.value.trim(), err = f.querySelector('[data-err]');
+    const name = f.name.value.trim(), contact = f.contact.value.trim(), msg = (f.msg && f.msg.value.trim()) || '';
+    const err = f.querySelector('[data-err]'), btn = f.querySelector('button[type=submit]');
+    let ok = f.querySelector('[data-ok]');
+    if (!ok) { ok = document.createElement('p'); ok.setAttribute('data-ok', ''); ok.setAttribute('role', 'status'); ok.className = 'hidden rounded-lg bg-emerald px-3 py-2 text-sm font-semibold text-ocean'; btn.before(ok); }
+    ok.classList.add('hidden');
     if (!name || !contact || (f.consent && !f.consent.checked)) { err.classList.remove('hidden'); return; }
     err.classList.add('hidden');
-    const body = `Имя: ${name}\nКонтакт: ${contact}\nПожелания: ${(f.msg && f.msg.value.trim()) || '—'}`;
-    location.href = 'mailto:andrei.jasinski@gmail.com?subject=' + encodeURIComponent('Заявка в Клуб умных путешествий') + '&body=' + encodeURIComponent(body);
+    if (f._honey && f._honey.value) return; // спам-ловушка
+    const label = btn.textContent; btn.disabled = true; btn.textContent = 'Отправляем…';
+    try {
+      const r = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ 'Имя': name, 'Контакт': contact, 'Сообщение': msg || '—', 'Согласие с политикой': 'да', _subject: 'Заявка в Клуб умных путешествий', _template: 'table', _captcha: 'false' })
+      });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok || String(j.success) === 'false') throw new Error('send failed');
+      ok.textContent = 'Спасибо! Заявка отправлена, мы свяжемся с вами.';
+      ok.classList.remove('hidden'); f.reset();
+    } catch (x) {
+      const body = `Имя: ${name}\nКонтакт: ${contact}\nПожелания: ${msg || '—'}`;
+      location.href = 'mailto:andrei.jasinski@gmail.com?subject=' + encodeURIComponent('Заявка в Клуб умных путешествий') + '&body=' + encodeURIComponent(body);
+    } finally { btn.disabled = false; btn.textContent = label; }
   }));
 
   /* ---------- cookie consent ---------- */
