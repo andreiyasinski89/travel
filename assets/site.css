@@ -61,7 +61,7 @@ h1, h2, h3, .font-display { font-family: Unbounded, sans-serif; }
 .a-train   { position: absolute; animation: trainGo var(--t, 25s) linear infinite; }
 .marquee-track { display: flex; width: max-content; animation: marquee 40s linear infinite; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
-.pin-pulse::before { content: ""; position: absolute; inset: 0; border-radius: 9999px; background: #F5B83D; animation: pulseRing 2.2s ease-out infinite; }
+.pin-pulse::before { content: ""; position: absolute; inset: 0; border-radius: 9999px; background: var(--c, #F5B83D); animation: pulseRing 2.2s ease-out infinite; }
 .route-dash { stroke-dasharray: 8 10; animation: dash 1.2s linear infinite; }
 .waves { display: flex; width: 200%; animation: waveMove 14s linear infinite; }
 .waves.slow { animation-duration: 24s; }

@@ -52,6 +52,18 @@
     </div>
   </header>`;
 
+
+  const WA_URL = 'https://wa.me/48731135317?text=' + encodeURIComponent('Здравствуйте! Хочу узнать о Клубе умных путешествий.');
+  const SOCIAL = [
+    ['Telegram', '<path d="M21.5 3.5 2.8 10.7c-.9.4-.9 1.1-.2 1.3l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.8c.3-1.2-.5-1.8-1.5-1.5Z" fill="currentColor"/><path d="m8 13.2 9.5-5.9" stroke="#08293F" stroke-width="1.4" stroke-linecap="round" fill="none"/>'],
+    ['Instagram', '<rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/>'],
+    ['WhatsApp', '<path d="M3 21l1.6-4.8A9 9 0 1 1 8 19.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2Z" fill="currentColor"/>'],
+    ['Facebook', '<path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8.5c0-.3.2-.5.5-.5Z" fill="currentColor"/>'],
+    ['YouTube', '<rect x="2.5" y="5" width="19" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="m10 9 5 3-5 3Z" fill="currentColor"/>']
+  ];
+  const socialHtml = `<ul class="mt-5 flex flex-wrap gap-3" aria-label="Мы в соцсетях">${SOCIAL.map(([n, d]) =>
+    `<li><a href="${n === 'WhatsApp' ? WA_URL : '#'}" ${n === 'WhatsApp' ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="${n}" title="${n}" class="grid h-11 w-11 place-items-center rounded-full bg-pale/10 text-gold ring-1 ring-pale/20 transition hover:-translate-y-1 hover:bg-gold hover:text-ocean"><svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true">${d}</svg></a></li>`).join('')}</ul>`;
+
   const ftr = document.getElementById('site-footer');
   if (ftr) ftr.innerHTML = `
   <footer class="relative overflow-hidden bg-ocean-grad text-pale">
@@ -63,6 +75,7 @@
       <div>
         <div class="flex items-center gap-2 font-display text-gold"><span class="h-9 w-9">${ART.compass}</span>Клуб умных путешествий</div>
         <p class="mt-4 max-w-sm text-sm">Закрытый клуб для тех, кто хочет видеть мир больше и платить за это меньше. Умные маршруты, честные цены и сообщество попутчиков.</p>
+        ${socialHtml}
       </div>
       <div><p class="font-display text-sm text-gold">Разделы</p><ul class="mt-3 space-y-2 text-sm">
         ${links.map(([h, t]) => `<li><a class="hover:text-gold" href="${h}">${t}</a></li>`).join('')}</ul></div>
@@ -72,6 +85,19 @@
     </div>
     <p class="border-t border-pale/20 px-4 py-5 text-center text-xs">© 2026 Клуб умных путешествий. Все права защищены.</p>
   </footer>`;
+
+
+  /* ---------- floating WhatsApp button ---------- */
+  const wa = document.createElement('a');
+  wa.href = WA_URL; wa.target = '_blank'; wa.rel = 'noopener noreferrer';
+  wa.setAttribute('aria-label', 'Написать в WhatsApp');
+  wa.className = 'group fixed bottom-5 right-4 z-40 flex items-center gap-3 sm:right-6';
+  wa.innerHTML = `<span class="pointer-events-none hidden rounded-full bg-ocean px-4 py-2 text-sm font-semibold text-gold opacity-0 shadow-soft transition group-hover:opacity-100 group-focus-visible:opacity-100 sm:block">Написать в WhatsApp</span>
+    <span class="relative grid h-14 w-14 place-items-center rounded-full bg-emerald text-ocean shadow-gold ring-4 ring-ocean/20 transition group-hover:scale-110">
+      <span class="pin-pulse absolute inset-0 rounded-full" style="--c:#10B981"></span>
+      <svg viewBox="0 0 24 24" class="relative h-7 w-7" aria-hidden="true"><path d="M3 21l1.6-4.8A9 9 0 1 1 8 19.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2Z" fill="currentColor"/></svg>
+    </span>`;
+  document.body.appendChild(wa);
 
   const btn = document.getElementById('menuBtn'), menu = document.getElementById('mobileMenu');
   if (btn) {
