@@ -61,7 +61,11 @@
         <div><label for="name" class="mb-1.5 block text-sm font-semibold">Ваше имя</label><input id="name" name="name" type="text" required autocomplete="name" class="min-h-[48px] w-full rounded-xl border-2 border-ocean/30 bg-sand px-4 text-base outline-none transition focus:border-ocean"></div>
         <div><label for="contact" class="mb-1.5 block text-sm font-semibold">Телефон или email</label><input id="contact" name="contact" type="text" required autocomplete="email" class="min-h-[48px] w-full rounded-xl border-2 border-ocean/30 bg-sand px-4 text-base outline-none transition focus:border-ocean"></div>
         <div><label for="msg" class="mb-1.5 block text-sm font-semibold">Куда хотите поехать? <span class="font-normal">(необязательно)</span></label><textarea id="msg" name="msg" rows="3" class="w-full rounded-xl border-2 border-ocean/30 bg-sand px-4 py-3 text-base outline-none transition focus:border-ocean"></textarea></div>
-        <p data-err class="hidden rounded-lg bg-ocean px-3 py-2 text-sm font-medium text-gold" role="alert">Пожалуйста, укажите имя и способ связи.</p>
+        <div class="flex items-start gap-3">
+          <input id="consent" name="consent" type="checkbox" required class="mt-1 h-6 w-6 shrink-0 accent-[#0B3C5D]">
+          <label for="consent" class="text-sm">Я прочитал(а) <a href="privacy.html" class="font-semibold underline">политику конфиденциальности</a> и согласен(на) на обработку указанных данных, чтобы со мной связались по моей заявке. Согласие можно отозвать в любой момент.</label>
+        </div>
+        <p data-err class="hidden rounded-lg bg-ocean px-3 py-2 text-sm font-medium text-gold" role="alert">Укажите имя и способ связи и подтвердите согласие с политикой конфиденциальности.</p>
         <button type="submit" class="min-h-[54px] w-full rounded-full bg-ocean px-8 py-3 font-semibold text-gold shadow-soft transition hover:-translate-y-0.5 hover:bg-deep">Отправить заявку</button>
       </div>
     </form>

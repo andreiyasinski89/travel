@@ -83,7 +83,15 @@
         <li><a class="hover:text-gold" href="tel:+48731135317">+48 731 135 317</a></li>
         <li><a class="break-all hover:text-gold" href="mailto:andrei.jasinski@gmail.com">andrei.jasinski@gmail.com</a></li></ul></div>
     </div>
-    <p class="border-t border-pale/20 px-4 py-5 text-center text-xs">© 2026 Клуб умных путешествий. Все права защищены.</p>
+    <div class="mx-auto max-w-6xl border-t border-pale/20 px-4 py-5 text-xs sm:px-6">
+      <p class="max-w-3xl">Независимый информационный сайт партнёра MWR Life. Не является официальным сайтом компании MWR Life. Материалы носят ознакомительный характер и не являются публичной офертой; условия, цены и доступность услуг уточняйте на официальном сайте компании.</p>
+      <nav class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2" aria-label="Правовая информация">
+        <a class="underline-offset-4 hover:text-gold hover:underline" href="privacy.html">Политика конфиденциальности</a>
+        <a class="underline-offset-4 hover:text-gold hover:underline" href="cookies.html">Политика cookie</a>
+        <button type="button" data-cookie-settings class="underline-offset-4 hover:text-gold hover:underline">Настройки cookie</button>
+      </nav>
+      <p class="mt-4">© 2026 Клуб умных путешествий. Все права защищены.</p>
+    </div>
   </footer>`;
 
 
@@ -170,9 +178,65 @@
   document.querySelectorAll('form[data-mail]').forEach(f => f.addEventListener('submit', e => {
     e.preventDefault();
     const name = f.name.value.trim(), contact = f.contact.value.trim(), err = f.querySelector('[data-err]');
-    if (!name || !contact) { err.classList.remove('hidden'); return; }
+    if (!name || !contact || (f.consent && !f.consent.checked)) { err.classList.remove('hidden'); return; }
     err.classList.add('hidden');
     const body = `Имя: ${name}\nКонтакт: ${contact}\nПожелания: ${(f.msg && f.msg.value.trim()) || '—'}`;
     location.href = 'mailto:andrei.jasinski@gmail.com?subject=' + encodeURIComponent('Заявка в Клуб умных путешествий') + '&body=' + encodeURIComponent(body);
   }));
+
+  /* ---------- cookie consent ---------- */
+  const CKEY = 'clubConsent', CV = 1;
+  const readConsent = () => { try { const o = JSON.parse(localStorage.getItem(CKEY)); return o && o.v === CV ? o : null; } catch (e) { return null; } };
+  const saveConsent = (analytics, marketing) => {
+    const o = { v: CV, necessary: true, analytics: !!analytics, marketing: !!marketing, ts: new Date().toISOString() };
+    try { localStorage.setItem(CKEY, JSON.stringify(o)); } catch (e) {}
+    window.clubConsent.state = o;
+    dispatchEvent(new CustomEvent('consent-change', { detail: o }));
+  };
+  window.clubConsent = { state: readConsent(), open: openConsent };
+
+  const sw = (id, label, desc, on, locked) => `
+    <div class="flex items-start justify-between gap-4 rounded-2xl bg-deep p-4">
+      <div><label for="${id}" class="font-semibold text-gold">${label}</label><p class="mt-1 text-xs">${desc}</p></div>
+      <input id="${id}" type="checkbox" class="mt-1 h-6 w-6 shrink-0 accent-[#F5B83D]" ${on ? 'checked' : ''} ${locked ? 'disabled' : ''}>
+    </div>`;
+
+  function openConsent() {
+    closeConsent();
+    const st = window.clubConsent.state || {};
+    const box = document.createElement('div');
+    box.id = 'cookieBanner';
+    box.setAttribute('role', 'dialog'); box.setAttribute('aria-labelledby', 'ckTitle'); box.setAttribute('aria-describedby', 'ckDesc');
+    box.className = 'fixed inset-x-3 bottom-3 z-[60] mx-auto max-h-[85vh] max-w-xl overflow-y-auto rounded-3xl bg-ocean p-5 text-pale shadow-soft ring-1 ring-pale/25 sm:left-6 sm:right-auto sm:mx-0 sm:p-6';
+    box.innerHTML = `
+      <h2 id="ckTitle" class="font-display text-base font-semibold text-gold">Мы ценим вашу приватность</h2>
+      <p id="ckDesc" class="mt-2 text-sm">Сайт использует только необходимые технические данные, например запоминает ваш выбор по cookie. Аналитические и маркетинговые cookie мы включаем только с вашего согласия. Подробнее: <a class="underline hover:text-gold" href="cookies.html">политика cookie</a> и <a class="underline hover:text-gold" href="privacy.html">политика конфиденциальности</a>.</p>
+      <div id="ckPanel" class="mt-4 hidden space-y-3 text-sm">
+        ${sw('ckNec', 'Необходимые', 'Нужны для работы сайта и сохранения вашего выбора. Всегда включены.', true, true)}
+        ${sw('ckAn', 'Аналитические', 'Помогают понять, как посетители пользуются сайтом. Сейчас на сайте не используются.', st.analytics, false)}
+        ${sw('ckMk', 'Маркетинговые', 'Нужны для персонализированной рекламы. Сейчас на сайте не используются.', st.marketing, false)}
+      </div>
+      <div class="mt-5 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+        <button type="button" data-ck="all" class="min-h-[44px] flex-1 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ocean transition hover:bg-gold-dark">Принять все</button>
+        <button type="button" data-ck="none" class="min-h-[44px] flex-1 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ocean transition hover:bg-gold-dark">Только необходимые</button>
+        <button type="button" data-ck="more" class="min-h-[44px] flex-1 rounded-full border-2 border-pale/50 px-5 py-2.5 text-sm font-semibold text-pale transition hover:border-gold hover:text-gold">Настроить</button>
+      </div>`;
+    document.body.appendChild(box);
+    box.addEventListener('click', e => {
+      const b = e.target.closest('[data-ck]'); if (!b) return;
+      const k = b.dataset.ck;
+      if (k === 'all') { saveConsent(true, true); closeConsent(); }
+      else if (k === 'none') { saveConsent(false, false); closeConsent(); }
+      else if (k === 'more') {
+        const panel = box.querySelector('#ckPanel');
+        if (panel.classList.contains('hidden')) { panel.classList.remove('hidden'); b.textContent = 'Сохранить выбор'; }
+        else { saveConsent(box.querySelector('#ckAn').checked, box.querySelector('#ckMk').checked); closeConsent(); }
+      }
+    });
+    box.addEventListener('keydown', e => { if (e.key === 'Escape' && window.clubConsent.state) closeConsent(); });
+    if (window.clubConsent.state) box.querySelector('button').focus();
+  }
+  function closeConsent() { const b = document.getElementById('cookieBanner'); if (b) b.remove(); }
+  document.addEventListener('click', e => { if (e.target.closest('[data-cookie-settings]')) openConsent(); });
+  if (!window.clubConsent.state) setTimeout(openConsent, 600);
 })();
