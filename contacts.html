@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Контакты — Клуб умных путешествий</title>
+<meta name="description" content="Свяжитесь с Клубом умных путешествий: телефон, email и форма заявки.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/tw.js"></script>
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  @keyframes paper { 0% { transform: translate(-10vw, 40px) rotate(8deg); } 50% { transform: translate(40vw, -30px) rotate(-6deg); } 100% { transform: translate(110vw, 20px) rotate(10deg); } }
+  .paper-plane { position: absolute; animation: paper 14s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) { .paper-plane { animation: none; left: 60%; } }
+  .stamp-corner { transform: rotate(8deg); }
+</style>
+</head>
+<body class="antialiased">
+<div id="site-header"></div>
+<main>
+
+<section class="relative overflow-hidden bg-sky-grad px-4 pb-16 pt-36 sm:px-6">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div class="a-cloud h-14 w-36" style="top:18%;--t:60s;--dl:-9s"><span data-art="cloud"></span></div>
+    <div class="paper-plane top-[45%] h-10 w-12"><svg viewBox="0 0 48 40" class="h-full w-full"><path d="M2 18 46 2 32 38 22 24Z" fill="#F5B83D" stroke="#0B3C5D" stroke-width="2" stroke-linejoin="round"/><path d="M22 24 46 2" stroke="#0B3C5D" stroke-width="2"/></svg></div>
+    <div class="a-plane h-8 w-20" style="top:30%;--t:30s;--dl:-12s"><span data-art="plane"></span></div>
+  </div>
+  <div class="relative mx-auto max-w-6xl">
+    <p class="reveal text-sm font-semibold uppercase tracking-widest text-ocean">Контакты</p>
+    <h1 class="reveal mt-4 max-w-3xl text-3xl font-bold leading-tight text-ocean sm:text-5xl" style="--d:80ms">Напишите нам: ответим и подскажем маршрут</h1>
+    <p class="reveal mt-6 max-w-2xl text-lg text-ink" style="--d:160ms">Оставьте заявку или свяжитесь любым удобным способом. Куратор клуба ответит на вопросы и расскажет о форматах участия.</p>
+  </div>
+</section>
+
+<section class="relative overflow-hidden bg-ocean-grad px-4 py-20 text-pale sm:px-6 lg:py-24">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true"><span class="a-twinkle absolute left-[6%] top-[15%] h-1.5 w-1.5 rounded-full bg-gold"></span><span class="a-twinkle absolute left-[48%] top-[8%] h-1.5 w-1.5 rounded-full bg-pale" style="--dl:-1s"></span><span class="a-twinkle absolute left-[92%] top-[40%] h-1.5 w-1.5 rounded-full bg-gold" style="--dl:-2s"></span></div>
+  <div class="relative mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1fr_1.15fr]">
+    <div class="reveal-left space-y-5">
+      <a href="tel:+48731135317" class="group flex items-center gap-5 rounded-3xl bg-deep p-6 ring-1 ring-pale/15 transition hover:-translate-y-1 hover:ring-gold">
+        <span class="grid h-14 w-14 place-items-center rounded-2xl bg-gold text-ocean"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+        <span><span class="block text-sm">Телефон</span><span class="font-display text-lg font-semibold text-gold">+48 731 135 317</span></span>
+      </a>
+      <a href="mailto:andrei.jasinski@gmail.com" class="group flex items-center gap-5 rounded-3xl bg-deep p-6 ring-1 ring-pale/15 transition hover:-translate-y-1 hover:ring-gold">
+        <span class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gold text-ocean"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+        <span class="min-w-0"><span class="block text-sm">Email</span><span class="block break-all font-display text-base font-semibold text-gold">andrei.jasinski@gmail.com</span></span>
+      </a>
+      <div class="flex items-center gap-5 rounded-3xl bg-deep p-6 ring-1 ring-pale/15">
+        <span class="h-14 w-14 shrink-0"><svg viewBox="0 0 100 100" class="h-full w-full"><circle cx="50" cy="50" r="46" fill="#F5B83D"/><g class="a-spin" style="transform-origin:50px 50px;--t:12s"><path d="M50 50V20" stroke="#0B3C5D" stroke-width="5" stroke-linecap="round"/></g><g class="a-spin" style="transform-origin:50px 50px;--t:144s"><path d="M50 50V32" stroke="#0B3C5D" stroke-width="6" stroke-linecap="round"/></g></svg></span>
+        <span><span class="block text-sm">Поддержка участников</span><span class="font-display text-lg font-semibold text-gold">24/7, на разных языках</span></span>
+      </div>
+      <div class="relative hidden h-24 overflow-hidden rounded-3xl bg-teal-grad lg:block" aria-hidden="true"><div class="a-bob absolute bottom-2 left-10 h-14 w-32"><span data-art="ship"></span></div><div class="waves slow absolute -bottom-1 left-0 h-8 text-[#0B3C5D]/70"><svg viewBox="0 0 1200 60" preserveAspectRatio="none" class="h-full"><path d="M0 34Q150 6 300 34T600 34T900 34T1200 34V60H0Z" fill="currentColor"/></svg><svg viewBox="0 0 1200 60" preserveAspectRatio="none" class="h-full"><path d="M0 34Q150 6 300 34T600 34T900 34T1200 34V60H0Z" fill="currentColor"/></svg></div></div>
+    </div>
+
+    <form data-mail class="reveal-right relative rounded-3xl bg-gold-grad p-6 text-ocean shadow-soft sm:p-9" novalidate>
+      <div class="stamp-corner stamp absolute -right-3 -top-5 grid h-20 w-20 place-items-center rounded-xl border-4 border-double border-ocean bg-sand text-center text-[10px] font-bold uppercase leading-tight text-ocean">Клуб<br>умных<br>путешествий</div>
+      <h2 class="text-xl font-bold sm:text-2xl">Заявка на вступление</h2>
+      <p class="mt-1 text-sm">Откроется почтовая программа с готовым письмом.</p>
+      <div class="mt-6 space-y-5">
+        <div><label for="name" class="mb-1.5 block text-sm font-semibold">Ваше имя</label><input id="name" name="name" type="text" required autocomplete="name" class="min-h-[48px] w-full rounded-xl border-2 border-ocean/30 bg-sand px-4 text-base outline-none transition focus:border-ocean"></div>
+        <div><label for="contact" class="mb-1.5 block text-sm font-semibold">Телефон или email</label><input id="contact" name="contact" type="text" required autocomplete="email" class="min-h-[48px] w-full rounded-xl border-2 border-ocean/30 bg-sand px-4 text-base outline-none transition focus:border-ocean"></div>
+        <div><label for="msg" class="mb-1.5 block text-sm font-semibold">Куда хотите поехать? <span class="font-normal">(необязательно)</span></label><textarea id="msg" name="msg" rows="3" class="w-full rounded-xl border-2 border-ocean/30 bg-sand px-4 py-3 text-base outline-none transition focus:border-ocean"></textarea></div>
+        <p data-err class="hidden rounded-lg bg-ocean px-3 py-2 text-sm font-medium text-gold" role="alert">Пожалуйста, укажите имя и способ связи.</p>
+        <button type="submit" class="min-h-[54px] w-full rounded-full bg-ocean px-8 py-3 font-semibold text-gold shadow-soft transition hover:-translate-y-0.5 hover:bg-deep">Отправить заявку</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="bg-mint-grad px-4 py-20 sm:px-6">
+  <div class="mx-auto max-w-4xl text-center">
+    <h2 class="reveal text-2xl font-bold text-ocean sm:text-3xl">Остались вопросы?</h2>
+    <p class="reveal mt-4 text-ink" style="--d:80ms">Загляните на страницу «Как это работает»: там мы отвечаем на самые частые.</p>
+    <a href="how.html#faq" class="reveal mt-8 inline-flex min-h-[52px] items-center rounded-full bg-ocean px-10 py-3 font-semibold text-gold transition hover:bg-deep" style="--d:160ms">Читать FAQ</a>
+  </div>
+</section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+</body>
+</html>
