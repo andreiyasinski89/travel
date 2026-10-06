@@ -91,7 +91,7 @@
   const wa = document.createElement('a');
   wa.href = WA_URL; wa.target = '_blank'; wa.rel = 'noopener noreferrer';
   wa.setAttribute('aria-label', 'Написать в WhatsApp');
-  wa.className = 'group fixed bottom-5 right-4 z-40 flex items-center gap-3 sm:right-6';
+  wa.className = 'group fixed right-4 top-[5.5rem] z-40 flex items-center gap-3 sm:right-6';
   wa.innerHTML = `<span class="pointer-events-none hidden rounded-full bg-ocean px-4 py-2 text-sm font-semibold text-gold opacity-0 shadow-soft transition group-hover:opacity-100 group-focus-visible:opacity-100 sm:block">Написать в WhatsApp</span>
     <span class="relative grid h-14 w-14 place-items-center rounded-full bg-emerald text-ocean shadow-gold ring-4 ring-ocean/20 transition group-hover:scale-110">
       <span class="pin-pulse absolute inset-0 rounded-full" style="--c:#10B981"></span>
