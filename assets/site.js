@@ -36,14 +36,14 @@
       <nav class="hidden items-center gap-1 text-sm font-medium text-ocean lg:flex" aria-label="Основная навигация">
         ${navLinks('rounded-full px-3 py-2 transition hover:bg-gold/60', 'bg-gold')}
       </nav>
-      <a href="https://www.mwrlife.com/ayasinski" target="_blank" rel="noopener noreferrer" class="hidden rounded-full bg-ocean px-5 py-2.5 text-sm font-semibold text-gold transition hover:bg-deep lg:inline-block">Вступить в клуб</a>
+      <a href="https://www.mwrlife.com/ayasinski/join" target="_blank" rel="noopener noreferrer" class="hidden rounded-full bg-ocean px-5 py-2.5 text-sm font-semibold text-gold transition hover:bg-deep lg:inline-block">Вступить в клуб</a>
       <button id="menuBtn" class="grid h-11 w-11 place-items-center rounded-xl text-ocean lg:hidden" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
         <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
     <div id="mobileMenu" class="mx-3 mt-2 hidden rounded-2xl glass p-3 shadow-soft lg:hidden">
       ${navLinks('block rounded-xl px-4 py-3 font-medium text-ocean', 'bg-gold')}
-      <a href="https://www.mwrlife.com/ayasinski" target="_blank" rel="noopener noreferrer" class="mt-2 block rounded-full bg-ocean px-5 py-3 text-center font-semibold text-gold">Вступить в клуб</a>
+      <a href="https://www.mwrlife.com/ayasinski/join" target="_blank" rel="noopener noreferrer" class="mt-2 block rounded-full bg-ocean px-5 py-3 text-center font-semibold text-gold">Вступить в клуб</a>
     </div>
     <div class="pointer-events-none relative mx-auto mt-1 h-6" style="width:calc(100% - 1.5rem);max-width:72rem" aria-hidden="true">
       <div class="absolute left-3 right-3 top-3 h-0.5 rounded bg-ocean/15"></div>
