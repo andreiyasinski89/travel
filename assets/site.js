@@ -170,6 +170,7 @@
 
 
   const WA_URL = 'https://wa.me/48731135317?text=' + encodeURIComponent(T('Здравствуйте! Хочу узнать о Клубе умных путешествий.', 'Hello! I would like to find out more about the Smart Travel Club.'));
+  const SOCIAL_URL = { Telegram: 'https://t.me/ayasinski', Instagram: 'https://instagram.com/andrei.yasinski', WhatsApp: WA_URL };
   const SOCIAL = [
     ['Telegram', '<path d="M21.5 3.5 2.8 10.7c-.9.4-.9 1.1-.2 1.3l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.8c.3-1.2-.5-1.8-1.5-1.5Z" fill="currentColor"/><path d="m8 13.2 9.5-5.9" stroke="#08293F" stroke-width="1.4" stroke-linecap="round" fill="none"/>'],
     ['Instagram', '<rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/>'],
@@ -178,7 +179,7 @@
     ['YouTube', '<rect x="2.5" y="5" width="19" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="m10 9 5 3-5 3Z" fill="currentColor"/>']
   ];
   const socialHtml = `<ul class="mt-5 flex flex-wrap gap-3" aria-label="${T('Мы в соцсетях', 'Follow us')}">${SOCIAL.map(([n, d]) =>
-    `<li><a href="${n === 'WhatsApp' ? WA_URL : '#'}" ${n === 'WhatsApp' ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="${n}" title="${n}" class="grid h-11 w-11 place-items-center rounded-full bg-pale/10 text-gold ring-1 ring-pale/20 transition hover:-translate-y-1 hover:bg-gold hover:text-ocean"><svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true">${d}</svg></a></li>`).join('')}</ul>`;
+    `<li><a href="${SOCIAL_URL[n] || '#'}" ${SOCIAL_URL[n] ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="${n}" title="${n}" class="grid h-11 w-11 place-items-center rounded-full bg-pale/10 text-gold ring-1 ring-pale/20 transition hover:-translate-y-1 hover:bg-gold hover:text-ocean"><svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true">${d}</svg></a></li>`).join('')}</ul>`;
 
   const ftr = document.getElementById('site-footer');
   if (ftr) ftr.innerHTML = `
