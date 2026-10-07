@@ -80,7 +80,7 @@ details[open] .chev { transform: rotate(180deg); }
 .card-flip { perspective: 1000px; }
 .card-flip .inner { position: relative; transition: transform .7s; transform-style: preserve-3d; }
 .card-flip:hover .inner, .card-flip:focus-within .inner, .card-flip.flipped .inner { transform: rotateY(180deg); }
-.card-flip .face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.card-flip .face, .card-flip .back { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .card-flip .back { position: absolute; inset: 0; transform: rotateY(180deg); }
 
 #progressPlane { transition: left .1s linear; }

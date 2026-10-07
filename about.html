@@ -61,8 +61,8 @@
 <section class="relative overflow-hidden bg-ocean-grad px-4 py-20 text-pale sm:px-6">
   <div class="pointer-events-none absolute inset-0" aria-hidden="true"><span class="a-twinkle absolute left-[10%] top-[20%] h-1.5 w-1.5 rounded-full bg-gold"></span><span class="a-twinkle absolute left-[70%] top-[30%] h-1.5 w-1.5 rounded-full bg-pale" style="--dl:-1s"></span><span class="a-twinkle absolute left-[35%] top-[75%] h-1.5 w-1.5 rounded-full bg-gold" style="--dl:-2s"></span><span class="a-twinkle absolute left-[88%] top-[70%] h-1.5 w-1.5 rounded-full bg-pale" style="--dl:-.5s"></span></div>
   <div class="relative mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
-    <div class="reveal text-center"><p class="font-display text-4xl font-bold text-gold" data-count="500" data-suffix="K+">0</p><p class="mt-2">активных участников</p></div>
-    <div class="reveal text-center" style="--d:100ms"><p class="font-display text-4xl font-bold text-gold" data-count="700" data-suffix="K">0</p><p class="mt-2">человек в международном сообществе</p></div>
+    <div class="reveal text-center"><p class="font-display text-4xl font-bold text-gold" data-count="700" data-suffix="K+">0</p><p class="mt-2">участников клуба по всему миру</p></div>
+    <div class="reveal text-center" style="--d:100ms"><p class="font-display text-4xl font-bold text-gold">24/7</p><p class="mt-2">поддержка на разных языках</p></div>
     <div class="reveal text-center" style="--d:200ms"><p class="font-display text-4xl font-bold text-gold" data-count="2" data-suffix=" млн+">0</p><p class="mt-2">отелей по всему миру</p></div>
     <div class="reveal text-center" style="--d:300ms"><p class="font-display text-4xl font-bold text-gold" data-count="5">0</p><p class="mt-2">континентов присутствия</p></div>
   </div>
@@ -114,7 +114,7 @@
   document.getElementById('whoGrid').innerHTML = who.map(([t, d, c, h], i) => `
     <div class="card-flip reveal h-52" style="--d:${i * 80}ms" tabindex="0">
       <div class="inner h-full w-full">
-        <div class="face absolute inset-0 grid place-items-center rounded-3xl bg-ocean-grad p-6 text-center"><div><div class="mx-auto h-14 w-14 rounded-full ${c.split(' ')[0]}"></div><h3 class="mt-4 text-lg font-semibold text-gold">${t}</h3></div></div>
+        <div class="face absolute inset-0 grid place-items-center rounded-3xl bg-ocean-grad p-3 text-center xl:p-6"><div class="w-full"><div class="mx-auto h-14 w-14 rounded-full ring-2 ring-pale/50 ${c.split(' ')[0]}"></div><h3 class="mt-4 break-words text-[0.8rem] font-semibold text-gold sm:text-sm xl:text-lg">${t}</h3></div></div>
         <div class="back grid place-items-center rounded-3xl ${c} p-6 text-center"><p class="font-medium">${d}</p></div>
       </div>
     </div>`).join('');
