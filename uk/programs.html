@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Програми — Клуб розумних подорожей</title>
+<meta name="description" content="Формати членства, накопичувальні бали та авторські тури Клубу розумних подорожей.">
+<link rel="alternate" hreflang="ru" href="https://clever-travel.club/programs.html">
+<link rel="alternate" hreflang="en" href="https://clever-travel.club/en/programs.html">
+<link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/programs.html">
+<link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/programs.html">
+<link rel="alternate" hreflang="x-default" href="https://clever-travel.club/programs.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/tw.js"></script>
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  input[type=range] { -webkit-appearance: none; appearance: none; height: 10px; border-radius: 9999px; background: #0B3C5D; outline-offset: 6px; }
+  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 30px; height: 30px; border-radius: 9999px; background: #F5B83D; border: 4px solid #0B3C5D; cursor: grab; }
+  input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 9999px; background: #F5B83D; border: 4px solid #0B3C5D; cursor: grab; }
+  .glow-border { position: relative; }
+  .glow-border::before { content: ""; position: absolute; inset: -3px; border-radius: 2rem; background: conic-gradient(from 0deg, #F5B83D, #10B981, #0EA5E9, #F5B83D); animation: spin 6s linear infinite; z-index: 0; }
+  .glow-border > * { position: relative; z-index: 1; }
+  @media (prefers-reduced-motion: reduce) { .glow-border::before { animation: none; } }
+</style>
+</head>
+<body class="antialiased">
+<div id="site-header"></div>
+<main>
+
+<section class="relative overflow-hidden bg-sky-grad px-4 pb-24 pt-36 sm:px-6">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div class="a-cloud h-14 w-36" style="top:18%;--t:65s;--dl:-12s"><span data-art="cloud"></span></div>
+    <div class="absolute right-[6%] top-28 h-24 w-16 a-balloon sm:h-40 sm:w-28"><span data-art="balloon"></span></div>
+    <div class="a-plane h-8 w-20" style="top:55%;--t:30s;--dl:-10s"><span data-art="plane"></span></div>
+  </div>
+  <div class="relative mx-auto max-w-6xl">
+    <p class="reveal text-sm font-semibold uppercase tracking-widest text-ocean">Програми</p>
+    <h1 class="reveal mt-4 max-w-3xl text-3xl font-bold leading-tight text-ocean sm:text-5xl" style="--d:80ms">Оберіть свій <span class="shine-text">клас подорожей</span></h1>
+    <p class="reveal mt-6 max-w-2xl text-lg text-ink" style="--d:160ms">Клубне членство ґрунтується на депозиті-підписці: ви вносите суму, а вона перетворюється на бали, якими оплачуються поїздки. Чим вищий формат, тим більше можливостей.</p>
+  </div>
+</section>
+
+<!-- TIERS -->
+<section class="bg-mint-grad px-4 py-20 sm:px-6 lg:py-28">
+  <div class="mx-auto grid max-w-6xl items-stretch gap-6 lg:grid-cols-3" id="tiers"></div>
+  <p class="mx-auto mt-8 max-w-6xl text-center text-sm text-muted">Вартість і точні умови кожного формату уточнюйте в куратора клубу.</p>
+</section>
+
+<!-- CALCULATOR -->
+<section class="relative overflow-hidden bg-gold-grad px-4 py-20 sm:px-6 lg:py-28">
+  <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
+    <div class="reveal-left">
+      <h2 class="text-2xl font-bold text-ocean sm:text-4xl">Бали замість готівки</h2>
+      <p class="mt-5 text-lg text-ink">Один бал дорівнює одному долару під час оплати поїздок. У вищому форматі бали нараховуються з бонусом: спробуйте самі й побачите різницю.</p>
+      <div class="mt-8 h-24 w-24 a-float"><span data-art="compass"></span></div>
+    </div>
+    <div class="reveal-right rounded-3xl bg-ocean p-7 text-pale shadow-soft sm:p-9">
+      <label for="amt" class="font-semibold text-gold">Сума внеску: <output id="amtOut" class="font-display">500</output> $</label>
+      <input id="amt" type="range" min="100" max="5000" step="100" value="500" class="mt-4 w-full">
+      <div class="mt-8 space-y-5">
+        <div><p class="mb-1 flex justify-between text-sm"><span>Дослідник і Навігатор</span><span id="p1" class="font-semibold text-gold">500 балів</span></p><div class="h-4 rounded-full bg-pale/20"><div id="b1" class="h-4 rounded-full bg-aqua transition-all duration-500" style="width:10%"></div></div></div>
+        <div><p class="mb-1 flex justify-between text-sm"><span>Капітан (з бонусом)</span><span id="p2" class="font-semibold text-gold">1 000 балів</span></p><div class="h-4 rounded-full bg-pale/20"><div id="b2" class="h-4 rounded-full bg-gradient-to-r from-emerald to-gold transition-all duration-500" style="width:20%"></div></div></div>
+      </div>
+      <p class="mt-6 text-xs opacity-80">Ілюстрація механіки. Точні умови нарахування уточнюйте в куратора.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="bg-sky-grad px-4 py-20 sm:px-6 lg:py-28">
+  <div class="mx-auto max-w-5xl">
+    <h2 class="reveal text-center text-2xl font-bold text-ocean sm:text-4xl">Порівняння форматів</h2>
+    <div class="reveal mt-10 overflow-x-auto rounded-3xl bg-ocean shadow-soft">
+      <table class="w-full min-w-[560px] text-left text-sm text-pale" id="cmp"></table>
+    </div>
+  </div>
+</section>
+
+<!-- TOURS -->
+<section class="bg-sunset px-4 py-20 sm:px-6 lg:py-28">
+  <div class="mx-auto max-w-6xl">
+    <div class="reveal max-w-2xl"><p class="text-sm font-semibold uppercase tracking-widest text-ocean">Life Experience</p><h2 class="mt-3 text-2xl font-bold text-ocean sm:text-4xl">Авторські групові тури</h2><p class="mt-4 text-ink">Закриті поїздки для учасників клубу: продумана програма, комфортні умови та компанія, з якою хочеться їхати далі.</p></div>
+    <div class="snap-row -mx-4 mt-10 flex gap-5 overflow-x-auto px-4 pb-6 sm:mx-0 sm:px-0" id="tours" tabindex="0" aria-label="Формати турів"></div>
+  </div>
+</section>
+
+<section class="bg-azure-grad px-4 py-20 text-center sm:px-6">
+  <h2 class="reveal text-2xl font-bold text-ocean sm:text-4xl">Не впевнені, який формат підійде?</h2>
+  <p class="reveal mt-4 text-ink" style="--d:80ms">Куратор підбере варіант під ваші цілі та бюджет.</p>
+  <a href="contacts.html" class="reveal mt-8 inline-flex min-h-[52px] items-center rounded-full bg-gold px-10 py-3 font-semibold text-ocean shadow-gold transition hover:-translate-y-0.5 hover:bg-gold-dark" style="--d:160ms">Отримати консультацію</a>
+</section>
+</main>
+<div id="site-footer"></div>
+
+<script>
+  const ok = '<svg class="mx-auto h-5 w-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>';
+  const no = '<span class="text-pale/50">—</span>';
+  const tiers = [
+    ['Дослідник', 'Для перших кроків', ['Каталог готелів, авіа та авто', 'Оптові ціни без націнок', 'AI-помічник зі складання маршрутів', 'Накопичувальні бали'], 'bg-ocean text-pale', 'text-gold', false],
+    ['Навігатор', 'Найпопулярніший', ['Усе з «Дослідника»', 'Доступ до групових турів', 'Особистий куратор', 'Пріоритетна підтримка 24/7'], 'bg-ocean-grad text-pale', 'text-gold', true],
+    ['Капітан', 'Максимум можливостей', ['Усе з «Навігатора»', 'Бонусні бали до внеску', 'Закриті пропозиції клубу', 'Запрошення на події'], 'bg-ocean text-pale', 'text-gold', false]
+  ];
+  document.getElementById('tiers').innerHTML = tiers.map(([t, s, f, c, h, hot], i) => `
+    <div class="reveal ${hot ? 'glow-border rounded-[2rem] lg:-mt-4 lg:mb-4' : ''}" style="--d:${i * 100}ms">
+      <article class="flex h-full flex-col rounded-[1.9rem] ${c} p-8 shadow-soft">
+        ${hot ? '<span class="mb-3 w-fit rounded-full bg-gold px-3 py-1 text-xs font-semibold text-ocean">Вибір учасників</span>' : ''}
+        <h3 class="text-2xl font-bold ${h}">${t}</h3><p class="mt-1 text-sm opacity-80">${s}</p>
+        <ul class="mt-6 flex-1 space-y-3 text-sm">${f.map(x => `<li class="flex gap-3"><span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold text-ocean"><svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span>${x}</li>`).join('')}</ul>
+        <a href="contacts.html" class="mt-8 inline-flex min-h-[48px] items-center justify-center rounded-full bg-gold px-6 py-3 font-semibold text-ocean transition hover:bg-gold-dark">Дізнатися умови</a>
+      </article>
+    </div>`).join('');
+
+  const rows = [['Каталог і оптові ціни', 1, 1, 1], ['AI-помічник', 1, 1, 1], ['Накопичувальні бали', 1, 1, 1], ['Групові тури Life Experience', 0, 1, 1], ['Особистий куратор', 0, 1, 1], ['Бонус до балів', 0, 0, 1], ['Закриті пропозиції та події', 0, 0, 1]];
+  document.getElementById('cmp').innerHTML = `<thead><tr class="text-gold"><th class="p-4">Можливість</th><th class="p-4 text-center">Дослідник</th><th class="p-4 text-center">Навігатор</th><th class="p-4 text-center">Капітан</th></tr></thead><tbody>` +
+    rows.map(r => `<tr class="border-t border-pale/15"><td class="p-4">${r[0]}</td>${r.slice(1).map(v => `<td class="p-4 text-center">${v ? ok : no}</td>`).join('')}</tr>`).join('') + '</tbody>';
+
+  const tours = [
+    ['Острови', 'Сонце, океан і неквапливий ритм', 'bg-azure-grad'],
+    ['Гори', 'Активні маршрути та краєвиди, від яких перехоплює подих', 'bg-mint-grad'],
+    ['Круїз', 'Кілька країн за одну поїздку', 'bg-teal-grad'],
+    ['Міста', 'Культура, гастрономія та архітектура', 'bg-gold-grad']
+  ];
+  document.getElementById('tours').innerHTML = tours.map(([t, d, bg]) => `
+    <article class="w-[80%] shrink-0 overflow-hidden rounded-3xl bg-ocean shadow-soft sm:w-[44%] lg:w-[28%]">
+      <div class="relative h-40 ${bg}"><div class="a-float absolute bottom-3 left-6 h-14 w-24"><span data-art="${t === 'Круїз' ? 'ship' : t === 'Острови' ? 'plane' : t === 'Гори' ? 'balloon' : 'train'}"></span></div></div>
+      <div class="p-6 text-pale"><h3 class="text-lg font-semibold text-gold">${t}</h3><p class="mt-1 text-sm">${d}</p></div>
+    </article>`).join('');
+
+  const amt = document.getElementById('amt');
+  const fmt = n => n.toLocaleString('uk-UA');
+  function calc() {
+    const v = +amt.value;
+    document.getElementById('amtOut').textContent = fmt(v);
+    document.getElementById('p1').textContent = fmt(v) + ' балів';
+    document.getElementById('p2').textContent = fmt(v * 2) + ' балів';
+    document.getElementById('b1').style.width = (v / 5000 * 50) + '%';
+    document.getElementById('b2').style.width = (v / 5000 * 100) + '%';
+  }
+  amt.addEventListener('input', calc); calc();
+</script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

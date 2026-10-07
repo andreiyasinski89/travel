@@ -1,7 +1,104 @@
 (function () {
-  const EN = document.documentElement.lang === 'en';
-  const T = (ru, en) => (EN ? en : ru);
-  const LOCALE = EN ? 'en-US' : 'ru-RU';
+  const LANG = document.documentElement.lang || 'ru';
+  const EN = LANG === 'en';
+  const D = {
+ "uk": {
+  "Главная": "Головна",
+  "О клубе": "Про клуб",
+  "Программы": "Програми",
+  "Направления": "Напрямки",
+  "Как это работает": "Як це працює",
+  "Контакты": "Контакти",
+  "Клуб умных<br>путешествий": "Клуб розумних<br>подорожей",
+  "Язык": "Мова",
+  "Основная навигация": "Основна навігація",
+  "Вступить в клуб": "Вступити до клубу",
+  "Открыть меню": "Відкрити меню",
+  "Здравствуйте! Хочу узнать о Клубе умных путешествий.": "Вітаю! Хочу дізнатися про Клуб розумних подорожей.",
+  "Мы в соцсетях": "Ми в соцмережах",
+  "Написать в WhatsApp": "Написати у WhatsApp",
+  "Клуб умных путешествий": "Клуб розумних подорожей",
+  "Закрытый клуб для тех, кто хочет видеть мир больше и платить за это меньше. Умные маршруты, честные цены и сообщество попутчиков.": "Закритий клуб для тих, хто хоче бачити світ більше й платити за це менше. Розумні маршрути, чесні ціни та спільнота попутників.",
+  "Разделы": "Розділи",
+  "Связь": "Зв’язок",
+  "Независимый информационный сайт партнёра MWR Life. Не является официальным сайтом компании MWR Life. Материалы носят ознакомительный характер и не являются публичной офертой; условия, цены и доступность услуг уточняйте на официальном сайте компании.": "Незалежний інформаційний сайт партнера MWR Life. Не є офіційним сайтом компанії MWR Life. Матеріали мають ознайомлювальний характер і не є публічною офертою; умови, ціни та доступність послуг уточнюйте на офіційному сайті компанії.",
+  "Правовая информация": "Правова інформація",
+  "Политика конфиденциальности": "Політика конфіденційності",
+  "Политика cookie": "Політика cookie",
+  "Настройки cookie": "Налаштування cookie",
+  "Клуб умных путешествий. Все права защищены.": "Клуб розумних подорожей. Усі права захищено.",
+  "Отправляем…": "Надсилаємо…",
+  "Спасибо! Заявка отправлена, мы свяжемся с вами.": "Дякуємо! Заявку надіслано, ми зв’яжемося з вами.",
+  "Заявка в Клуб умных путешествий": "Заявка до Клубу розумних подорожей",
+  "Мы ценим вашу приватность": "Ми цінуємо вашу приватність",
+  "Сайт использует только необходимые технические данные, например запоминает ваш выбор по cookie. Аналитические и маркетинговые cookie мы включаем только с вашего согласия. Подробнее:": "Сайт використовує лише необхідні технічні дані, наприклад запам’ятовує ваш вибір щодо cookie. Аналітичні та маркетингові cookie ми вмикаємо лише за вашої згоди. Докладніше:",
+  "политика cookie": "політика cookie",
+  "и": "і",
+  "политика конфиденциальности": "політика конфіденційності",
+  "Необходимые": "Необхідні",
+  "Нужны для работы сайта и сохранения вашего выбора. Всегда включены.": "Потрібні для роботи сайту та збереження вашого вибору. Завжди ввімкнені.",
+  "Аналитические": "Аналітичні",
+  "Помогают понять, как посетители пользуются сайтом. Сейчас на сайте не используются.": "Допомагають зрозуміти, як відвідувачі користуються сайтом. Наразі на сайті не використовуються.",
+  "Маркетинговые": "Маркетингові",
+  "Нужны для персонализированной рекламы. Сейчас на сайте не используются.": "Потрібні для персоналізованої реклами. Наразі на сайті не використовуються.",
+  "Принять все": "Прийняти всі",
+  "Только необходимые": "Лише необхідні",
+  "Настроить": "Налаштувати",
+  "Сохранить выбор": "Зберегти вибір",
+  "Имя": "Ім’я",
+  "Контакт": "Контакт",
+  "Пожелания": "Побажання"
+ },
+ "pl": {
+  "Главная": "Strona główna",
+  "О клубе": "O klubie",
+  "Программы": "Programy",
+  "Направления": "Kierunki",
+  "Как это работает": "Jak to działa",
+  "Контакты": "Kontakt",
+  "Клуб умных<br>путешествий": "Klub Inteligentnych<br>Podróży",
+  "Язык": "Język",
+  "Основная навигация": "Nawigacja główna",
+  "Вступить в клуб": "Dołącz do klubu",
+  "Открыть меню": "Otwórz menu",
+  "Здравствуйте! Хочу узнать о Клубе умных путешествий.": "Dzień dobry! Chcę dowiedzieć się więcej o Klubie Inteligentnych Podróży.",
+  "Мы в соцсетях": "Jesteśmy w mediach społecznościowych",
+  "Написать в WhatsApp": "Napisz na WhatsApp",
+  "Клуб умных путешествий": "Klub Inteligentnych Podróży",
+  "Закрытый клуб для тех, кто хочет видеть мир больше и платить за это меньше. Умные маршруты, честные цены и сообщество попутчиков.": "Zamknięty klub dla tych, którzy chcą zobaczyć więcej świata i płacić za to mniej. Inteligentne trasy, uczciwe ceny i społeczność towarzyszy podróży.",
+  "Разделы": "Sekcje",
+  "Связь": "Dane kontaktowe",
+  "Независимый информационный сайт партнёра MWR Life. Не является официальным сайтом компании MWR Life. Материалы носят ознакомительный характер и не являются публичной офертой; условия, цены и доступность услуг уточняйте на официальном сайте компании.": "Niezależna witryna informacyjna partnera MWR Life. Nie jest oficjalną stroną firmy MWR Life. Materiały mają charakter informacyjny i nie stanowią oferty publicznej; warunki, ceny i dostępność usług sprawdzaj na oficjalnej stronie firmy.",
+  "Правовая информация": "Informacje prawne",
+  "Политика конфиденциальности": "Polityka prywatności",
+  "Политика cookie": "Polityka cookies",
+  "Настройки cookie": "Ustawienia cookies",
+  "Клуб умных путешествий. Все права защищены.": "Klub Inteligentnych Podróży. Wszelkie prawa zastrzeżone.",
+  "Отправляем…": "Wysyłamy…",
+  "Спасибо! Заявка отправлена, мы свяжемся с вами.": "Dziękujemy! Zgłoszenie zostało wysłane, skontaktujemy się z Tobą.",
+  "Заявка в Клуб умных путешествий": "Zgłoszenie do Klubu Inteligentnych Podróży",
+  "Мы ценим вашу приватность": "Cenimy Twoją prywatność",
+  "Сайт использует только необходимые технические данные, например запоминает ваш выбор по cookie. Аналитические и маркетинговые cookie мы включаем только с вашего согласия. Подробнее:": "Ta strona wykorzystuje tylko niezbędne dane techniczne, na przykład zapamiętuje Twój wybór dotyczący plików cookie. Analityczne i marketingowe pliki cookie włączamy wyłącznie za Twoją zgodą. Więcej informacji:",
+  "политика cookie": "polityka cookies",
+  "и": "i",
+  "политика конфиденциальности": "polityka prywatności",
+  "Необходимые": "Niezbędne",
+  "Нужны для работы сайта и сохранения вашего выбора. Всегда включены.": "Potrzebne do działania strony i zapisania Twojego wyboru. Zawsze włączone.",
+  "Аналитические": "Analityczne",
+  "Помогают понять, как посетители пользуются сайтом. Сейчас на сайте не используются.": "Pomagają zrozumieć, jak odwiedzający korzystają ze strony. Obecnie nie są używane na tej stronie.",
+  "Маркетинговые": "Marketingowe",
+  "Нужны для персонализированной рекламы. Сейчас на сайте не используются.": "Potrzebne do spersonalizowanych reklam. Obecnie nie są używane na tej stronie.",
+  "Принять все": "Akceptuj wszystkie",
+  "Только необходимые": "Tylko niezbędne",
+  "Настроить": "Dostosuj",
+  "Сохранить выбор": "Zapisz wybór",
+  "Имя": "Imię",
+  "Контакт": "Kontakt",
+  "Пожелания": "Uwagi"
+ }
+};
+  const T = (ru, en) => (LANG === 'ru' ? ru : LANG === 'en' ? en : ((D[LANG] && D[LANG][ru]) || en));
+  const LOCALE = { ru: 'ru-RU', en: 'en-US', uk: 'uk-UA', pl: 'pl-PL' }[LANG] || 'ru-RU';
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- SVG art ---------- */
@@ -26,17 +123,24 @@
   ];
   let page = location.pathname.split('/').pop();
   page = !page ? 'index.html' : (/\.html$/.test(page) ? page : page + '.html');
-  const otherHref = (EN ? '../' : 'en/') + page + location.hash;
+  const LANGS = [['ru', 'RU', 'Русский'], ['en', 'EN', 'English'], ['uk', 'UA', 'Українська'], ['pl', 'PL', 'Polski']];
+  const langHref = code => (LANG === 'ru' ? '' : '../') + (code === 'ru' ? '' : code + '/') + page + location.hash;
   const navLinks = (cls, active) => links.map(([h, t]) =>
     `<a href="${h}" class="${cls} ${h === page ? active : ''}">${t}</a>`).join('');
 
-  const logo = `<a href="index.html" class="flex items-center gap-2 font-display text-sm font-semibold text-ocean">
-      <span class="h-8 w-8">${ART.compass}</span><span class="leading-tight">${T('Клуб умных<br>путешествий', 'Smart Travel<br>Club')}</span></a>`;
+  const logo = `<a href="index.html" class="flex items-center gap-2 font-display text-xs font-semibold text-ocean max-[339px]:text-[10.5px] min-[400px]:text-sm">
+      <span class="h-8 w-8">${ART.compass}</span><span class="whitespace-nowrap leading-tight">${T('Клуб умных<br>путешествий', 'Smart Travel<br>Club')}</span></a>`;
 
-  const langSwitch = `<div class="flex items-center rounded-full bg-ocean/15 p-0.5 text-xs font-bold text-ocean" role="group" aria-label="${T('Язык', 'Language')}">
-        ${EN
-          ? `<a href="${otherHref}" hreflang="ru" lang="ru" title="Русский" class="rounded-full px-2.5 py-1.5 transition hover:bg-gold/60">RU</a><span aria-current="true" class="rounded-full bg-ocean px-2.5 py-1.5 text-gold">EN</span>`
-          : `<span aria-current="true" class="rounded-full bg-ocean px-2.5 py-1.5 text-gold">RU</span><a href="${otherHref}" hreflang="en" lang="en" title="English" class="rounded-full px-2.5 py-1.5 transition hover:bg-gold/60">EN</a>`}
+  const curLang = LANGS.find(l => l[0] === LANG) || LANGS[0];
+  const langSwitch = `<div class="relative" id="langMenu">
+        <button type="button" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-controls="langList" aria-label="${T('Язык', 'Language')}: ${curLang[2]}" class="flex min-h-[40px] items-center gap-1.5 rounded-full bg-ocean/15 px-3 py-2 text-xs font-bold text-ocean transition hover:bg-gold/60">
+          <svg class="hidden h-4 w-4 min-[360px]:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>
+          <span>${curLang[1]}</span>
+          <svg class="chev h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <ul id="langList" role="menu" aria-label="${T('Язык', 'Language')}" class="absolute right-0 top-full z-[60] mt-2 hidden w-48 rounded-2xl bg-ocean p-1.5 shadow-soft ring-1 ring-pale/25">
+          ${LANGS.map(([code, short, name]) => `<li role="none"><a role="menuitem" href="${code === LANG ? '#' : langHref(code)}" lang="${code}" hreflang="${code}" ${code === LANG ? 'aria-current="true"' : ''} class="flex min-h-[44px] items-center justify-between gap-3 rounded-xl px-3 py-2 text-sm font-semibold transition ${code === LANG ? 'bg-gold text-ocean' : 'text-pale hover:bg-pale/15'}"><span>${name}</span><span class="text-xs opacity-80">${short}</span></a></li>`).join('')}
+        </ul>
       </div>`;
 
   const hdr = document.getElementById('site-header');
@@ -45,10 +149,10 @@
     <div class="mx-auto mt-3 flex max-w-6xl items-center justify-between rounded-2xl glass px-4 py-2.5 shadow-soft sm:px-5" style="width:calc(100% - 1.5rem)">
       ${logo}
       <nav class="hidden items-center gap-1 text-sm font-medium text-ocean lg:flex" aria-label="${T('Основная навигация', 'Main navigation')}">
-        ${navLinks('rounded-full px-3 py-2 transition hover:bg-gold/60', 'bg-gold')}
+        ${navLinks('whitespace-nowrap rounded-full px-2 py-2 text-[13px] transition hover:bg-gold/60 xl:px-3 xl:text-sm', 'bg-gold')}
       </nav>
       ${langSwitch}
-      <a href="https://www.mwrlife.com/ayasinski/join" target="_blank" rel="noopener noreferrer" class="hidden rounded-full bg-ocean px-5 py-2.5 text-sm font-semibold text-gold transition hover:bg-deep lg:inline-block">${T('Вступить в клуб', 'Join the club')}</a>
+      <a href="https://www.mwrlife.com/ayasinski/join" target="_blank" rel="noopener noreferrer" class="hidden whitespace-nowrap rounded-full bg-ocean px-4 py-2.5 text-sm font-semibold text-gold transition hover:bg-deep lg:inline-block xl:px-5">${T('Вступить в клуб', 'Join the club')}</a>
       <button id="menuBtn" class="grid h-11 w-11 place-items-center rounded-xl text-ocean lg:hidden" aria-label="${T('Открыть меню', 'Open menu')}" aria-expanded="false" aria-controls="mobileMenu">
         <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
@@ -203,17 +307,47 @@
       const r = await fetch(FORM_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ 'Имя': name, 'Контакт': contact, 'Сообщение': msg || '—', 'Согласие с политикой': 'да', 'Язык сайта': EN ? 'EN' : 'RU', _subject: 'Заявка в Клуб умных путешествий', _template: 'table', _captcha: 'false' })
+        body: JSON.stringify({ 'Имя': name, 'Контакт': contact, 'Сообщение': msg || '—', 'Согласие с политикой': 'да', 'Язык сайта': LANG.toUpperCase(), _subject: 'Заявка в Клуб умных путешествий', _template: 'table', _captcha: 'false' })
       });
       const j = await r.json().catch(() => ({}));
       if (!r.ok || String(j.success) === 'false') throw new Error('send failed');
       ok.textContent = T('Спасибо! Заявка отправлена, мы свяжемся с вами.', 'Thank you! Your request has been sent. We will get back to you.');
       ok.classList.remove('hidden'); f.reset();
     } catch (x) {
-      const body = EN ? `Name: ${name}\nContact: ${contact}\nWishes: ${msg || '—'}` : `Имя: ${name}\nКонтакт: ${contact}\nПожелания: ${msg || '—'}`;
+      const body = `${T('Имя', 'Name')}: ${name}\n${T('Контакт', 'Contact')}: ${contact}\n${T('Пожелания', 'Wishes')}: ${msg || '—'}`;
       location.href = 'mailto:andrei.jasinski@gmail.com?subject=' + encodeURIComponent(T('Заявка в Клуб умных путешествий', 'Application to the Smart Travel Club')) + '&body=' + encodeURIComponent(body);
     } finally { btn.disabled = false; btn.textContent = label; }
   }));
+
+  /* ---------- language dropdown ---------- */
+  (function langDropdown() {
+    const btn = document.getElementById('langBtn'), list = document.getElementById('langList');
+    if (!btn || !list) return;
+    const items = () => [...list.querySelectorAll('a')];
+    const open = focusFirst => {
+      list.classList.remove('hidden'); btn.setAttribute('aria-expanded', 'true');
+      btn.querySelector('.chev').style.transform = 'rotate(180deg)';
+      if (focusFirst) { const a = list.querySelector('[aria-current]') || items()[0]; a && a.focus(); }
+    };
+    const close = ret => {
+      list.classList.add('hidden'); btn.setAttribute('aria-expanded', 'false');
+      btn.querySelector('.chev').style.transform = '';
+      if (ret) btn.focus();
+    };
+    btn.addEventListener('click', () => (list.classList.contains('hidden') ? open(false) : close(false)));
+    btn.addEventListener('keydown', e => { if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); open(true); } });
+    list.addEventListener('keydown', e => {
+      const a = items(), i = a.indexOf(document.activeElement);
+      if (e.key === 'ArrowDown') { e.preventDefault(); a[(i + 1) % a.length].focus(); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); a[(i - 1 + a.length) % a.length].focus(); }
+      else if (e.key === 'Home') { e.preventDefault(); a[0].focus(); }
+      else if (e.key === 'End') { e.preventDefault(); a[a.length - 1].focus(); }
+      else if (e.key === 'Escape') { e.preventDefault(); close(true); }
+      else if (e.key === 'Tab') close(false);
+    });
+    list.addEventListener('click', e => { const a = e.target.closest('a'); if (a && a.getAttribute('href') === '#') { e.preventDefault(); close(true); } });
+    document.addEventListener('click', e => { if (!e.target.closest('#langMenu')) close(false); });
+  })();
 
   /* ---------- cookie consent ---------- */
   const CKEY = 'clubConsent', CV = 1;
