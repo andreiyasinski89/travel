@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Направления — Клуб умных путешествий</title>
-<meta name="description" content="Интерактивная карта направлений Клуба умных путешествий: пляжи, города, горы и круизы.">
+<title>Destinations — Smart Travel Club</title>
+<meta name="description" content="An interactive map of Smart Travel Club destinations: beaches, cities, mountains and cruises.">
 <link rel="alternate" hreflang="ru" href="https://clever-travel.club/destinations.html">
 <link rel="alternate" hreflang="en" href="https://clever-travel.club/en/destinations.html">
 <link rel="alternate" hreflang="x-default" href="https://clever-travel.club/destinations.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="assets/tw.js"></script>
-<link rel="stylesheet" href="assets/site.css">
+<script src="../assets/tw.js"></script>
+<link rel="stylesheet" href="../assets/site.css">
 </head>
 <body class="antialiased">
 <div id="site-header"></div>
@@ -24,18 +24,18 @@
     <div class="a-plane h-8 w-20" style="top:48%;--t:28s"><span data-art="plane"></span></div>
   </div>
   <div class="relative mx-auto max-w-6xl">
-    <p class="reveal text-sm font-semibold uppercase tracking-widest text-ocean">Направления</p>
-    <h1 class="reveal mt-4 max-w-3xl text-3xl font-bold leading-tight text-ocean sm:text-5xl" style="--d:80ms">Куда полетим на этот раз?</h1>
-    <p class="reveal mt-6 max-w-2xl text-lg text-ink" style="--d:160ms">Выберите точку на карте или тип отдыха: самолёт проложит маршрут из Варшавы. Это примеры направлений, а каталог клуба охватывает весь мир.</p>
+    <p class="reveal text-sm font-semibold uppercase tracking-widest text-ocean">Destinations</p>
+    <h1 class="reveal mt-4 max-w-3xl text-3xl font-bold leading-tight text-ocean sm:text-5xl" style="--d:80ms">Where shall we fly this time?</h1>
+    <p class="reveal mt-6 max-w-2xl text-lg text-ink" style="--d:160ms">Choose a point on the map or a type of vacation: the plane will plot a route from Warsaw. These are example destinations, and the club’s catalog covers the whole world.</p>
   </div>
 </section>
 
 <!-- MAP -->
 <section class="bg-ocean-grad px-4 pb-20 pt-10 sm:px-6">
   <div class="mx-auto max-w-6xl">
-    <div class="flex flex-wrap gap-2" role="group" aria-label="Фильтр по типу отдыха" id="filters"></div>
+    <div class="flex flex-wrap gap-2" role="group" aria-label="Filter by type of vacation" id="filters"></div>
     <div class="relative mt-6 overflow-hidden rounded-3xl bg-deep shadow-soft ring-1 ring-pale/20">
-      <svg id="map" viewBox="0 0 1000 500" class="block h-auto w-full" role="img" aria-label="Карта мира с направлениями">
+      <svg id="map" viewBox="0 0 1000 500" class="block h-auto w-full" role="img" aria-label="World map with destinations">
         <defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#BAE6FD" stroke-opacity=".08"/></pattern></defs>
         <rect width="1000" height="500" fill="url(#grid)"/>
         <g id="land" fill="#10B981" fill-opacity=".55" stroke="#A6F0C4" stroke-opacity=".7" stroke-width="1.5" stroke-linejoin="round"></g>
@@ -52,21 +52,21 @@
 <!-- CARDS -->
 <section class="bg-sunset px-4 py-20 sm:px-6 lg:py-28">
   <div class="mx-auto max-w-6xl">
-    <h2 class="reveal text-2xl font-bold text-ocean sm:text-4xl">Идеи для вашего следующего маршрута</h2>
+    <h2 class="reveal text-2xl font-bold text-ocean sm:text-4xl">Ideas for your next route</h2>
     <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" id="cards"></div>
   </div>
 </section>
 
 <section class="bg-azure-grad px-4 py-20 text-center sm:px-6">
-  <h2 class="reveal text-2xl font-bold text-ocean sm:text-4xl">Нужно что-то особенное?</h2>
-  <p class="reveal mt-4 text-ink" style="--d:80ms">Скажите куратору, чего хотите, и он соберёт индивидуальный маршрут.</p>
-  <a href="contacts.html" class="reveal mt-8 inline-flex min-h-[52px] items-center rounded-full bg-gold px-10 py-3 font-semibold text-ocean shadow-gold transition hover:-translate-y-0.5 hover:bg-gold-dark" style="--d:160ms">Связаться с куратором</a>
+  <h2 class="reveal text-2xl font-bold text-ocean sm:text-4xl">Need something special?</h2>
+  <p class="reveal mt-4 text-ink" style="--d:80ms">Tell the curator what you want, and they will put together a custom route.</p>
+  <a href="contacts.html" class="reveal mt-8 inline-flex min-h-[52px] items-center rounded-full bg-gold px-10 py-3 font-semibold text-ocean shadow-gold transition hover:-translate-y-0.5 hover:bg-gold-dark" style="--d:160ms">Contact a curator</a>
 </section>
 </main>
 <div id="site-footer"></div>
 
 <script>
-  /* простая стилизованная карта: контуры континентов в координатах lon/lat */
+  /* simple stylized map: continent outlines in lon/lat coordinates */
   const P = ([lo, la]) => [(lo + 180) / 360 * 1000, (90 - la) / 180 * 500];
   const land = {
     na: [[-168,66],[-140,70],[-95,72],[-80,70],[-62,60],[-55,50],[-67,44],[-76,35],[-81,25],[-97,26],[-97,18],[-87,21],[-83,10],[-78,8],[-92,15],[-105,22],[-117,32],[-124,40],[-125,49],[-140,59],[-153,58],[-165,60]],
@@ -80,29 +80,29 @@
   document.getElementById('land').innerHTML = Object.values(land).map(pts => `<polygon points="${pts.map(p => P(p).map(n => n.toFixed(1)).join(',')).join(' ')}"/>`).join('');
 
   const dest = [
-    ['Лиссабон', 'city', [-9, 39], 'Тёплый океанский город: трамваи, набережные и лучшая выпечка Европы.'],
-    ['Дубай', 'city', [55, 25], 'Небоскрёбы, пустыня и пляжи в одной поездке.'],
-    ['Бали', 'beach', [115, -8], 'Рисовые террасы, сёрфинг и спокойные ретриты.'],
-    ['Токио', 'city', [139, 36], 'Город контрастов: от технологий до древних храмов.'],
-    ['Рим', 'city', [12, 42], 'Вечный город: история на каждом шагу.'],
-    ['Мальдивы', 'beach', [73, 4], 'Бирюзовая лагуна и виллы над водой.'],
-    ['Нью-Йорк', 'city', [-74, 41], 'Город, который не спит: музеи, шоу и гастрономия.'],
-    ['Стамбул', 'city', [29, 41], 'Мост между континентами и богатая кухня.'],
-    ['Кейптаун', 'mount', [18, -34], 'Стол-гора, океан и винные долины.'],
-    ['Рио-де-Жанейро', 'beach', [-43, -23], 'Карнавальный ритм, пляжи и горы над городом.'],
-    ['Рейкьявик', 'mount', [-22, 64], 'Гейзеры, водопады и северное сияние.'],
-    ['Сидней', 'cruise', [151, -34], 'Бухта, оперный театр и морские прогулки.'],
-    ['Средиземноморский круиз', 'cruise', [10, 38], 'Несколько стран за одну поездку без пересадок.']
+    ['Lisbon', 'city', [-9, 39], 'A warm ocean city: trams, waterfronts and the best pastries in Europe.'],
+    ['Dubai', 'city', [55, 25], 'Skyscrapers, desert and beaches in one trip.'],
+    ['Bali', 'beach', [115, -8], 'Rice terraces, surfing and calm retreats.'],
+    ['Tokyo', 'city', [139, 36], 'A city of contrasts: from technology to ancient temples.'],
+    ['Rome', 'city', [12, 42], 'The Eternal City: history at every step.'],
+    ['Maldives', 'beach', [73, 4], 'A turquoise lagoon and villas over the water.'],
+    ['New York', 'city', [-74, 41], 'The city that never sleeps: museums, shows and gastronomy.'],
+    ['Istanbul', 'city', [29, 41], 'A bridge between continents and a rich cuisine.'],
+    ['Cape Town', 'mount', [18, -34], 'Table Mountain, the ocean and wine valleys.'],
+    ['Rio de Janeiro', 'beach', [-43, -23], 'Carnival rhythm, beaches and mountains above the city.'],
+    ['Reykjavik', 'mount', [-22, 64], 'Geysers, waterfalls and the northern lights.'],
+    ['Sydney', 'cruise', [151, -34], 'A bay, an opera house and sea cruises.'],
+    ['Mediterranean cruise', 'cruise', [10, 38], 'Several countries in one trip with no transfers.']
   ];
-  const typeName = { all: 'Все', beach: 'Пляжи', city: 'Города', mount: 'Горы и природа', cruise: 'Круизы' };
+  const typeName = { all: 'All', beach: 'Beaches', city: 'Cities', mount: 'Mountains and nature', cruise: 'Cruises' };
   const typeBg = { beach: 'bg-azure-grad', city: 'bg-gold-grad', mount: 'bg-mint-grad', cruise: 'bg-teal-grad' };
   const art = { beach: 'balloon', city: 'plane', mount: 'balloon', cruise: 'ship' };
-  const origin = { name: 'Варшава', ll: [21, 52] };
+  const origin = { name: 'Warsaw', ll: [21, 52] };
   let filter = 'all', selected = null;
 
   const pinsG = document.getElementById('pins'), arc = document.getElementById('arc'), plane = document.getElementById('mapPlane'), info = document.getElementById('infoCard');
   const [ox, oy] = P(origin.ll);
-  document.getElementById('origin').innerHTML = `<circle cx="${ox}" cy="${oy}" r="8" fill="#BAE6FD"/><circle cx="${ox}" cy="${oy}" r="4" fill="#0B3C5D"/><text x="${ox + 12}" y="${oy - 8}" fill="#BAE6FD" font-size="14" font-family="Onest">Вы: ${origin.name}</text>`;
+  document.getElementById('origin').innerHTML = `<circle cx="${ox}" cy="${oy}" r="8" fill="#BAE6FD"/><circle cx="${ox}" cy="${oy}" r="4" fill="#0B3C5D"/><text x="${ox + 12}" y="${oy - 8}" fill="#BAE6FD" font-size="14" font-family="Onest">You: ${origin.name}</text>`;
 
   function renderPins() {
     pinsG.innerHTML = dest.map((d, i) => {
@@ -116,7 +116,7 @@
   function selectDest(i) {
     selected = i; const d = dest[i];
     renderPins();
-    info.innerHTML = `<p class="font-display text-lg font-semibold">${d[0]}</p><p class="mt-1 text-sm">${d[3]}</p><a href="contacts.html" class="mt-3 inline-block rounded-full bg-ocean px-4 py-2 text-sm font-semibold text-gold">Хочу сюда</a>`;
+    info.innerHTML = `<p class="font-display text-lg font-semibold">${d[0]}</p><p class="mt-1 text-sm">${d[3]}</p><a href="contacts.html" class="mt-3 inline-block rounded-full bg-ocean px-4 py-2 text-sm font-semibold text-gold">I want to go here</a>`;
     const [x, y] = P(d[2]), mx = (ox + x) / 2, my = Math.min(oy, y) - 70 - Math.abs(x - ox) * .12;
     arc.setAttribute('d', `M${ox},${oy} Q${mx},${my} ${x},${y}`);
     flyPlane();
@@ -148,16 +148,16 @@
     document.getElementById('cards').innerHTML = dest.map((d, i) => ({ d, i })).filter(({ d }) => filter === 'all' || d[1] === filter).map(({ d, i }, n) => `
       <article class="reveal in overflow-hidden rounded-3xl bg-ocean text-pale shadow-soft transition hover:-translate-y-1.5" style="--d:${n * 50}ms">
         <div class="relative h-36 ${typeBg[d[1]]}"><div class="a-float absolute bottom-3 left-5 h-14 w-24" style="--dl:-${n}s"><span data-art="${art[d[1]]}"></span></div><span class="absolute right-4 top-4 rounded-full bg-ocean px-3 py-1 text-xs font-semibold text-gold">${typeName[d[1]]}</span></div>
-        <div class="p-6"><h3 class="text-lg font-semibold text-gold">${d[0]}</h3><p class="mt-2 text-sm">${d[3]}</p><button data-show="${i}" class="mt-4 rounded-full border border-gold px-4 py-2 text-sm font-semibold text-gold transition hover:bg-gold hover:text-ocean">Показать на карте</button></div>
+        <div class="p-6"><h3 class="text-lg font-semibold text-gold">${d[0]}</h3><p class="mt-2 text-sm">${d[3]}</p><button data-show="${i}" class="mt-4 rounded-full border border-gold px-4 py-2 text-sm font-semibold text-gold transition hover:bg-gold hover:text-ocean">Show on map</button></div>
       </article>`).join('');
     document.querySelectorAll('#cards [data-art]').forEach(el => el.innerHTML = window.__ART ? window.__ART[el.dataset.art] : '');
   }
   document.getElementById('cards').addEventListener('click', e => { const b = e.target.closest('[data-show]'); if (!b) return; selectDest(+b.dataset.show); document.getElementById('map').scrollIntoView({ behavior: 'smooth', block: 'center' }); });
 
   renderFilters(); renderPins(); renderCards();
-  info.innerHTML = '<p class="font-medium">Нажмите на точку на карте, чтобы увидеть направление.</p>';
+  info.innerHTML = '<p class="font-medium">Click a point on the map to see the destination.</p>';
 </script>
-<script src="assets/site.js"></script>
+<script src="../assets/site.js"></script>
 <script>renderCards();</script>
 </body>
 </html>

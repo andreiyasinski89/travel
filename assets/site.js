@@ -1,4 +1,7 @@
 (function () {
+  const EN = document.documentElement.lang === 'en';
+  const T = (ru, en) => (EN ? en : ru);
+  const LOCALE = EN ? 'en-US' : 'ru-RU';
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- SVG art ---------- */
@@ -18,32 +21,41 @@
 
   /* ---------- header & footer ---------- */
   const links = [
-    ['index.html', 'Главная'], ['about.html', 'О клубе'], ['programs.html', 'Программы'],
-    ['destinations.html', 'Направления'], ['how.html', 'Как это работает'], ['contacts.html', 'Контакты']
+    ['index.html', T('Главная', 'Home')], ['about.html', T('О клубе', 'About')], ['programs.html', T('Программы', 'Programs')],
+    ['destinations.html', T('Направления', 'Destinations')], ['how.html', T('Как это работает', 'How it works')], ['contacts.html', T('Контакты', 'Contacts')]
   ];
-  const page = (location.pathname.split('/').pop() || 'index.html');
+  let page = location.pathname.split('/').pop();
+  page = !page ? 'index.html' : (/\.html$/.test(page) ? page : page + '.html');
+  const otherHref = (EN ? '../' : 'en/') + page + location.hash;
   const navLinks = (cls, active) => links.map(([h, t]) =>
     `<a href="${h}" class="${cls} ${h === page ? active : ''}">${t}</a>`).join('');
 
   const logo = `<a href="index.html" class="flex items-center gap-2 font-display text-sm font-semibold text-ocean">
-      <span class="h-8 w-8">${ART.compass}</span><span class="leading-tight">Клуб умных<br>путешествий</span></a>`;
+      <span class="h-8 w-8">${ART.compass}</span><span class="leading-tight">${T('Клуб умных<br>путешествий', 'Smart Travel<br>Club')}</span></a>`;
+
+  const langSwitch = `<div class="flex items-center rounded-full bg-ocean/15 p-0.5 text-xs font-bold text-ocean" role="group" aria-label="${T('Язык', 'Language')}">
+        ${EN
+          ? `<a href="${otherHref}" hreflang="ru" lang="ru" title="Русский" class="rounded-full px-2.5 py-1.5 transition hover:bg-gold/60">RU</a><span aria-current="true" class="rounded-full bg-ocean px-2.5 py-1.5 text-gold">EN</span>`
+          : `<span aria-current="true" class="rounded-full bg-ocean px-2.5 py-1.5 text-gold">RU</span><a href="${otherHref}" hreflang="en" lang="en" title="English" class="rounded-full px-2.5 py-1.5 transition hover:bg-gold/60">EN</a>`}
+      </div>`;
 
   const hdr = document.getElementById('site-header');
   if (hdr) hdr.innerHTML = `
   <header class="fixed inset-x-0 top-0 z-50">
     <div class="mx-auto mt-3 flex max-w-6xl items-center justify-between rounded-2xl glass px-4 py-2.5 shadow-soft sm:px-5" style="width:calc(100% - 1.5rem)">
       ${logo}
-      <nav class="hidden items-center gap-1 text-sm font-medium text-ocean lg:flex" aria-label="Основная навигация">
+      <nav class="hidden items-center gap-1 text-sm font-medium text-ocean lg:flex" aria-label="${T('Основная навигация', 'Main navigation')}">
         ${navLinks('rounded-full px-3 py-2 transition hover:bg-gold/60', 'bg-gold')}
       </nav>
-      <a href="https://www.mwrlife.com/ayasinski/join" target="_blank" rel="noopener noreferrer" class="hidden rounded-full bg-ocean px-5 py-2.5 text-sm font-semibold text-gold transition hover:bg-deep lg:inline-block">Вступить в клуб</a>
-      <button id="menuBtn" class="grid h-11 w-11 place-items-center rounded-xl text-ocean lg:hidden" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
+      ${langSwitch}
+      <a href="https://www.mwrlife.com/ayasinski/join" target="_blank" rel="noopener noreferrer" class="hidden rounded-full bg-ocean px-5 py-2.5 text-sm font-semibold text-gold transition hover:bg-deep lg:inline-block">${T('Вступить в клуб', 'Join the club')}</a>
+      <button id="menuBtn" class="grid h-11 w-11 place-items-center rounded-xl text-ocean lg:hidden" aria-label="${T('Открыть меню', 'Open menu')}" aria-expanded="false" aria-controls="mobileMenu">
         <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
     <div id="mobileMenu" class="mx-3 mt-2 hidden rounded-2xl glass p-3 shadow-soft lg:hidden">
       ${navLinks('block rounded-xl px-4 py-3 font-medium text-ocean', 'bg-gold')}
-      <a href="https://www.mwrlife.com/ayasinski/join" target="_blank" rel="noopener noreferrer" class="mt-2 block rounded-full bg-ocean px-5 py-3 text-center font-semibold text-gold">Вступить в клуб</a>
+      <a href="https://www.mwrlife.com/ayasinski/join" target="_blank" rel="noopener noreferrer" class="mt-2 block rounded-full bg-ocean px-5 py-3 text-center font-semibold text-gold">${T('Вступить в клуб', 'Join the club')}</a>
     </div>
     <div class="pointer-events-none relative mx-auto mt-1 h-6" style="width:calc(100% - 1.5rem);max-width:72rem" aria-hidden="true">
       <div class="absolute left-3 right-3 top-3 h-0.5 rounded bg-ocean/15"></div>
@@ -53,7 +65,7 @@
   </header>`;
 
 
-  const WA_URL = 'https://wa.me/48731135317?text=' + encodeURIComponent('Здравствуйте! Хочу узнать о Клубе умных путешествий.');
+  const WA_URL = 'https://wa.me/48731135317?text=' + encodeURIComponent(T('Здравствуйте! Хочу узнать о Клубе умных путешествий.', 'Hello! I would like to find out more about the Smart Travel Club.'));
   const SOCIAL = [
     ['Telegram', '<path d="M21.5 3.5 2.8 10.7c-.9.4-.9 1.1-.2 1.3l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.8c.3-1.2-.5-1.8-1.5-1.5Z" fill="currentColor"/><path d="m8 13.2 9.5-5.9" stroke="#08293F" stroke-width="1.4" stroke-linecap="round" fill="none"/>'],
     ['Instagram', '<rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/>'],
@@ -61,7 +73,7 @@
     ['Facebook', '<path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8.5c0-.3.2-.5.5-.5Z" fill="currentColor"/>'],
     ['YouTube', '<rect x="2.5" y="5" width="19" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="m10 9 5 3-5 3Z" fill="currentColor"/>']
   ];
-  const socialHtml = `<ul class="mt-5 flex flex-wrap gap-3" aria-label="Мы в соцсетях">${SOCIAL.map(([n, d]) =>
+  const socialHtml = `<ul class="mt-5 flex flex-wrap gap-3" aria-label="${T('Мы в соцсетях', 'Follow us')}">${SOCIAL.map(([n, d]) =>
     `<li><a href="${n === 'WhatsApp' ? WA_URL : '#'}" ${n === 'WhatsApp' ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="${n}" title="${n}" class="grid h-11 w-11 place-items-center rounded-full bg-pale/10 text-gold ring-1 ring-pale/20 transition hover:-translate-y-1 hover:bg-gold hover:text-ocean"><svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true">${d}</svg></a></li>`).join('')}</ul>`;
 
   const ftr = document.getElementById('site-footer');
@@ -73,24 +85,24 @@
     </div>
     <div class="mx-auto grid max-w-6xl gap-10 px-4 pb-8 pt-4 sm:px-6 md:grid-cols-[1.2fr_1fr_1fr]">
       <div>
-        <div class="flex items-center gap-2 font-display text-gold"><span class="h-9 w-9">${ART.compass}</span>Клуб умных путешествий</div>
-        <p class="mt-4 max-w-sm text-sm">Закрытый клуб для тех, кто хочет видеть мир больше и платить за это меньше. Умные маршруты, честные цены и сообщество попутчиков.</p>
+        <div class="flex items-center gap-2 font-display text-gold"><span class="h-9 w-9">${ART.compass}</span>${T('Клуб умных путешествий', 'Smart Travel Club')}</div>
+        <p class="mt-4 max-w-sm text-sm">${T('Закрытый клуб для тех, кто хочет видеть мир больше и платить за это меньше. Умные маршруты, честные цены и сообщество попутчиков.', 'A private club for those who want to see more of the world and pay less for it. Smart routes, honest prices and a community of travel companions.')}</p>
         ${socialHtml}
       </div>
-      <div><p class="font-display text-sm text-gold">Разделы</p><ul class="mt-3 space-y-2 text-sm">
+      <div><p class="font-display text-sm text-gold">${T('Разделы', 'Sections')}</p><ul class="mt-3 space-y-2 text-sm">
         ${links.map(([h, t]) => `<li><a class="hover:text-gold" href="${h}">${t}</a></li>`).join('')}</ul></div>
-      <div><p class="font-display text-sm text-gold">Связь</p><ul class="mt-3 space-y-2 text-sm">
+      <div><p class="font-display text-sm text-gold">${T('Связь', 'Contact')}</p><ul class="mt-3 space-y-2 text-sm">
         <li><a class="hover:text-gold" href="tel:+48731135317">+48 731 135 317</a></li>
         <li><a class="break-all hover:text-gold" href="mailto:andrei.jasinski@gmail.com">andrei.jasinski@gmail.com</a></li></ul></div>
     </div>
     <div class="mx-auto max-w-6xl border-t border-pale/20 px-4 py-5 text-xs sm:px-6">
-      <p class="max-w-3xl">Независимый информационный сайт партнёра MWR Life. Не является официальным сайтом компании MWR Life. Материалы носят ознакомительный характер и не являются публичной офертой; условия, цены и доступность услуг уточняйте на официальном сайте компании.</p>
-      <nav class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2" aria-label="Правовая информация">
-        <a class="underline-offset-4 hover:text-gold hover:underline" href="privacy.html">Политика конфиденциальности</a>
-        <a class="underline-offset-4 hover:text-gold hover:underline" href="cookies.html">Политика cookie</a>
-        <button type="button" data-cookie-settings class="underline-offset-4 hover:text-gold hover:underline">Настройки cookie</button>
+      <p class="max-w-3xl">${T('Независимый информационный сайт партнёра MWR Life. Не является официальным сайтом компании MWR Life. Материалы носят ознакомительный характер и не являются публичной офертой; условия, цены и доступность услуг уточняйте на официальном сайте компании.', 'An independent information website of an MWR Life partner. It is not the official website of MWR Life. The materials are for information only and do not constitute a public offer; please check terms, prices and availability of services on the company’s official website.')}</p>
+      <nav class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2" aria-label="${T('Правовая информация', 'Legal information')}">
+        <a class="underline-offset-4 hover:text-gold hover:underline" href="privacy.html">${T('Политика конфиденциальности', 'Privacy Policy')}</a>
+        <a class="underline-offset-4 hover:text-gold hover:underline" href="cookies.html">${T('Политика cookie', 'Cookie Policy')}</a>
+        <button type="button" data-cookie-settings class="underline-offset-4 hover:text-gold hover:underline">${T('Настройки cookie', 'Cookie settings')}</button>
       </nav>
-      <p class="mt-4">© 2026 Клуб умных путешествий. Все права защищены.</p>
+      <p class="mt-4">© 2026 ${T('Клуб умных путешествий. Все права защищены.', 'Smart Travel Club. All rights reserved.')}</p>
     </div>
   </footer>`;
 
@@ -98,9 +110,9 @@
   /* ---------- floating WhatsApp button ---------- */
   const wa = document.createElement('a');
   wa.href = WA_URL; wa.target = '_blank'; wa.rel = 'noopener noreferrer';
-  wa.setAttribute('aria-label', 'Написать в WhatsApp');
+  wa.setAttribute('aria-label', T('Написать в WhatsApp', 'Message us on WhatsApp'));
   wa.className = 'group fixed right-4 top-[5.5rem] z-40 flex items-center gap-3 sm:right-6';
-  wa.innerHTML = `<span class="pointer-events-none hidden rounded-full bg-ocean px-4 py-2 text-sm font-semibold text-gold opacity-0 shadow-soft transition group-hover:opacity-100 group-focus-visible:opacity-100 sm:block">Написать в WhatsApp</span>
+  wa.innerHTML = `<span class="pointer-events-none hidden rounded-full bg-ocean px-4 py-2 text-sm font-semibold text-gold opacity-0 shadow-soft transition group-hover:opacity-100 group-focus-visible:opacity-100 sm:block">${T('Написать в WhatsApp', 'Message us on WhatsApp')}</span>
     <span class="relative grid h-14 w-14 place-items-center rounded-full bg-emerald text-ocean shadow-gold ring-4 ring-ocean/20 transition group-hover:scale-110">
       <span class="pin-pulse absolute inset-0 rounded-full" style="--c:#10B981"></span>
       <svg viewBox="0 0 24 24" class="relative h-7 w-7" aria-hidden="true"><path d="M3 21l1.6-4.8A9 9 0 1 1 8 19.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2Z" fill="currentColor"/></svg>
@@ -125,7 +137,7 @@
     const end = parseFloat(el.dataset.count), suf = el.dataset.suffix || '', dur = reduce ? 1 : 1600, t0 = performance.now();
     (function tick(t) {
       const p = Math.min(1, (t - t0) / dur), v = Math.round(end * (1 - Math.pow(1 - p, 3)));
-      el.textContent = v.toLocaleString('ru-RU') + suf;
+      el.textContent = v.toLocaleString(LOCALE) + suf;
       if (p < 1) requestAnimationFrame(tick);
     })(t0);
   }
@@ -185,21 +197,21 @@
     ok.classList.add('hidden');
     if (!name || !contact || (f.consent && !f.consent.checked)) { err.classList.remove('hidden'); return; }
     err.classList.add('hidden');
-    if (f._honey && f._honey.value) return; // спам-ловушка
-    const label = btn.textContent; btn.disabled = true; btn.textContent = 'Отправляем…';
+    if (f._honey && f._honey.value) return; // honeypot (spam trap)
+    const label = btn.textContent; btn.disabled = true; btn.textContent = T('Отправляем…', 'Sending…');
     try {
       const r = await fetch(FORM_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ 'Имя': name, 'Контакт': contact, 'Сообщение': msg || '—', 'Согласие с политикой': 'да', _subject: 'Заявка в Клуб умных путешествий', _template: 'table', _captcha: 'false' })
+        body: JSON.stringify({ 'Имя': name, 'Контакт': contact, 'Сообщение': msg || '—', 'Согласие с политикой': 'да', 'Язык сайта': EN ? 'EN' : 'RU', _subject: 'Заявка в Клуб умных путешествий', _template: 'table', _captcha: 'false' })
       });
       const j = await r.json().catch(() => ({}));
       if (!r.ok || String(j.success) === 'false') throw new Error('send failed');
-      ok.textContent = 'Спасибо! Заявка отправлена, мы свяжемся с вами.';
+      ok.textContent = T('Спасибо! Заявка отправлена, мы свяжемся с вами.', 'Thank you! Your request has been sent. We will get back to you.');
       ok.classList.remove('hidden'); f.reset();
     } catch (x) {
-      const body = `Имя: ${name}\nКонтакт: ${contact}\nПожелания: ${msg || '—'}`;
-      location.href = 'mailto:andrei.jasinski@gmail.com?subject=' + encodeURIComponent('Заявка в Клуб умных путешествий') + '&body=' + encodeURIComponent(body);
+      const body = EN ? `Name: ${name}\nContact: ${contact}\nWishes: ${msg || '—'}` : `Имя: ${name}\nКонтакт: ${contact}\nПожелания: ${msg || '—'}`;
+      location.href = 'mailto:andrei.jasinski@gmail.com?subject=' + encodeURIComponent(T('Заявка в Клуб умных путешествий', 'Application to the Smart Travel Club')) + '&body=' + encodeURIComponent(body);
     } finally { btn.disabled = false; btn.textContent = label; }
   }));
 
@@ -228,17 +240,17 @@
     box.setAttribute('role', 'dialog'); box.setAttribute('aria-labelledby', 'ckTitle'); box.setAttribute('aria-describedby', 'ckDesc');
     box.className = 'fixed inset-x-3 bottom-3 z-[60] mx-auto max-h-[85vh] max-w-xl overflow-y-auto rounded-3xl bg-ocean p-5 text-pale shadow-soft ring-1 ring-pale/25 sm:left-6 sm:right-auto sm:mx-0 sm:p-6';
     box.innerHTML = `
-      <h2 id="ckTitle" class="font-display text-base font-semibold text-gold">Мы ценим вашу приватность</h2>
-      <p id="ckDesc" class="mt-2 text-sm">Сайт использует только необходимые технические данные, например запоминает ваш выбор по cookie. Аналитические и маркетинговые cookie мы включаем только с вашего согласия. Подробнее: <a class="underline hover:text-gold" href="cookies.html">политика cookie</a> и <a class="underline hover:text-gold" href="privacy.html">политика конфиденциальности</a>.</p>
+      <h2 id="ckTitle" class="font-display text-base font-semibold text-gold">${T('Мы ценим вашу приватность', 'We value your privacy')}</h2>
+      <p id="ckDesc" class="mt-2 text-sm">${T('Сайт использует только необходимые технические данные, например запоминает ваш выбор по cookie. Аналитические и маркетинговые cookie мы включаем только с вашего согласия. Подробнее:', 'This site uses only the technical data it needs, for example it remembers your cookie choice. We turn on analytics and marketing cookies only with your consent. More details:')} <a class="underline hover:text-gold" href="cookies.html">${T('политика cookie', 'cookie policy')}</a> ${T('и', 'and')} <a class="underline hover:text-gold" href="privacy.html">${T('политика конфиденциальности', 'privacy policy')}</a>.</p>
       <div id="ckPanel" class="mt-4 hidden space-y-3 text-sm">
-        ${sw('ckNec', 'Необходимые', 'Нужны для работы сайта и сохранения вашего выбора. Всегда включены.', true, true)}
-        ${sw('ckAn', 'Аналитические', 'Помогают понять, как посетители пользуются сайтом. Сейчас на сайте не используются.', st.analytics, false)}
-        ${sw('ckMk', 'Маркетинговые', 'Нужны для персонализированной рекламы. Сейчас на сайте не используются.', st.marketing, false)}
+        ${sw('ckNec', T('Необходимые', 'Necessary'), T('Нужны для работы сайта и сохранения вашего выбора. Всегда включены.', 'Needed for the site to work and to save your choice. Always on.'), true, true)}
+        ${sw('ckAn', T('Аналитические', 'Analytics'), T('Помогают понять, как посетители пользуются сайтом. Сейчас на сайте не используются.', 'Help us understand how visitors use the site. Not used on this site at the moment.'), st.analytics, false)}
+        ${sw('ckMk', T('Маркетинговые', 'Marketing'), T('Нужны для персонализированной рекламы. Сейчас на сайте не используются.', 'Needed for personalized advertising. Not used on this site at the moment.'), st.marketing, false)}
       </div>
       <div class="mt-5 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
-        <button type="button" data-ck="all" class="min-h-[44px] flex-1 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ocean transition hover:bg-gold-dark">Принять все</button>
-        <button type="button" data-ck="none" class="min-h-[44px] flex-1 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ocean transition hover:bg-gold-dark">Только необходимые</button>
-        <button type="button" data-ck="more" class="min-h-[44px] flex-1 rounded-full border-2 border-pale/50 px-5 py-2.5 text-sm font-semibold text-pale transition hover:border-gold hover:text-gold">Настроить</button>
+        <button type="button" data-ck="all" class="min-h-[44px] flex-1 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ocean transition hover:bg-gold-dark">${T('Принять все', 'Accept all')}</button>
+        <button type="button" data-ck="none" class="min-h-[44px] flex-1 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ocean transition hover:bg-gold-dark">${T('Только необходимые', 'Necessary only')}</button>
+        <button type="button" data-ck="more" class="min-h-[44px] flex-1 rounded-full border-2 border-pale/50 px-5 py-2.5 text-sm font-semibold text-pale transition hover:border-gold hover:text-gold">${T('Настроить', 'Customize')}</button>
       </div>`;
     document.body.appendChild(box);
     box.addEventListener('click', e => {
@@ -248,7 +260,7 @@
       else if (k === 'none') { saveConsent(false, false); closeConsent(); }
       else if (k === 'more') {
         const panel = box.querySelector('#ckPanel');
-        if (panel.classList.contains('hidden')) { panel.classList.remove('hidden'); b.textContent = 'Сохранить выбор'; }
+        if (panel.classList.contains('hidden')) { panel.classList.remove('hidden'); b.textContent = T('Сохранить выбор', 'Save choice'); }
         else { saveConsent(box.querySelector('#ckAn').checked, box.querySelector('#ckMk').checked); closeConsent(); }
       }
     });
