@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="pl">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kierunki — Klub Inteligentnych Podróży</title>
-<meta name="description" content="Interaktywna mapa kierunków Klubu Inteligentnych Podróży: plaże, miasta, góry i rejsy.">
-<link rel="canonical" href="https://clever-travel.club/pl/destinations.html">
+<title>Destinos — Club de Viajes Inteligentes</title>
+<meta name="description" content="Mapa interactivo de destinos del Club de Viajes Inteligentes: playas, ciudades, montañas y cruceros.">
+<link rel="canonical" href="https://clever-travel.club/es/destinations.html">
 <link rel="alternate" hreflang="ru" href="https://clever-travel.club/destinations.html">
 <link rel="alternate" hreflang="en" href="https://clever-travel.club/en/destinations.html">
 <link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/destinations.html">
@@ -33,18 +33,18 @@
     <div class="a-plane h-8 w-20" style="top:48%;--t:28s"><span data-art="plane"></span></div>
   </div>
   <div class="relative mx-auto max-w-6xl">
-    <p class="reveal text-sm font-semibold uppercase tracking-widest text-ocean">Kierunki</p>
-    <h1 class="reveal mt-4 max-w-3xl text-3xl font-bold leading-tight text-ocean sm:text-5xl" style="--d:80ms">Dokąd polecimy tym razem?</h1>
-    <p class="reveal mt-6 max-w-2xl text-lg text-ink" style="--d:160ms">Wybierz punkt na mapie lub rodzaj wypoczynku: samolot wytyczy trasę z Warszawy. To przykładowe kierunki, a katalog klubu obejmuje cały świat.</p>
+    <p class="reveal text-sm font-semibold uppercase tracking-widest text-ocean">Destinos</p>
+    <h1 class="reveal mt-4 max-w-3xl text-3xl font-bold leading-tight text-ocean sm:text-5xl" style="--d:80ms">¿Adónde volamos esta vez?</h1>
+    <p class="reveal mt-6 max-w-2xl text-lg text-ink" style="--d:160ms">Elige un punto en el mapa o un tipo de descanso: el avión trazará una ruta desde Varsovia. Son ejemplos de destinos, y el catálogo del club abarca todo el mundo.</p>
   </div>
 </section>
 
 <!-- MAP -->
 <section class="bg-ocean-grad px-4 pb-20 pt-10 sm:px-6">
   <div class="mx-auto max-w-6xl">
-    <div class="flex flex-wrap gap-2" role="group" aria-label="Filtr według rodzaju wypoczynku" id="filters"></div>
+    <div class="flex flex-wrap gap-2" role="group" aria-label="Filtro por tipo de descanso" id="filters"></div>
     <div class="relative mt-6 overflow-hidden rounded-3xl bg-deep shadow-soft ring-1 ring-pale/20">
-      <svg id="map" viewBox="0 0 1000 500" class="block h-auto w-full" role="img" aria-label="Mapa świata z kierunkami">
+      <svg id="map" viewBox="0 0 1000 500" class="block h-auto w-full" role="img" aria-label="Mapa del mundo con destinos">
         <defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#BAE6FD" stroke-opacity=".08"/></pattern></defs>
         <rect width="1000" height="500" fill="url(#grid)"/>
         <g id="land" fill="#10B981" fill-opacity=".55" stroke="#A6F0C4" stroke-opacity=".7" stroke-width="1.5" stroke-linejoin="round"></g>
@@ -61,15 +61,15 @@
 <!-- CARDS -->
 <section class="bg-sunset px-4 py-20 sm:px-6 lg:py-28">
   <div class="mx-auto max-w-6xl">
-    <h2 class="reveal text-2xl font-bold text-ocean sm:text-4xl">Pomysły na Twoją następną trasę</h2>
+    <h2 class="reveal text-2xl font-bold text-ocean sm:text-4xl">Ideas para tu próxima ruta</h2>
     <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" id="cards"></div>
   </div>
 </section>
 
 <section class="bg-azure-grad px-4 py-20 text-center sm:px-6">
-  <h2 class="reveal text-2xl font-bold text-ocean sm:text-4xl">Potrzebujesz czegoś wyjątkowego?</h2>
-  <p class="reveal mt-4 text-ink" style="--d:80ms">Powiedz opiekunowi, czego chcesz, a przygotuje indywidualną trasę.</p>
-  <a href="contacts.html" class="reveal mt-8 inline-flex min-h-[52px] items-center rounded-full bg-gold px-10 py-3 font-semibold text-ocean shadow-gold transition hover:-translate-y-0.5 hover:bg-gold-dark" style="--d:160ms">Skontaktuj się z opiekunem</a>
+  <h2 class="reveal text-2xl font-bold text-ocean sm:text-4xl">¿Necesitas algo especial?</h2>
+  <p class="reveal mt-4 text-ink" style="--d:80ms">Dile al asesor qué quieres y armará una ruta personalizada.</p>
+  <a href="contacts.html" class="reveal mt-8 inline-flex min-h-[52px] items-center rounded-full bg-gold px-10 py-3 font-semibold text-ocean shadow-gold transition hover:-translate-y-0.5 hover:bg-gold-dark" style="--d:160ms">Contactar con un asesor</a>
 </section>
 </main>
 <div id="site-footer"></div>
@@ -89,29 +89,29 @@
   document.getElementById('land').innerHTML = Object.values(land).map(pts => `<polygon points="${pts.map(p => P(p).map(n => n.toFixed(1)).join(',')).join(' ')}"/>`).join('');
 
   const dest = [
-    ['Lizbona', 'city', [-9, 39], 'Ciepłe oceaniczne miasto: tramwaje, nabrzeża i najlepsze wypieki w Europie.'],
-    ['Dubaj', 'city', [55, 25], 'Drapacze chmur, pustynia i plaże w jednej podróży.'],
-    ['Bali', 'beach', [115, -8], 'Tarasy ryżowe, surfing i spokojne retreaty.'],
-    ['Tokio', 'city', [139, 36], 'Miasto kontrastów: od technologii po starożytne świątynie.'],
-    ['Rzym', 'city', [12, 42], 'Wieczne Miasto: historia na każdym kroku.'],
-    ['Malediwy', 'beach', [73, 4], 'Turkusowa laguna i wille nad wodą.'],
-    ['Nowy Jork', 'city', [-74, 41], 'Miasto, które nie śpi: muzea, widowiska i gastronomia.'],
-    ['Stambuł', 'city', [29, 41], 'Most między kontynentami i bogata kuchnia.'],
-    ['Kapsztad', 'mount', [18, -34], 'Góra Stołowa, ocean i winne doliny.'],
-    ['Rio de Janeiro', 'beach', [-43, -23], 'Karnawałowy rytm, plaże i góry nad miastem.'],
-    ['Reykjavik', 'mount', [-22, 64], 'Gejzery, wodospady i zorza polarna.'],
-    ['Sydney', 'cruise', [151, -34], 'Zatoka, opera i rejsy morskie.'],
-    ['Rejs po Morzu Śródziemnym', 'cruise', [10, 38], 'Kilka krajów w jednej podróży, bez przesiadek.']
+    ['Lisboa', 'city', [-9, 39], 'Una cálida ciudad oceánica: tranvías, paseos marítimos y la mejor repostería de Europa.'],
+    ['Dubái', 'city', [55, 25], 'Rascacielos, desierto y playas en un solo viaje.'],
+    ['Bali', 'beach', [115, -8], 'Terrazas de arroz, surf y retiros tranquilos.'],
+    ['Tokio', 'city', [139, 36], 'Una ciudad de contrastes: de la tecnología a los templos antiguos.'],
+    ['Roma', 'city', [12, 42], 'La Ciudad Eterna: historia a cada paso.'],
+    ['Maldivas', 'beach', [73, 4], 'Una laguna turquesa y villas sobre el agua.'],
+    ['Nueva York', 'city', [-74, 41], 'La ciudad que nunca duerme: museos, espectáculos y gastronomía.'],
+    ['Estambul', 'city', [29, 41], 'Un puente entre continentes y una cocina rica.'],
+    ['Ciudad del Cabo', 'mount', [18, -34], 'La Montaña de la Mesa, el océano y valles vinícolas.'],
+    ['Río de Janeiro', 'beach', [-43, -23], 'Ritmo de carnaval, playas y montañas sobre la ciudad.'],
+    ['Reikiavik', 'mount', [-22, 64], 'Géiseres, cascadas y auroras boreales.'],
+    ['Sídney', 'cruise', [151, -34], 'Una bahía, una ópera y paseos por el mar.'],
+    ['Crucero por el Mediterráneo', 'cruise', [10, 38], 'Varios países en un solo viaje, sin trasbordos.']
   ];
-  const typeName = { all: 'Wszystkie', beach: 'Plaże', city: 'Miasta', mount: 'Góry i przyroda', cruise: 'Rejsy' };
+  const typeName = { all: 'Todos', beach: 'Playas', city: 'Ciudades', mount: 'Montañas y naturaleza', cruise: 'Cruceros' };
   const typeBg = { beach: 'bg-azure-grad', city: 'bg-gold-grad', mount: 'bg-mint-grad', cruise: 'bg-teal-grad' };
   const art = { beach: 'balloon', city: 'plane', mount: 'balloon', cruise: 'ship' };
-  const origin = { name: 'Warszawa', ll: [21, 52] };
+  const origin = { name: 'Varsovia', ll: [21, 52] };
   let filter = 'all', selected = null;
 
   const pinsG = document.getElementById('pins'), arc = document.getElementById('arc'), plane = document.getElementById('mapPlane'), info = document.getElementById('infoCard');
   const [ox, oy] = P(origin.ll);
-  document.getElementById('origin').innerHTML = `<circle cx="${ox}" cy="${oy}" r="8" fill="#BAE6FD"/><circle cx="${ox}" cy="${oy}" r="4" fill="#0B3C5D"/><text x="${ox + 12}" y="${oy - 8}" fill="#BAE6FD" font-size="14" font-family="Onest">Ty: ${origin.name}</text>`;
+  document.getElementById('origin').innerHTML = `<circle cx="${ox}" cy="${oy}" r="8" fill="#BAE6FD"/><circle cx="${ox}" cy="${oy}" r="4" fill="#0B3C5D"/><text x="${ox + 12}" y="${oy - 8}" fill="#BAE6FD" font-size="14" font-family="Onest">Tú: ${origin.name}</text>`;
 
   function renderPins() {
     pinsG.innerHTML = dest.map((d, i) => {
@@ -125,7 +125,7 @@
   function selectDest(i) {
     selected = i; const d = dest[i];
     renderPins();
-    info.innerHTML = `<p class="font-display text-lg font-semibold">${d[0]}</p><p class="mt-1 text-sm">${d[3]}</p><a href="contacts.html" class="mt-3 inline-block rounded-full bg-ocean px-4 py-2 text-sm font-semibold text-gold">Chcę tam</a>`;
+    info.innerHTML = `<p class="font-display text-lg font-semibold">${d[0]}</p><p class="mt-1 text-sm">${d[3]}</p><a href="contacts.html" class="mt-3 inline-block rounded-full bg-ocean px-4 py-2 text-sm font-semibold text-gold">Quiero ir aquí</a>`;
     const [x, y] = P(d[2]), mx = (ox + x) / 2, my = Math.min(oy, y) - 70 - Math.abs(x - ox) * .12;
     arc.setAttribute('d', `M${ox},${oy} Q${mx},${my} ${x},${y}`);
     flyPlane();
@@ -157,14 +157,14 @@
     document.getElementById('cards').innerHTML = dest.map((d, i) => ({ d, i })).filter(({ d }) => filter === 'all' || d[1] === filter).map(({ d, i }, n) => `
       <article class="reveal in overflow-hidden rounded-3xl bg-ocean text-pale shadow-soft transition hover:-translate-y-1.5" style="--d:${n * 50}ms">
         <div class="relative h-36 ${typeBg[d[1]]}"><div class="a-float absolute bottom-3 left-5 h-14 w-24" style="--dl:-${n}s"><span data-art="${art[d[1]]}"></span></div><span class="absolute right-4 top-4 rounded-full bg-ocean px-3 py-1 text-xs font-semibold text-gold">${typeName[d[1]]}</span></div>
-        <div class="p-6"><h3 class="text-lg font-semibold text-gold">${d[0]}</h3><p class="mt-2 text-sm">${d[3]}</p><button data-show="${i}" class="mt-4 rounded-full border border-gold px-4 py-2 text-sm font-semibold text-gold transition hover:bg-gold hover:text-ocean">Pokaż na mapie</button></div>
+        <div class="p-6"><h3 class="text-lg font-semibold text-gold">${d[0]}</h3><p class="mt-2 text-sm">${d[3]}</p><button data-show="${i}" class="mt-4 rounded-full border border-gold px-4 py-2 text-sm font-semibold text-gold transition hover:bg-gold hover:text-ocean">Mostrar en el mapa</button></div>
       </article>`).join('');
     document.querySelectorAll('#cards [data-art]').forEach(el => el.innerHTML = window.__ART ? window.__ART[el.dataset.art] : '');
   }
   document.getElementById('cards').addEventListener('click', e => { const b = e.target.closest('[data-show]'); if (!b) return; selectDest(+b.dataset.show); document.getElementById('map').scrollIntoView({ behavior: 'smooth', block: 'center' }); });
 
   renderFilters(); renderPins(); renderCards();
-  info.innerHTML = '<p class="font-medium">Kliknij punkt na mapie, aby zobaczyć kierunek.</p>';
+  info.innerHTML = '<p class="font-medium">Haz clic en un punto del mapa para ver el destino.</p>';
 </script>
 <script src="../assets/site.js"></script>
 <script>renderCards();</script>

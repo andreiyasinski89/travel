@@ -95,10 +95,104 @@
   "Имя": "Imię",
   "Контакт": "Kontakt",
   "Пожелания": "Uwagi"
+ },
+ "de": {
+  "Главная": "Startseite",
+  "О клубе": "Über uns",
+  "Программы": "Programme",
+  "Направления": "Reiseziele",
+  "Как это работает": "So funktioniert’s",
+  "Контакты": "Kontakt",
+  "Клуб умных<br>путешествий": "Club für kluges<br>Reisen",
+  "Язык": "Sprache",
+  "Основная навигация": "Hauptnavigation",
+  "Вступить в клуб": "Dem Club beitreten",
+  "Открыть меню": "Menü öffnen",
+  "Здравствуйте! Хочу узнать о Клубе умных путешествий.": "Guten Tag! Ich möchte mehr über den Club für kluges Reisen erfahren.",
+  "Мы в соцсетях": "Wir in den sozialen Netzwerken",
+  "Написать в WhatsApp": "Per WhatsApp schreiben",
+  "Клуб умных путешествий": "Club für kluges Reisen",
+  "Закрытый клуб для тех, кто хочет видеть мир больше и платить за это меньше. Умные маршруты, честные цены и сообщество попутчиков.": "Ein privater Club für alle, die mehr von der Welt sehen und dafür weniger bezahlen möchten. Smarte Routen, ehrliche Preise und eine Community von Mitreisenden.",
+  "Разделы": "Bereiche",
+  "Связь": "Kontaktdaten",
+  "Независимый информационный сайт партнёра MWR Life. Не является официальным сайтом компании MWR Life. Материалы носят ознакомительный характер и не являются публичной офертой; условия, цены и доступность услуг уточняйте на официальном сайте компании.": "Eine unabhängige Informationswebsite eines MWR-Life-Partners. Sie ist nicht die offizielle Website von MWR Life. Die Inhalte dienen nur der Information und stellen kein öffentliches Angebot dar; Bedingungen, Preise und Verfügbarkeit von Leistungen prüfen Sie bitte auf der offiziellen Website des Unternehmens.",
+  "Правовая информация": "Rechtliche Hinweise",
+  "Политика конфиденциальности": "Datenschutzerklärung",
+  "Политика cookie": "Cookie-Richtlinie",
+  "Настройки cookie": "Cookie-Einstellungen",
+  "Клуб умных путешествий. Все права защищены.": "Club für kluges Reisen. Alle Rechte vorbehalten.",
+  "Отправляем…": "Wird gesendet…",
+  "Спасибо! Заявка отправлена, мы свяжемся с вами.": "Vielen Dank! Ihre Anfrage wurde gesendet, wir melden uns bei Ihnen.",
+  "Заявка в Клуб умных путешествий": "Anfrage an den Club für kluges Reisen",
+  "Мы ценим вашу приватность": "Wir respektieren Ihre Privatsphäre",
+  "Сайт использует только необходимые технические данные, например запоминает ваш выбор по cookie. Аналитические и маркетинговые cookie мы включаем только с вашего согласия. Подробнее:": "Diese Website verwendet nur notwendige technische Daten, zum Beispiel merkt sie sich Ihre Cookie-Auswahl. Analyse- und Marketing-Cookies aktivieren wir nur mit Ihrer Einwilligung. Mehr dazu:",
+  "политика cookie": "Cookie-Richtlinie",
+  "и": "und",
+  "политика конфиденциальности": "Datenschutzerklärung",
+  "Необходимые": "Notwendig",
+  "Нужны для работы сайта и сохранения вашего выбора. Всегда включены.": "Erforderlich für den Betrieb der Website und das Speichern Ihrer Auswahl. Immer aktiv.",
+  "Аналитические": "Analyse",
+  "Помогают понять, как посетители пользуются сайтом. Сейчас на сайте не используются.": "Helfen zu verstehen, wie Besucher die Website nutzen. Derzeit auf dieser Website nicht im Einsatz.",
+  "Маркетинговые": "Marketing",
+  "Нужны для персонализированной рекламы. Сейчас на сайте не используются.": "Erforderlich für personalisierte Werbung. Derzeit auf dieser Website nicht im Einsatz.",
+  "Принять все": "Alle akzeptieren",
+  "Только необходимые": "Nur notwendige",
+  "Настроить": "Anpassen",
+  "Сохранить выбор": "Auswahl speichern",
+  "Имя": "Name",
+  "Контакт": "Kontakt",
+  "Пожелания": "Anmerkungen"
+ },
+ "es": {
+  "Главная": "Inicio",
+  "О клубе": "Sobre el club",
+  "Программы": "Programas",
+  "Направления": "Destinos",
+  "Как это работает": "Cómo funciona",
+  "Контакты": "Contacto",
+  "Клуб умных<br>путешествий": "Club de Viajes<br>Inteligentes",
+  "Язык": "Idioma",
+  "Основная навигация": "Navegación principal",
+  "Вступить в клуб": "Unirse al club",
+  "Открыть меню": "Abrir menú",
+  "Здравствуйте! Хочу узнать о Клубе умных путешествий.": "¡Hola! Quiero saber más sobre el Club de Viajes Inteligentes.",
+  "Мы в соцсетях": "Estamos en redes sociales",
+  "Написать в WhatsApp": "Escribir por WhatsApp",
+  "Клуб умных путешествий": "Club de Viajes Inteligentes",
+  "Закрытый клуб для тех, кто хочет видеть мир больше и платить за это меньше. Умные маршруты, честные цены и сообщество попутчиков.": "Un club privado para quienes quieren ver más mundo y pagar menos por ello. Rutas inteligentes, precios honestos y una comunidad de compañeros de viaje.",
+  "Разделы": "Secciones",
+  "Связь": "Datos de contacto",
+  "Независимый информационный сайт партнёра MWR Life. Не является официальным сайтом компании MWR Life. Материалы носят ознакомительный характер и не являются публичной офертой; условия, цены и доступность услуг уточняйте на официальном сайте компании.": "Sitio web informativo independiente de un socio de MWR Life. No es el sitio web oficial de la empresa MWR Life. Los materiales tienen carácter informativo y no constituyen una oferta pública; consulta las condiciones, los precios y la disponibilidad de los servicios en el sitio web oficial de la empresa.",
+  "Правовая информация": "Información legal",
+  "Политика конфиденциальности": "Política de privacidad",
+  "Политика cookie": "Política de cookies",
+  "Настройки cookie": "Configuración de cookies",
+  "Клуб умных путешествий. Все права защищены.": "Club de Viajes Inteligentes. Todos los derechos reservados.",
+  "Отправляем…": "Enviando…",
+  "Спасибо! Заявка отправлена, мы свяжемся с вами.": "¡Gracias! Tu solicitud ha sido enviada, nos pondremos en contacto contigo.",
+  "Заявка в Клуб умных путешествий": "Solicitud al Club de Viajes Inteligentes",
+  "Мы ценим вашу приватность": "Valoramos tu privacidad",
+  "Сайт использует только необходимые технические данные, например запоминает ваш выбор по cookie. Аналитические и маркетинговые cookie мы включаем только с вашего согласия. Подробнее:": "Este sitio utiliza solo los datos técnicos necesarios, por ejemplo, recuerda tu elección sobre las cookies. Activamos las cookies analíticas y de marketing solo con tu consentimiento. Más información:",
+  "политика cookie": "política de cookies",
+  "и": "y",
+  "политика конфиденциальности": "política de privacidad",
+  "Необходимые": "Necesarias",
+  "Нужны для работы сайта и сохранения вашего выбора. Всегда включены.": "Necesarias para que el sitio funcione y para guardar tu elección. Siempre activas.",
+  "Аналитические": "Analíticas",
+  "Помогают понять, как посетители пользуются сайтом. Сейчас на сайте не используются.": "Ayudan a entender cómo usan el sitio los visitantes. Actualmente no se usan en este sitio.",
+  "Маркетинговые": "De marketing",
+  "Нужны для персонализированной рекламы. Сейчас на сайте не используются.": "Necesarias para la publicidad personalizada. Actualmente no se usan en este sitio.",
+  "Принять все": "Aceptar todas",
+  "Только необходимые": "Solo las necesarias",
+  "Настроить": "Personalizar",
+  "Сохранить выбор": "Guardar elección",
+  "Имя": "Nombre",
+  "Контакт": "Contacto",
+  "Пожелания": "Comentarios"
  }
 };
   const T = (ru, en) => (LANG === 'ru' ? ru : LANG === 'en' ? en : ((D[LANG] && D[LANG][ru]) || en));
-  const LOCALE = { ru: 'ru-RU', en: 'en-US', uk: 'uk-UA', pl: 'pl-PL' }[LANG] || 'ru-RU';
+  const LOCALE = { ru: 'ru-RU', en: 'en-US', uk: 'uk-UA', pl: 'pl-PL', de: 'de-DE', es: 'es-ES' }[LANG] || 'ru-RU';
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- SVG art ---------- */
@@ -123,7 +217,7 @@
   ];
   let page = location.pathname.split('/').pop();
   page = !page ? 'index.html' : (/\.html$/.test(page) ? page : page + '.html');
-  const LANGS = [['ru', 'RU', 'Русский'], ['en', 'EN', 'English'], ['uk', 'UA', 'Українська'], ['pl', 'PL', 'Polski']];
+  const LANGS = [['ru', 'RU', 'Русский'], ['en', 'EN', 'English'], ['uk', 'UA', 'Українська'], ['pl', 'PL', 'Polski'], ['de', 'DE', 'Deutsch'], ['es', 'ES', 'Español']];
   const langHref = code => (LANG === 'ru' ? '' : '../') + (code === 'ru' ? '' : code + '/') + page + location.hash;
   const navLinks = (cls, active) => links.map(([h, t]) =>
     `<a href="${h}" class="${cls} ${h === page ? active : ''}">${t}</a>`).join('');
@@ -356,16 +450,23 @@
 
   /* ---------- language suggestion (never redirects automatically) ---------- */
   const LANG_KEY = 'clubLang';
-  const SUPPORTED = ['ru', 'en', 'uk', 'pl'];
+  const SUPPORTED = ['ru', 'en', 'uk', 'pl', 'de', 'es'];
   function getStoredLang() { try { return localStorage.getItem(LANG_KEY); } catch (e) { return null; } }
   function setStoredLang(v) { try { localStorage.setItem(LANG_KEY, v); } catch (e) {} }
   const SUG = {
     ru: { q: 'Открыть сайт на русском?', go: 'Перейти на русский', stay: 'Остаться здесь', aria: 'Выбор языка' },
     en: { q: 'View this site in English?', go: 'Switch to English', stay: 'Stay here', aria: 'Language suggestion' },
     uk: { q: 'Переглянути сайт українською?', go: 'Перейти на українську', stay: 'Залишитися тут', aria: 'Вибір мови' },
-    pl: { q: 'Czy wyświetlić stronę po polsku?', go: 'Przejdź na polski', stay: 'Zostań tutaj', aria: 'Wybór języka' }
+    pl: { q: 'Czy wyświetlić stronę po polsku?', go: 'Przejdź na polski', stay: 'Zostań tutaj', aria: 'Wybór języka' },
+    de: { q: 'Diese Website auf Deutsch anzeigen?', go: 'Zu Deutsch wechseln', stay: 'Hier bleiben', aria: 'Sprachvorschlag' },
+    es: { q: '¿Ver este sitio en español?', go: 'Cambiar a español', stay: 'Quedarme aquí', aria: 'Sugerencia de idioma' }
   };
-  const COUNTRY_LANG = { PL: 'pl', UA: 'uk', RU: 'ru', BY: 'ru', KZ: 'ru' };
+  const COUNTRY_LANG = {
+    PL: 'pl', UA: 'uk', RU: 'ru', BY: 'ru', KZ: 'ru',
+    DE: 'de', AT: 'de', CH: 'de', LI: 'de',
+    ES: 'es', MX: 'es', AR: 'es', CO: 'es', CL: 'es', PE: 'es', VE: 'es', EC: 'es', GT: 'es', CU: 'es', BO: 'es',
+    DO: 'es', HN: 'es', PY: 'es', SV: 'es', NI: 'es', CR: 'es', PA: 'es', UY: 'es', PR: 'es', GQ: 'es'
+  };
   const GEO_SERVICES = [
     ['https://api.country.is/', j => j && j.country],
     ['https://ipwho.is/?fields=success,country_code', j => j && j.success !== false && j.country_code]
