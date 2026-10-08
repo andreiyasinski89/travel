@@ -346,9 +346,90 @@
       else if (e.key === 'Escape') { e.preventDefault(); close(true); }
       else if (e.key === 'Tab') close(false);
     });
-    list.addEventListener('click', e => { const a = e.target.closest('a'); if (a && a.getAttribute('href') === '#') { e.preventDefault(); close(true); } });
+    list.addEventListener('click', e => {
+      const a = e.target.closest('a'); if (!a) return;
+      if (a.getAttribute('hreflang')) setStoredLang(a.getAttribute('hreflang'));
+      if (a.getAttribute('href') === '#') { e.preventDefault(); close(true); }
+    });
     document.addEventListener('click', e => { if (!e.target.closest('#langMenu')) close(false); });
   })();
+
+  /* ---------- language suggestion (never redirects automatically) ---------- */
+  const LANG_KEY = 'clubLang';
+  const SUPPORTED = ['ru', 'en', 'uk', 'pl'];
+  function getStoredLang() { try { return localStorage.getItem(LANG_KEY); } catch (e) { return null; } }
+  function setStoredLang(v) { try { localStorage.setItem(LANG_KEY, v); } catch (e) {} }
+  const SUG = {
+    ru: { q: 'Открыть сайт на русском?', go: 'Перейти на русский', stay: 'Остаться здесь', aria: 'Выбор языка' },
+    en: { q: 'View this site in English?', go: 'Switch to English', stay: 'Stay here', aria: 'Language suggestion' },
+    uk: { q: 'Переглянути сайт українською?', go: 'Перейти на українську', stay: 'Залишитися тут', aria: 'Вибір мови' },
+    pl: { q: 'Czy wyświetlić stronę po polsku?', go: 'Przejdź na polski', stay: 'Zostań tutaj', aria: 'Wybór języka' }
+  };
+  const COUNTRY_LANG = { PL: 'pl', UA: 'uk', RU: 'ru', BY: 'ru', KZ: 'ru' };
+  const GEO_SERVICES = [
+    ['https://api.country.is/', j => j && j.country],
+    ['https://ipwho.is/?fields=success,country_code', j => j && j.success !== false && j.country_code]
+  ];
+
+  // 1st step: the first supported language in navigator.languages
+  function langFromBrowser() {
+    const list = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];
+    for (const l of list) {
+      const primary = String(l).toLowerCase().split('-')[0];
+      if (SUPPORTED.includes(primary)) return primary;
+    }
+    return null;
+  }
+  // 2nd step: only when the browser language is not supported — country by IP (free services, short timeout)
+  async function countryByIp() {
+    try { const c = sessionStorage.getItem('clubGeo'); if (c) return c === '-' ? null : c; } catch (e) {}
+    for (const [url, pick] of GEO_SERVICES) {
+      try {
+        const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), 3500);
+        const r = await fetch(url, { signal: ctl.signal, credentials: 'omit', referrerPolicy: 'no-referrer' });
+        clearTimeout(timer);
+        if (!r.ok) continue;
+        const code = String(pick(await r.json()) || '').toUpperCase();
+        if (/^[A-Z]{2}$/.test(code)) { try { sessionStorage.setItem('clubGeo', code); } catch (e) {} return code; }
+      } catch (e) { /* try the next service */ }
+    }
+    try { sessionStorage.setItem('clubGeo', '-'); } catch (e) {}
+    return null;
+  }
+  async function detectLang() {
+    const fromBrowser = langFromBrowser();
+    if (fromBrowser) return fromBrowser;
+    const country = await countryByIp();
+    return country ? (COUNTRY_LANG[country] || 'en') : null;
+  }
+  function showLangSuggestion(target) {
+    if (document.getElementById('langSuggest')) return;
+    const t = SUG[target];
+    const box = document.createElement('div');
+    box.id = 'langSuggest';
+    box.setAttribute('role', 'region'); box.setAttribute('aria-label', t.aria); box.setAttribute('lang', target);
+    box.className = 'fixed left-3 right-3 top-[9.5rem] z-[55] rounded-2xl bg-ocean p-4 text-pale shadow-soft ring-1 ring-pale/25 sm:left-1/2 sm:right-auto sm:top-[5.75rem] sm:w-[30rem] sm:-translate-x-1/2';
+    box.innerHTML = `<p class="font-semibold text-gold">${t.q}</p>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <a data-lang-go href="${langHref(target)}" hreflang="${target}" class="inline-flex min-h-[44px] items-center rounded-full bg-gold px-5 py-2 text-sm font-semibold text-ocean transition hover:bg-gold-dark">${t.go}</a>
+        <button type="button" data-lang-stay class="min-h-[44px] rounded-full border-2 border-pale/50 px-5 py-2 text-sm font-semibold text-pale transition hover:border-gold hover:text-gold">${t.stay}</button>
+      </div>`;
+    document.body.appendChild(box);
+    const stay = () => { setStoredLang(LANG); box.remove(); };
+    box.querySelector('[data-lang-go]').addEventListener('click', () => setStoredLang(target));
+    box.querySelector('[data-lang-stay]').addEventListener('click', stay);
+    box.addEventListener('keydown', e => { if (e.key === 'Escape') stay(); });
+  }
+  async function runLangSuggest() {
+    if (getStoredLang()) return;                                                     // the user has already chosen: never ask again
+    if (/bot|crawl|spider|slurp|facebookexternalhit|lighthouse/i.test(navigator.userAgent || '')) return;
+    const target = await detectLang();
+    if (!target || target === LANG || getStoredLang()) return;
+    showLangSuggestion(target);
+  }
+  window.clubLang = { run: runLangSuggest, detect: detectLang, fromBrowser: langFromBrowser, country: countryByIp };
+  if (document.readyState === 'complete') setTimeout(runLangSuggest, 800);
+  else addEventListener('load', () => setTimeout(runLangSuggest, 800));
 
   /* ---------- cookie consent ---------- */
   const CKEY = 'clubConsent', CV = 1;
