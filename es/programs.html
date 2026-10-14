@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Programas — Club de Viajes Inteligentes</title>
-<meta name="description" content="Formatos de membresía, puntos acumulables y viajes de autor del Club de Viajes Inteligentes.">
+<meta name="description" content="Membresías Travel Advantage™ Elite y Turbo Travel Advantage™: precio, cuotas y qué incluye cada programa.">
 <link rel="canonical" href="https://clever-travel.club/es/programs.html">
 <link rel="alternate" hreflang="ru" href="https://clever-travel.club/programs.html">
 <link rel="alternate" hreflang="en" href="https://clever-travel.club/en/programs.html">
@@ -23,12 +23,10 @@
 <script src="../assets/tw.js"></script>
 <link rel="stylesheet" href="../assets/site.css">
 <style>
-  input[type=range] { -webkit-appearance: none; appearance: none; height: 10px; border-radius: 9999px; background: #0B3C5D; outline-offset: 6px; }
-  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 30px; height: 30px; border-radius: 9999px; background: #F5B83D; border: 4px solid #0B3C5D; cursor: grab; }
-  input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 9999px; background: #F5B83D; border: 4px solid #0B3C5D; cursor: grab; }
-  .glow-border { position: relative; }
-  .glow-border::before { content: ""; position: absolute; inset: -3px; border-radius: 2rem; background: conic-gradient(from 0deg, #F5B83D, #10B981, #0EA5E9, #F5B83D); animation: spin 6s linear infinite; z-index: 0; }
-  .glow-border > * { position: relative; z-index: 1; }
+  .glow-border { position: relative; overflow: hidden; padding: 3px; isolation: isolate; }
+  .glow-border::before { content: ""; position: absolute; left: 50%; top: 50%; width: 220%; aspect-ratio: 1; background: conic-gradient(from 0deg, #F5B83D, #10B981, #0EA5E9, #F5B83D); transform: translate(-50%, -50%); animation: glowSpin 6s linear infinite; z-index: -1; }
+  @keyframes glowSpin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+  .plan-card { background-image: linear-gradient(135deg, rgba(255,255,255,0) 40%, rgba(255,255,255,.18) 50%, rgba(255,255,255,0) 60%); }
   @media (prefers-reduced-motion: reduce) { .glow-border::before { animation: none; } }
 </style>
 </head>
@@ -36,7 +34,8 @@
 <div id="site-header"></div>
 <main>
 
-<section class="relative overflow-hidden bg-sky-grad px-4 pb-24 pt-36 sm:px-6">
+<!-- HERO -->
+<section class="relative overflow-hidden bg-sky-grad px-4 pb-20 pt-36 sm:px-6">
   <div class="pointer-events-none absolute inset-0" aria-hidden="true">
     <div class="a-cloud h-14 w-36" style="top:18%;--t:65s;--dl:-12s"><span data-art="cloud"></span></div>
     <div class="absolute right-[6%] top-28 h-24 w-16 a-balloon sm:h-40 sm:w-28"><span data-art="balloon"></span></div>
@@ -44,109 +43,113 @@
   </div>
   <div class="relative mx-auto max-w-6xl">
     <p class="reveal text-sm font-semibold uppercase tracking-widest text-ocean">Programas</p>
-    <h1 class="reveal mt-4 max-w-3xl text-3xl font-bold leading-tight text-ocean sm:text-5xl" style="--d:80ms">Elige tu <span class="shine-text">clase de viaje</span></h1>
-    <p class="reveal mt-6 max-w-2xl text-lg text-ink" style="--d:160ms">La membresía del club se basa en un depósito-suscripción: aportas una cantidad y se convierte en puntos con los que se pagan los viajes. Cuanto más alto es el formato, más posibilidades.</p>
+    <h1 class="reveal mt-4 max-w-3xl text-3xl font-bold leading-tight text-ocean sm:text-5xl" style="--d:80ms">Elige tu membresía</h1>
+    <p class="reveal mt-6 max-w-2xl text-lg text-ink" style="--d:160ms">Dos formatos: Elite y Turbo. A continuación: de qué se compone el precio de cada uno y qué incluye.</p>
   </div>
 </section>
 
-<!-- TIERS -->
-<section class="bg-mint-grad px-4 py-20 sm:px-6 lg:py-28">
-  <div class="mx-auto grid max-w-6xl items-stretch gap-6 lg:grid-cols-3" id="tiers"></div>
-  <p class="mx-auto mt-8 max-w-6xl text-center text-sm text-muted">El precio y las condiciones exactas de cada formato consúltalos con un asesor del club.</p>
-</section>
+<!-- PLANS -->
+<section id="plans" class="bg-mint-grad px-4 py-20 sm:px-6 lg:py-28">
+  <div class="mx-auto grid max-w-6xl grid-cols-1 items-stretch gap-8 lg:grid-cols-2">
 
-<!-- CALCULATOR -->
-<section class="relative overflow-hidden bg-gold-grad px-4 py-20 sm:px-6 lg:py-28">
-  <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
-    <div class="reveal-left">
-      <h2 class="text-2xl font-bold text-ocean sm:text-4xl">Puntos en lugar de efectivo</h2>
-      <p class="mt-5 text-lg text-ink">Un punto equivale a un dólar al pagar los viajes. En el formato superior los puntos se acreditan con bonificación: pruébalo tú mismo y verás la diferencia.</p>
-      <div class="mt-8 h-24 w-24 a-float"><span data-art="compass"></span></div>
-    </div>
-    <div class="reveal-right rounded-3xl bg-ocean p-7 text-pale shadow-soft sm:p-9">
-      <label for="amt" class="font-semibold text-gold">Importe del depósito: <output id="amtOut" class="font-display">500</output> $</label>
-      <input id="amt" type="range" min="100" max="5000" step="100" value="500" class="mt-4 w-full">
-      <div class="mt-8 space-y-5">
-        <div><p class="mb-1 flex justify-between text-sm"><span>Explorador y Navegante</span><span id="p1" class="font-semibold text-gold">500 puntos</span></p><div class="h-4 rounded-full bg-pale/20"><div id="b1" class="h-4 rounded-full bg-aqua transition-all duration-500" style="width:10%"></div></div></div>
-        <div><p class="mb-1 flex justify-between text-sm"><span>Capitán (con bonificación)</span><span id="p2" class="font-semibold text-gold">1000 puntos</span></p><div class="h-4 rounded-full bg-pale/20"><div id="b2" class="h-4 rounded-full bg-gradient-to-r from-emerald to-gold transition-all duration-500" style="width:20%"></div></div></div>
+    <!-- ELITE -->
+    <article class="reveal flex h-full flex-col rounded-[2rem] bg-ocean p-7 text-pale shadow-soft sm:p-9">
+      <div class="flex items-start justify-between gap-3">
+        <div class="min-w-0">
+          <h2 class="font-display text-xl font-bold text-gold sm:text-2xl">Travel Advantage™ Elite</h2>
+          <p class="mt-4 font-display text-4xl font-bold text-pale sm:text-5xl">$239.97</p>
+        </div>
+        <div class="plan-card h-16 w-24 shrink-0 sm:h-20 sm:w-32 rotate-3 rounded-xl bg-gradient-to-br from-violet-800 to-fuchsia-500 p-3 shadow-soft" aria-hidden="true"><span class="font-display text-xs font-bold tracking-widest text-sand">ELITE</span></div>
       </div>
-      <p class="mt-6 text-xs opacity-80">Ilustración del mecanismo. Las condiciones exactas de acreditación consúltalas con un asesor.</p>
+
+      <h3 class="mt-8 text-sm font-semibold uppercase tracking-widest text-gold">De qué se compone el precio</h3>
+      <dl class="mt-3 divide-y divide-pale/20 text-sm">
+        <div class="flex items-center justify-between gap-4 py-3"><dt>Cuota única por la activación de la membresía</dt><dd class="shrink-0 font-semibold text-gold">$120</dd></div>
+        <div class="flex items-center justify-between gap-4 py-3"><dt>Cuota mensual de la membresía Elite</dt><dd class="shrink-0 font-semibold text-gold">$119.97</dd></div>
+        <div class="flex items-center justify-between gap-4 py-3 text-base"><dt class="font-semibold">Total</dt><dd class="shrink-0 font-display font-bold text-gold">$239.97</dd></div>
+      </dl>
+
+      <h3 class="mt-8 text-sm font-semibold uppercase tracking-widest text-gold">Qué incluye</h3>
+      <ul class="mt-4 flex-1 space-y-4 text-sm">
+        <li class="flex gap-3"><span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold text-ocean"><svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><span>Acceso a casi <strong class="text-gold">2 000 000 de ofertas de viaje</strong> de todo el mundo</span></li>
+        <li class="flex gap-3"><span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold text-ocean"><svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><span><strong class="text-gold">Acceso ilimitado</strong> a la plataforma Travel Advantage™ y a Lifestyle Mall</span></li>
+        <li class="flex gap-3"><span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold text-ocean"><svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><span><strong class="text-gold">120 puntos de fidelidad</strong> al mes</span></li>
+        <li class="flex gap-3"><span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold text-ocean"><svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><span><strong class="text-gold">50 pases de invitado</strong> al registrarte y <strong class="text-gold">20 pases de invitado GRATUITOS</strong> al mes</span></li>
+      </ul>
+    </article>
+
+    <!-- TURBO -->
+    <div class="reveal glow-border rounded-[2.2rem]" style="--d:120ms">
+      <article class="flex h-full flex-col rounded-[2rem] bg-deep p-7 text-pale shadow-soft sm:p-9">
+        <div class="flex items-start justify-between gap-3">
+          <div class="min-w-0">
+            <h2 class="font-display text-xl font-bold text-gold sm:text-2xl">Turbo Travel Advantage™</h2>
+            <p class="mt-4 font-display text-4xl font-bold text-pale sm:text-5xl">$489.94</p>
+          </div>
+          <div class="plan-card h-16 w-24 shrink-0 sm:h-20 sm:w-32 -rotate-3 rounded-xl bg-gradient-to-br from-orange-600 to-amber-400 p-3 shadow-soft" aria-hidden="true"><span class="font-display text-xs font-bold tracking-widest text-ocean">TURBO</span></div>
+        </div>
+
+        <h3 class="mt-8 text-sm font-semibold uppercase tracking-widest text-gold">De qué se compone el precio</h3>
+        <dl class="mt-3 divide-y divide-pale/20 text-sm">
+          <div class="flex items-center justify-between gap-4 py-3"><dt>Cuota única por la activación de la membresía</dt><dd class="shrink-0 font-semibold text-gold">$120</dd></div>
+          <div class="flex items-center justify-between gap-4 py-3"><dt>Cuota mensual de Turbo Travel Advantage</dt><dd class="shrink-0 font-semibold text-gold">$119.97</dd></div>
+          <div class="flex items-center justify-between gap-4 py-3"><dt>Actualización única a Turbo</dt><dd class="shrink-0 font-semibold text-gold">$249.97</dd></div>
+          <div class="flex items-center justify-between gap-4 py-3 text-base"><dt class="font-semibold">Total</dt><dd class="shrink-0 font-display font-bold text-gold">$489.94</dd></div>
+        </dl>
+
+        <h3 class="mt-8 text-sm font-semibold uppercase tracking-widest text-gold">Qué incluye</h3>
+        <p class="mt-4 rounded-xl bg-gold px-4 py-2.5 text-sm font-semibold text-ocean">Todo lo que tiene Elite, y además:</p>
+        <ul class="mt-4 flex-1 space-y-4 text-sm">
+          <li class="flex gap-3"><span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold text-ocean"><svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><span><strong class="text-gold">Puntos de fidelidad dobles</strong> cada mes</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold text-ocean"><svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><span>Recibe al instante <strong class="text-gold">250 puntos de fidelidad extra</strong></span></li>
+          <li class="flex gap-3"><span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold text-ocean"><svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><span>Añade <strong class="text-gold">1500 pases de invitado</strong> a tu cuenta</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold text-ocean"><svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><span>Acceso a <strong class="text-gold">ofertas de hotel exclusivas</strong> para miembros de Turbo</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold text-ocean"><svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><span>Aplica hasta <strong class="text-gold">100 puntos de fidelidad</strong> por un segundo invitado al reservar Life Experience®</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold text-ocean"><svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><span>Aprovecha la opción <strong class="text-gold">Flex Traveller</strong> cada 6 meses</span></li>
+        </ul>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- COMPARE -->
+<!-- COMPARISON -->
 <section class="bg-sky-grad px-4 py-20 sm:px-6 lg:py-28">
   <div class="mx-auto max-w-5xl">
-    <h2 class="reveal text-center text-2xl font-bold text-ocean sm:text-4xl">Comparación de formatos</h2>
+    <h2 class="reveal text-center text-2xl font-bold text-ocean sm:text-4xl">Comparación de programas</h2>
     <div class="reveal mt-10 overflow-x-auto rounded-3xl bg-ocean shadow-soft">
-      <table class="w-full min-w-[560px] text-left text-sm text-pale" id="cmp"></table>
+      <table class="w-full min-w-[680px] text-left text-sm text-pale">
+        <thead><tr class="text-gold"><th class="p-4">Qué incluye</th><th class="p-4 text-center">Elite</th><th class="p-4 text-center">Turbo</th></tr></thead>
+        <tbody>
+          <tr class="border-t border-pale/15"><td class="p-4">Cuota única por la activación de la membresía</td><td class="p-4 text-center font-semibold text-gold">$120</td><td class="p-4 text-center font-semibold text-gold">$120</td></tr>
+          <tr class="border-t border-pale/15"><td class="p-4">Cuota mensual</td><td class="p-4 text-center font-semibold text-gold">$119.97</td><td class="p-4 text-center font-semibold text-gold">$119.97</td></tr>
+          <tr class="border-t border-pale/15"><td class="p-4">Actualización única a Turbo</td><td class="p-4 text-center text-pale/50">—</td><td class="p-4 text-center font-semibold text-gold">$249.97</td></tr>
+          <tr class="border-t border-pale/15 bg-deep"><td class="p-4 font-semibold">Total</td><td class="p-4 text-center font-display font-bold text-gold">$239.97</td><td class="p-4 text-center font-display font-bold text-gold">$489.94</td></tr>
+          <tr class="border-t border-pale/15"><td class="p-4">Acceso a casi 2 000 000 de ofertas de viaje</td><td class="p-4 text-center text-gold"><svg class="mx-auto h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></td><td class="p-4 text-center text-gold"><svg class="mx-auto h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></td></tr>
+          <tr class="border-t border-pale/15"><td class="p-4">Acceso ilimitado a la plataforma Travel Advantage™ y a Lifestyle Mall</td><td class="p-4 text-center text-gold"><svg class="mx-auto h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></td><td class="p-4 text-center text-gold"><svg class="mx-auto h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></td></tr>
+          <tr class="border-t border-pale/15"><td class="p-4">Puntos de fidelidad al mes</td><td class="p-4 text-center font-semibold text-gold">120</td><td class="p-4 text-center font-semibold text-gold">Dobles</td></tr>
+          <tr class="border-t border-pale/15"><td class="p-4">Pases de invitado</td><td class="p-4 text-center">50 al registrarte y 20 gratuitos al mes</td><td class="p-4 text-center">Igual que Elite y 1500 más en tu cuenta</td></tr>
+          <tr class="border-t border-pale/15"><td class="p-4">250 puntos de fidelidad adicionales al instante</td><td class="p-4 text-center text-pale/50">—</td><td class="p-4 text-center text-gold"><svg class="mx-auto h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></td></tr>
+          <tr class="border-t border-pale/15"><td class="p-4">Ofertas de hotel exclusivas para miembros de Turbo</td><td class="p-4 text-center text-pale/50">—</td><td class="p-4 text-center text-gold"><svg class="mx-auto h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></td></tr>
+          <tr class="border-t border-pale/15"><td class="p-4">Hasta 100 puntos de fidelidad por un segundo invitado al reservar Life Experience®</td><td class="p-4 text-center text-pale/50">—</td><td class="p-4 text-center text-gold"><svg class="mx-auto h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></td></tr>
+          <tr class="border-t border-pale/15"><td class="p-4">Opción Flex Traveller cada 6 meses</td><td class="p-4 text-center text-pale/50">—</td><td class="p-4 text-center text-gold"><svg class="mx-auto h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></td></tr>
+        </tbody>
+      </table>
     </div>
+    <p class="reveal mt-5 text-center text-sm text-ink">Consulta las condiciones y los precios actuales en el sitio web oficial de la empresa.</p>
   </div>
 </section>
 
-<!-- TOURS -->
-<section class="bg-sunset px-4 py-20 sm:px-6 lg:py-28">
-  <div class="mx-auto max-w-6xl">
-    <div class="reveal max-w-2xl"><p class="text-sm font-semibold uppercase tracking-widest text-ocean">Life Experience</p><h2 class="mt-3 text-2xl font-bold text-ocean sm:text-4xl">Viajes de autor en grupo</h2><p class="mt-4 text-ink">Viajes exclusivos para miembros del club: programa bien pensado, condiciones cómodas y compañía con la que apetece seguir viajando.</p></div>
-    <div class="snap-row -mx-4 mt-10 flex gap-5 overflow-x-auto px-4 pb-6 sm:mx-0 sm:px-0" id="tours" tabindex="0" aria-label="Formatos de viaje"></div>
-  </div>
-</section>
-
+<!-- CTA -->
 <section class="bg-azure-grad px-4 py-20 text-center sm:px-6">
-  <h2 class="reveal text-2xl font-bold text-ocean sm:text-4xl">¿No sabes qué formato te conviene?</h2>
-  <p class="reveal mt-4 text-ink" style="--d:80ms">Un asesor elegirá una opción según tus objetivos y tu presupuesto.</p>
-  <a href="contacts.html" class="reveal mt-8 inline-flex min-h-[52px] items-center rounded-full bg-gold px-10 py-3 font-semibold text-ocean shadow-gold transition hover:-translate-y-0.5 hover:bg-gold-dark" style="--d:160ms">Pedir asesoramiento</a>
+  <h2 class="reveal text-2xl font-bold text-ocean sm:text-4xl">¿Es hora de elegir tu membresía?</h2>
+  <div class="reveal mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row" style="--d:120ms">
+    <a href="https://www.mwrlife.com/ayasinski/join" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-[52px] items-center rounded-full bg-gold px-10 py-3 font-semibold text-ocean shadow-gold transition hover:-translate-y-0.5 hover:bg-gold-dark">Unirse al club</a>
+    <a href="contacts.html" class="inline-flex min-h-[52px] items-center rounded-full border-2 border-ocean/40 px-10 py-3 font-semibold text-ocean transition hover:bg-ocean hover:text-gold">Pedir asesoramiento</a>
+  </div>
 </section>
 </main>
 <div id="site-footer"></div>
 
-<script>
-  const ok = '<svg class="mx-auto h-5 w-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>';
-  const no = '<span class="text-pale/50">—</span>';
-  const tiers = [
-    ['Explorador', 'Para los primeros pasos', ['Catálogo de hoteles, vuelos y coches', 'Precios mayoristas, sin recargos', 'Asistente de IA para rutas', 'Puntos acumulables'], 'bg-ocean text-pale', 'text-gold', false],
-    ['Navegante', 'El más popular', ['Todo lo de «Explorador»', 'Acceso a viajes en grupo', 'Asesor personal', 'Asistencia prioritaria 24/7'], 'bg-ocean-grad text-pale', 'text-gold', true],
-    ['Capitán', 'Máximas posibilidades', ['Todo lo de «Navegante»', 'Puntos de bonificación sobre el depósito', 'Ofertas exclusivas del club', 'Invitaciones a eventos'], 'bg-ocean text-pale', 'text-gold', false]
-  ];
-  document.getElementById('tiers').innerHTML = tiers.map(([t, s, f, c, h, hot], i) => `
-    <div class="reveal ${hot ? 'glow-border rounded-[2rem] lg:-mt-4 lg:mb-4' : ''}" style="--d:${i * 100}ms">
-      <article class="flex h-full flex-col rounded-[1.9rem] ${c} p-8 shadow-soft">
-        ${hot ? '<span class="mb-3 w-fit rounded-full bg-gold px-3 py-1 text-xs font-semibold text-ocean">La elección de los miembros</span>' : ''}
-        <h3 class="text-2xl font-bold ${h}">${t}</h3><p class="mt-1 text-sm opacity-80">${s}</p>
-        <ul class="mt-6 flex-1 space-y-3 text-sm">${f.map(x => `<li class="flex gap-3"><span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold text-ocean"><svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span>${x}</li>`).join('')}</ul>
-        <a href="contacts.html" class="mt-8 inline-flex min-h-[48px] items-center justify-center rounded-full bg-gold px-6 py-3 font-semibold text-ocean transition hover:bg-gold-dark">Ver condiciones</a>
-      </article>
-    </div>`).join('');
-
-  const rows = [['Catálogo y precios mayoristas', 1, 1, 1], ['Asistente de IA', 1, 1, 1], ['Puntos acumulables', 1, 1, 1], ['Viajes en grupo Life Experience', 0, 1, 1], ['Asesor personal', 0, 1, 1], ['Bonificación de puntos', 0, 0, 1], ['Ofertas y eventos exclusivos', 0, 0, 1]];
-  document.getElementById('cmp').innerHTML = `<thead><tr class="text-gold"><th class="p-4">Característica</th><th class="p-4 text-center">Explorador</th><th class="p-4 text-center">Navegante</th><th class="p-4 text-center">Capitán</th></tr></thead><tbody>` +
-    rows.map(r => `<tr class="border-t border-pale/15"><td class="p-4">${r[0]}</td>${r.slice(1).map(v => `<td class="p-4 text-center">${v ? ok : no}</td>`).join('')}</tr>`).join('') + '</tbody>';
-
-  const tours = [
-    ['Islas', 'Sol, océano y un ritmo sin prisas', 'bg-azure-grad'],
-    ['Montañas', 'Rutas activas y paisajes que quitan el aliento', 'bg-mint-grad'],
-    ['Crucero', 'Varios países en un solo viaje', 'bg-teal-grad'],
-    ['Ciudades', 'Cultura, gastronomía y arquitectura', 'bg-gold-grad']
-  ];
-  document.getElementById('tours').innerHTML = tours.map(([t, d, bg]) => `
-    <article class="w-[80%] shrink-0 overflow-hidden rounded-3xl bg-ocean shadow-soft sm:w-[44%] lg:w-[28%]">
-      <div class="relative h-40 ${bg}"><div class="a-float absolute bottom-3 left-6 h-14 w-24"><span data-art="${t === 'Crucero' ? 'ship' : t === 'Islas' ? 'plane' : t === 'Montañas' ? 'balloon' : 'train'}"></span></div></div>
-      <div class="p-6 text-pale"><h3 class="text-lg font-semibold text-gold">${t}</h3><p class="mt-1 text-sm">${d}</p></div>
-    </article>`).join('');
-
-  const amt = document.getElementById('amt');
-  const fmt = n => n.toLocaleString('es-ES');
-  function calc() {
-    const v = +amt.value;
-    document.getElementById('amtOut').textContent = fmt(v);
-    document.getElementById('p1').textContent = fmt(v) + ' puntos';
-    document.getElementById('p2').textContent = fmt(v * 2) + ' puntos';
-    document.getElementById('b1').style.width = (v / 5000 * 50) + '%';
-    document.getElementById('b2').style.width = (v / 5000 * 100) + '%';
-  }
-  amt.addEventListener('input', calc); calc();
-</script>
 <script src="../assets/site.js"></script>
 </body>
 </html>
