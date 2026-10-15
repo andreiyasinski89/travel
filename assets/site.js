@@ -9,6 +9,7 @@
   "Направления": "Напрямки",
   "Как это работает": "Як це працює",
   "Контакты": "Контакти",
+  "Тест": "Тест",
   "Клуб умных<br>путешествий": "Клуб розумних<br>подорожей",
   "Язык": "Мова",
   "Основная навигация": "Основна навігація",
@@ -41,6 +42,7 @@
   "Направления": "Kierunki",
   "Как это работает": "Jak to działa",
   "Контакты": "Kontakt",
+  "Тест": "Quiz",
   "Клуб умных<br>путешествий": "Klub Inteligentnych<br>Podróży",
   "Язык": "Język",
   "Основная навигация": "Nawigacja główna",
@@ -73,6 +75,7 @@
   "Направления": "Reiseziele",
   "Как это работает": "So funktioniert’s",
   "Контакты": "Kontakt",
+  "Тест": "Quiz",
   "Клуб умных<br>путешествий": "Club für kluges<br>Reisen",
   "Язык": "Sprache",
   "Основная навигация": "Hauptnavigation",
@@ -105,6 +108,7 @@
   "Направления": "Destinos",
   "Как это работает": "Cómo funciona",
   "Контакты": "Contacto",
+  "Тест": "Test",
   "Клуб умных<br>путешествий": "Club de Viajes<br>Inteligentes",
   "Язык": "Idioma",
   "Основная навигация": "Navegación principal",
@@ -153,7 +157,7 @@
   /* ---------- header & footer ---------- */
   const links = [
     ['index.html', T('Главная', 'Home')], ['about.html', T('О клубе', 'About')], ['programs.html', T('Программы', 'Programs')],
-    ['destinations.html', T('Направления', 'Destinations')], ['how.html', T('Как это работает', 'How it works')], ['contacts.html', T('Контакты', 'Contacts')]
+    ['destinations.html', T('Направления', 'Destinations')], ['how.html', T('Как это работает', 'How it works')], ['quiz.html', T('Тест', 'Quiz')], ['contacts.html', T('Контакты', 'Contacts')]
   ];
   let page = location.pathname.split('/').pop();
   page = !page ? 'index.html' : (/\.html$/.test(page) ? page : page + '.html');
@@ -183,7 +187,7 @@
     <div class="mx-auto mt-3 flex max-w-6xl items-center justify-between rounded-2xl glass px-4 py-2.5 shadow-soft sm:px-5" style="width:calc(100% - 1.5rem)">
       ${logo}
       <nav class="hidden items-center gap-1 text-sm font-medium text-ocean lg:flex" aria-label="${T('Основная навигация', 'Main navigation')}">
-        ${navLinks('whitespace-nowrap rounded-full px-2 py-2 text-[13px] transition hover:bg-gold/60 xl:px-3 xl:text-sm', 'bg-gold')}
+        ${navLinks('whitespace-nowrap rounded-full px-1.5 py-2 text-[13px] transition hover:bg-gold/60 xl:px-3 xl:text-sm', 'bg-gold')}
       </nav>
       ${langSwitch}
       <a href="https://www.mwrlife.com/ayasinski/join" target="_blank" rel="noopener noreferrer" class="hidden whitespace-nowrap rounded-full bg-ocean px-4 py-2.5 text-sm font-semibold text-gold transition hover:bg-deep lg:inline-block xl:px-5">${T('Вступить в клуб', 'Join the club')}</a>
