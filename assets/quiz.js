@@ -1,6 +1,6 @@
 /* Quiz "Which kind of traveler are you?" - one shared file for all 6 language versions of quiz.html.
    Texts, questions and results live in TXT below; the page itself only holds the title, subtitle and start button.
-   GA4 events (through window.clubTrack from consent.js): quiz_start, quiz_step, quiz_complete, quiz_lead_telegram, quiz_lead_whatsapp. */
+   GA4 events (through window.clubTrack from consent.js): quiz_start, quiz_step, quiz_complete, quiz_lead_telegram, quiz_lead_whatsapp, quiz_lead_form. */
 (function () {
   'use strict';
   var root = document.getElementById('quiz');
@@ -8,6 +8,8 @@
 
   var TG_USER = 'ayasinski';          // https://t.me/ayasinski
   var WA_NUMBER = '48731135317';      // +48 731 135 317
+  // Google Apps Script web app that appends the lead to a Google Sheet
+  var LEAD_URL = 'https://script.google.com/macros/s/AKfycbzOHnNYF11QajbuW1K91f7YRMzxkn09bLJ7j450FTnG4tXCXwzK1l5VVrp1GhqwJ-8gdQ/exec';
 
   var LANG = (document.documentElement.lang || 'ru').toLowerCase().slice(0, 2);
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -132,6 +134,29 @@
   if (!TXT[LANG]) LANG = 'ru';
   var L = TXT[LANG], TOTAL = L.q.length;
 
+  // Lead form shown under the result (texts per language)
+  var FORM = {
+    ru: { title: 'Или оставь контакт — я сам напишу тебе с примерами', name: 'Имя', contact: 'Telegram или телефон',
+          consent: 'Я согласен на обработку моих данных для связи со мной', policy: 'Политика конфиденциальности', send: 'Отправить', sending: 'Отправляем…',
+          thanks: 'Спасибо! Напишу тебе в ближайшее время 🙌', errFill: 'Укажи имя и Telegram или телефон.', errConsent: 'Поставь галочку согласия.', errNet: 'Не удалось отправить. Проверь интернет и попробуй ещё раз.' },
+    en: { title: 'Or leave your contact — I’ll write to you with examples myself', name: 'Name', contact: 'Telegram or phone',
+          consent: 'I agree to the processing of my data so you can contact me', policy: 'Privacy policy', send: 'Send', sending: 'Sending…',
+          thanks: 'Thank you! I’ll write to you very soon 🙌', errFill: 'Please enter your name and Telegram or phone.', errConsent: 'Please tick the consent box.', errNet: 'Could not send. Check your connection and try again.' },
+    uk: { title: 'Або залиш контакт — я сам напишу тобі з прикладами', name: 'Ім’я', contact: 'Telegram або телефон',
+          consent: 'Я погоджуюсь на обробку моїх даних для зв’язку зі мною', policy: 'Політика конфіденційності', send: 'Надіслати', sending: 'Надсилаємо…',
+          thanks: 'Дякую! Напишу тобі найближчим часом 🙌', errFill: 'Вкажи ім’я та Telegram або телефон.', errConsent: 'Постав позначку згоди.', errNet: 'Не вдалося надіслати. Перевір інтернет і спробуй ще раз.' },
+    pl: { title: 'Albo zostaw kontakt — sam napiszę do Ciebie z przykładami', name: 'Imię', contact: 'Telegram lub telefon',
+          consent: 'Wyrażam zgodę na przetwarzanie moich danych w celu skontaktowania się ze mną', policy: 'Polityka prywatności', send: 'Wyślij', sending: 'Wysyłanie…',
+          thanks: 'Dziękuję! Napiszę do Ciebie w najbliższym czasie 🙌', errFill: 'Podaj imię oraz Telegram lub telefon.', errConsent: 'Zaznacz zgodę.', errNet: 'Nie udało się wysłać. Sprawdź połączenie i spróbuj ponownie.' },
+    de: { title: 'Oder hinterlasse deinen Kontakt – ich schreibe dir selbst mit Beispielen', name: 'Name', contact: 'Telegram oder Telefon',
+          consent: 'Ich bin mit der Verarbeitung meiner Daten einverstanden, damit man mich kontaktieren kann', policy: 'Datenschutzerklärung', send: 'Absenden', sending: 'Wird gesendet…',
+          thanks: 'Danke! Ich melde mich in Kürze bei dir 🙌', errFill: 'Bitte gib deinen Namen und Telegram oder Telefon an.', errConsent: 'Bitte bestätige die Einwilligung.', errNet: 'Senden fehlgeschlagen. Prüfe deine Verbindung und versuche es erneut.' },
+    es: { title: 'O deja tu contacto: yo mismo te escribiré con ejemplos', name: 'Nombre', contact: 'Telegram o teléfono',
+          consent: 'Acepto el tratamiento de mis datos para que se pongan en contacto conmigo', policy: 'Política de privacidad', send: 'Enviar', sending: 'Enviando…',
+          thanks: '¡Gracias! Te escribiré muy pronto 🙌', errFill: 'Indica tu nombre y tu Telegram o teléfono.', errConsent: 'Marca la casilla de consentimiento.', errNet: 'No se pudo enviar. Revisa tu conexión e inténtalo de nuevo.' }
+  };
+  var F = FORM[LANG];
+
   var answers = [];   // chosen option index (0-3) for every question
   var step = 0;       // index of the question on screen
   var busy = false;
@@ -229,7 +254,8 @@
         '</div>' +
         '<div class="mt-7 rounded-2xl bg-deep p-5 text-center">' +
           '<p class="font-semibold">' + esc(L.cta) + '</p>' +
-          '<div class="mt-5 flex flex-col gap-3 sm:flex-row">' +
+          formHtml() +
+          '<div class="mt-6 flex flex-col gap-3 sm:flex-row">' +
             '<a data-lead="telegram" href="' + tg + '" target="_blank" rel="noopener noreferrer" class="' + btn + ' bg-gold hover:bg-gold-dark">' + ICON_TG + esc(L.tg) + '</a>' +
             '<a data-lead="whatsapp" href="' + wa + '" target="_blank" rel="noopener noreferrer" class="' + btn + ' bg-emerald">' + ICON_WA + esc(L.wa) + '</a>' +
           '</div>' +
@@ -242,8 +268,57 @@
     stage.dataset.result = key;
   }
 
+
+  /* ---------- lead form ---------- */
+  var field = 'mt-1 block min-h-[48px] w-full rounded-xl bg-ocean px-4 py-3 font-normal text-pale ring-1 ring-pale/30 transition placeholder:text-pale/60 focus:outline-none focus:ring-2 focus:ring-gold';
+  function formHtml() {
+    return '<form id="quizForm" novalidate class="mt-6 border-t border-pale/20 pt-6 text-left">' +
+      '<h3 class="text-center font-display text-base font-semibold text-gold sm:text-lg">' + esc(F.title) + '</h3>' +
+      '<div class="mt-4 grid gap-3">' +
+        '<label class="block text-sm font-semibold">' + esc(F.name) + '<input type="text" name="name" required maxlength="80" autocomplete="given-name" class="' + field + '"></label>' +
+        '<label class="block text-sm font-semibold">' + esc(F.contact) + '<input type="text" name="contact" required maxlength="100" autocomplete="off" class="' + field + '"></label>' +
+      '</div>' +
+      // honeypot: invisible for people, bots fill it in
+      '<div style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>' +
+      '<label class="mt-4 flex cursor-pointer items-start gap-3 text-sm"><input type="checkbox" name="consent" class="mt-0.5 h-6 w-6 shrink-0"><span>' + esc(F.consent) +
+        ' (<a class="underline underline-offset-2 hover:text-gold" href="privacy.html" target="_blank" rel="noopener">' + esc(F.policy) + '</a>)</span></label>' +
+      '<p id="quizFormErr" role="alert" hidden class="mt-3 rounded-xl bg-gold px-4 py-2 text-sm font-semibold text-ocean"></p>' +
+      '<button type="submit" class="mt-4 inline-flex min-h-[52px] w-full items-center justify-center rounded-full bg-gold px-6 py-3 font-semibold text-ocean shadow-gold transition hover:-translate-y-0.5 hover:bg-gold-dark disabled:cursor-not-allowed disabled:opacity-60">' + esc(F.send) + '</button>' +
+    '</form>';
+  }
+
+  var sending = false;                 // also true after success: no second submission
+  function formError(msg, input) {
+    var e = el('quizFormErr'); e.textContent = msg; e.hidden = false;
+    if (input) input.focus();
+  }
+  function submitLead(form) {
+    if (sending) return;
+    var name = form.name.value.trim().slice(0, 80), contact = form.contact.value.trim().slice(0, 100), hp = form.website.value;
+    el('quizFormErr').hidden = true;
+    if (!name || contact.length < 3) { formError(F.errFill, !name ? form.name : form.contact); return; }
+    if (!form.consent.checked) { formError(F.errConsent, form.consent); return; }
+
+    var key = stage.dataset.result || resultType(answers), btn = form.querySelector('button[type=submit]');
+    var done = function (real) {
+      if (real) track('quiz_lead_form', { result_type: key });          // no name or contact goes to analytics
+      form.outerHTML = '<div role="status" class="mt-6 border-t border-pale/20 pt-6 text-center"><p class="font-display text-lg font-semibold text-gold">' + esc(F.thanks) + '</p></div>';
+    };
+    sending = true; btn.disabled = true; btn.textContent = F.sending;
+    if (hp) { done(false); return; }                                    // bot: pretend it worked, send nothing
+
+    var body = new URLSearchParams();
+    body.append('name', name); body.append('contact', contact); body.append('website', hp);
+    body.append('type', L.r[key][1]);
+    for (var i = 0; i < TOTAL; i++) body.append('q' + (i + 1), L.q[i][1][answers[i]] || '');
+    body.append('lang', LANG);
+    fetch(LEAD_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
+      .then(function () { done(true); })
+      .catch(function () { sending = false; btn.disabled = false; btn.textContent = F.send; formError(F.errNet); });
+  }
+
   function start(restart) {
-    answers = []; step = 0; busy = false;
+    answers = []; step = 0; busy = false; sending = false;
     delete stage.dataset.result;
     intro.hidden = true;
     track('quiz_start', restart ? { restart: 1 } : {});
@@ -254,6 +329,11 @@
 
   var startBtn = el('quizStart');
   if (startBtn) startBtn.addEventListener('click', function () { start(false); });
+
+  stage.addEventListener('submit', function (e) {
+    if (e.target.id !== 'quizForm') return;
+    e.preventDefault(); submitLead(e.target);
+  });
 
   stage.addEventListener('click', function (e) {
     var o = e.target.closest('[data-opt]');
