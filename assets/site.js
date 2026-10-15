@@ -30,21 +30,6 @@
   "Отправляем…": "Надсилаємо…",
   "Спасибо! Заявка отправлена, мы свяжемся с вами.": "Дякуємо! Заявку надіслано, ми зв’яжемося з вами.",
   "Заявка в Клуб умных путешествий": "Заявка до Клубу розумних подорожей",
-  "Мы ценим вашу приватность": "Ми цінуємо вашу приватність",
-  "Сайт использует только необходимые технические данные, например запоминает ваш выбор по cookie. Аналитические и маркетинговые cookie мы включаем только с вашего согласия. Подробнее:": "Сайт використовує лише необхідні технічні дані, наприклад запам’ятовує ваш вибір щодо cookie. Аналітичні та маркетингові cookie ми вмикаємо лише за вашої згоди. Докладніше:",
-  "политика cookie": "політика cookie",
-  "и": "і",
-  "политика конфиденциальности": "політика конфіденційності",
-  "Необходимые": "Необхідні",
-  "Нужны для работы сайта и сохранения вашего выбора. Всегда включены.": "Потрібні для роботи сайту та збереження вашого вибору. Завжди ввімкнені.",
-  "Аналитические": "Аналітичні",
-  "Помогают понять, как посетители пользуются сайтом. Сейчас на сайте не используются.": "Допомагають зрозуміти, як відвідувачі користуються сайтом. Наразі на сайті не використовуються.",
-  "Маркетинговые": "Маркетингові",
-  "Нужны для персонализированной рекламы. Сейчас на сайте не используются.": "Потрібні для персоналізованої реклами. Наразі на сайті не використовуються.",
-  "Принять все": "Прийняти всі",
-  "Только необходимые": "Лише необхідні",
-  "Настроить": "Налаштувати",
-  "Сохранить выбор": "Зберегти вибір",
   "Имя": "Ім’я",
   "Контакт": "Контакт",
   "Пожелания": "Побажання"
@@ -77,21 +62,6 @@
   "Отправляем…": "Wysyłamy…",
   "Спасибо! Заявка отправлена, мы свяжемся с вами.": "Dziękujemy! Zgłoszenie zostało wysłane, skontaktujemy się z Tobą.",
   "Заявка в Клуб умных путешествий": "Zgłoszenie do Klubu Inteligentnych Podróży",
-  "Мы ценим вашу приватность": "Cenimy Twoją prywatność",
-  "Сайт использует только необходимые технические данные, например запоминает ваш выбор по cookie. Аналитические и маркетинговые cookie мы включаем только с вашего согласия. Подробнее:": "Ta strona wykorzystuje tylko niezbędne dane techniczne, na przykład zapamiętuje Twój wybór dotyczący plików cookie. Analityczne i marketingowe pliki cookie włączamy wyłącznie za Twoją zgodą. Więcej informacji:",
-  "политика cookie": "polityka cookies",
-  "и": "i",
-  "политика конфиденциальности": "polityka prywatności",
-  "Необходимые": "Niezbędne",
-  "Нужны для работы сайта и сохранения вашего выбора. Всегда включены.": "Potrzebne do działania strony i zapisania Twojego wyboru. Zawsze włączone.",
-  "Аналитические": "Analityczne",
-  "Помогают понять, как посетители пользуются сайтом. Сейчас на сайте не используются.": "Pomagają zrozumieć, jak odwiedzający korzystają ze strony. Obecnie nie są używane na tej stronie.",
-  "Маркетинговые": "Marketingowe",
-  "Нужны для персонализированной рекламы. Сейчас на сайте не используются.": "Potrzebne do spersonalizowanych reklam. Obecnie nie są używane na tej stronie.",
-  "Принять все": "Akceptuj wszystkie",
-  "Только необходимые": "Tylko niezbędne",
-  "Настроить": "Dostosuj",
-  "Сохранить выбор": "Zapisz wybór",
   "Имя": "Imię",
   "Контакт": "Kontakt",
   "Пожелания": "Uwagi"
@@ -124,21 +94,6 @@
   "Отправляем…": "Wird gesendet…",
   "Спасибо! Заявка отправлена, мы свяжемся с вами.": "Vielen Dank! Ihre Anfrage wurde gesendet, wir melden uns bei Ihnen.",
   "Заявка в Клуб умных путешествий": "Anfrage an den Club für kluges Reisen",
-  "Мы ценим вашу приватность": "Wir respektieren Ihre Privatsphäre",
-  "Сайт использует только необходимые технические данные, например запоминает ваш выбор по cookie. Аналитические и маркетинговые cookie мы включаем только с вашего согласия. Подробнее:": "Diese Website verwendet nur notwendige technische Daten, zum Beispiel merkt sie sich Ihre Cookie-Auswahl. Analyse- und Marketing-Cookies aktivieren wir nur mit Ihrer Einwilligung. Mehr dazu:",
-  "политика cookie": "Cookie-Richtlinie",
-  "и": "und",
-  "политика конфиденциальности": "Datenschutzerklärung",
-  "Необходимые": "Notwendig",
-  "Нужны для работы сайта и сохранения вашего выбора. Всегда включены.": "Erforderlich für den Betrieb der Website und das Speichern Ihrer Auswahl. Immer aktiv.",
-  "Аналитические": "Analyse",
-  "Помогают понять, как посетители пользуются сайтом. Сейчас на сайте не используются.": "Helfen zu verstehen, wie Besucher die Website nutzen. Derzeit auf dieser Website nicht im Einsatz.",
-  "Маркетинговые": "Marketing",
-  "Нужны для персонализированной рекламы. Сейчас на сайте не используются.": "Erforderlich für personalisierte Werbung. Derzeit auf dieser Website nicht im Einsatz.",
-  "Принять все": "Alle akzeptieren",
-  "Только необходимые": "Nur notwendige",
-  "Настроить": "Anpassen",
-  "Сохранить выбор": "Auswahl speichern",
   "Имя": "Name",
   "Контакт": "Kontakt",
   "Пожелания": "Anmerkungen"
@@ -171,21 +126,6 @@
   "Отправляем…": "Enviando…",
   "Спасибо! Заявка отправлена, мы свяжемся с вами.": "¡Gracias! Tu solicitud ha sido enviada, nos pondremos en contacto contigo.",
   "Заявка в Клуб умных путешествий": "Solicitud al Club de Viajes Inteligentes",
-  "Мы ценим вашу приватность": "Valoramos tu privacidad",
-  "Сайт использует только необходимые технические данные, например запоминает ваш выбор по cookie. Аналитические и маркетинговые cookie мы включаем только с вашего согласия. Подробнее:": "Este sitio utiliza solo los datos técnicos necesarios, por ejemplo, recuerda tu elección sobre las cookies. Activamos las cookies analíticas y de marketing solo con tu consentimiento. Más información:",
-  "политика cookie": "política de cookies",
-  "и": "y",
-  "политика конфиденциальности": "política de privacidad",
-  "Необходимые": "Necesarias",
-  "Нужны для работы сайта и сохранения вашего выбора. Всегда включены.": "Necesarias para que el sitio funcione y para guardar tu elección. Siempre activas.",
-  "Аналитические": "Analíticas",
-  "Помогают понять, как посетители пользуются сайтом. Сейчас на сайте не используются.": "Ayudan a entender cómo usan el sitio los visitantes. Actualmente no se usan en este sitio.",
-  "Маркетинговые": "De marketing",
-  "Нужны для персонализированной рекламы. Сейчас на сайте не используются.": "Necesarias para la publicidad personalizada. Actualmente no se usan en este sitio.",
-  "Принять все": "Aceptar todas",
-  "Только необходимые": "Solo las necesarias",
-  "Настроить": "Personalizar",
-  "Сохранить выбор": "Guardar elección",
   "Имя": "Nombre",
   "Контакт": "Contacto",
   "Пожелания": "Comentarios"
@@ -408,8 +348,10 @@
       if (!r.ok || String(j.success) === 'false') throw new Error('send failed');
       ok.textContent = T('Спасибо! Заявка отправлена, мы свяжемся с вами.', 'Thank you! Your request has been sent. We will get back to you.');
       ok.classList.remove('hidden'); f.reset();
+      window.dispatchEvent(new CustomEvent('club-form-submit', { detail: { form: 'contact', method: 'formsubmit' } }));
     } catch (x) {
       const body = `${T('Имя', 'Name')}: ${name}\n${T('Контакт', 'Contact')}: ${contact}\n${T('Пожелания', 'Wishes')}: ${msg || '—'}`;
+      window.dispatchEvent(new CustomEvent('club-form-submit', { detail: { form: 'contact', method: 'mailto' } }));
       location.href = 'mailto:andrei.jasinski@gmail.com?subject=' + encodeURIComponent(T('Заявка в Клуб умных путешествий', 'Application to the Smart Travel Club')) + '&body=' + encodeURIComponent(body);
     } finally { btn.disabled = false; btn.textContent = label; }
   }));
@@ -532,59 +474,5 @@
   if (document.readyState === 'complete') setTimeout(runLangSuggest, 800);
   else addEventListener('load', () => setTimeout(runLangSuggest, 800));
 
-  /* ---------- cookie consent ---------- */
-  const CKEY = 'clubConsent', CV = 1;
-  const readConsent = () => { try { const o = JSON.parse(localStorage.getItem(CKEY)); return o && o.v === CV ? o : null; } catch (e) { return null; } };
-  const saveConsent = (analytics, marketing) => {
-    const o = { v: CV, necessary: true, analytics: !!analytics, marketing: !!marketing, ts: new Date().toISOString() };
-    try { localStorage.setItem(CKEY, JSON.stringify(o)); } catch (e) {}
-    window.clubConsent.state = o;
-    dispatchEvent(new CustomEvent('consent-change', { detail: o }));
-  };
-  window.clubConsent = { state: readConsent(), open: openConsent };
-
-  const sw = (id, label, desc, on, locked) => `
-    <div class="flex items-start justify-between gap-4 rounded-2xl bg-deep p-4">
-      <div><label for="${id}" class="font-semibold text-gold">${label}</label><p class="mt-1 text-xs">${desc}</p></div>
-      <input id="${id}" type="checkbox" class="mt-1 h-6 w-6 shrink-0 accent-[#F5B83D]" ${on ? 'checked' : ''} ${locked ? 'disabled' : ''}>
-    </div>`;
-
-  function openConsent() {
-    closeConsent();
-    const st = window.clubConsent.state || {};
-    const box = document.createElement('div');
-    box.id = 'cookieBanner';
-    box.setAttribute('role', 'dialog'); box.setAttribute('aria-labelledby', 'ckTitle'); box.setAttribute('aria-describedby', 'ckDesc');
-    box.className = 'fixed inset-x-3 bottom-3 z-[60] mx-auto max-h-[85vh] max-w-xl overflow-y-auto rounded-3xl bg-ocean p-5 text-pale shadow-soft ring-1 ring-pale/25 sm:left-6 sm:right-auto sm:mx-0 sm:p-6';
-    box.innerHTML = `
-      <h2 id="ckTitle" class="font-display text-base font-semibold text-gold">${T('Мы ценим вашу приватность', 'We value your privacy')}</h2>
-      <p id="ckDesc" class="mt-2 text-sm">${T('Сайт использует только необходимые технические данные, например запоминает ваш выбор по cookie. Аналитические и маркетинговые cookie мы включаем только с вашего согласия. Подробнее:', 'This site uses only the technical data it needs, for example it remembers your cookie choice. We turn on analytics and marketing cookies only with your consent. More details:')} <a class="underline hover:text-gold" href="cookies.html">${T('политика cookie', 'cookie policy')}</a> ${T('и', 'and')} <a class="underline hover:text-gold" href="privacy.html">${T('политика конфиденциальности', 'privacy policy')}</a>.</p>
-      <div id="ckPanel" class="mt-4 hidden space-y-3 text-sm">
-        ${sw('ckNec', T('Необходимые', 'Necessary'), T('Нужны для работы сайта и сохранения вашего выбора. Всегда включены.', 'Needed for the site to work and to save your choice. Always on.'), true, true)}
-        ${sw('ckAn', T('Аналитические', 'Analytics'), T('Помогают понять, как посетители пользуются сайтом. Сейчас на сайте не используются.', 'Help us understand how visitors use the site. Not used on this site at the moment.'), st.analytics, false)}
-        ${sw('ckMk', T('Маркетинговые', 'Marketing'), T('Нужны для персонализированной рекламы. Сейчас на сайте не используются.', 'Needed for personalized advertising. Not used on this site at the moment.'), st.marketing, false)}
-      </div>
-      <div class="mt-5 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
-        <button type="button" data-ck="all" class="min-h-[44px] flex-1 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ocean transition hover:bg-gold-dark">${T('Принять все', 'Accept all')}</button>
-        <button type="button" data-ck="none" class="min-h-[44px] flex-1 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ocean transition hover:bg-gold-dark">${T('Только необходимые', 'Necessary only')}</button>
-        <button type="button" data-ck="more" class="min-h-[44px] flex-1 rounded-full border-2 border-pale/50 px-5 py-2.5 text-sm font-semibold text-pale transition hover:border-gold hover:text-gold">${T('Настроить', 'Customize')}</button>
-      </div>`;
-    document.body.appendChild(box);
-    box.addEventListener('click', e => {
-      const b = e.target.closest('[data-ck]'); if (!b) return;
-      const k = b.dataset.ck;
-      if (k === 'all') { saveConsent(true, true); closeConsent(); }
-      else if (k === 'none') { saveConsent(false, false); closeConsent(); }
-      else if (k === 'more') {
-        const panel = box.querySelector('#ckPanel');
-        if (panel.classList.contains('hidden')) { panel.classList.remove('hidden'); b.textContent = T('Сохранить выбор', 'Save choice'); }
-        else { saveConsent(box.querySelector('#ckAn').checked, box.querySelector('#ckMk').checked); closeConsent(); }
-      }
-    });
-    box.addEventListener('keydown', e => { if (e.key === 'Escape' && window.clubConsent.state) closeConsent(); });
-    if (window.clubConsent.state) box.querySelector('button').focus();
-  }
-  function closeConsent() { const b = document.getElementById('cookieBanner'); if (b) b.remove(); }
-  document.addEventListener('click', e => { if (e.target.closest('[data-cookie-settings]')) openConsent(); });
-  if (!window.clubConsent.state) setTimeout(openConsent, 600);
+  /* cookie banner, consent and analytics live in assets/consent.js */
 })();

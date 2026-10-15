@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="pl">
 <head>
+<script src="../assets/consent.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Polityka cookies — Klub Inteligentnych Podróży</title>
@@ -33,9 +34,9 @@
     <div class="a-plane h-7 w-16" style="top:50%;--t:30s"><span data-art="plane"></span></div>
   </div>
   <div class="relative mx-auto max-w-4xl">
-    <p class="text-sm font-semibold uppercase tracking-widest text-ocean">Informacje prawne Jeśli język Twojej przeglądarki nie jest obsługiwany przez stronę, to aby zaproponować odpowiednią wersję językową, przeglądarka łączy się z usługami określania kraju po adresie IP (api.country.is, ipwho.is): otrzymują one Twój adres IP.</p>
+    <p class="text-sm font-semibold uppercase tracking-widest text-ocean">Informacje prawne</p>
     <h1 class="mt-4 text-3xl font-bold leading-tight text-ocean sm:text-5xl">Polityka cookies</h1>
-    <p class="mt-4 text-ink">Wersja z dnia 7 października 2026 r.</p>
+    <p class="mt-4 text-ink">Wersja z dnia 15 października 2026 r.</p>
   </div>
 </section>
 <section class="bg-mint-grad px-4 py-14 sm:px-6">
@@ -45,14 +46,17 @@
 <tr><td><code>clubConsent</code> (localStorage)</td><td>własny</td><td>niezbędny</td><td>przechowuje Twój wybór dotyczący plików cookie</td><td>do 12 miesięcy lub do czasu wyczyszczenia danych przeglądarki</td></tr>
 <tr><td><code>clubLang</code> (localStorage)</td><td>własny</td><td>niezbędny</td><td>zapamiętuje wybrany przez Ciebie język strony, aby nie proponować zmiany ponownie</td><td>do czasu wyczyszczenia danych przeglądarki</td></tr>
 <tr><td><code>clubGeo</code> (sessionStorage)</td><td>własny</td><td>niezbędny</td><td>tymczasowo przechowuje ustalony kraj, aby nie powtarzać zapytania</td><td>do zamknięcia karty</td></tr>
+<tr><td><code>_ga</code>, <code>_ga_*</code></td><td>Google (w naszej domenie)</td><td>analityczny, tylko za zgodą</td><td>rozróżniają odwiedzających i mierzą ruch (Google Analytics 4)</td><td>do 2 lat</td></tr>
+<tr><td><code>_clck</code>, <code>_clsk</code></td><td>Microsoft (w naszej domenie)</td><td>analityczny, tylko za zgodą</td><td>rejestrują, jak odwiedzający korzystają ze stron: kliknięcia, przewijanie, ruchy wskaźnika (Microsoft Clarity)</td><td>_clck do 1 roku, _clsk 1 dzień</td></tr>
 </tbody></table></div>
-<p>Analityczne i marketingowe pliki cookie <strong>nie są obecnie używane na stronie</strong>. Jeśli dodamy takie narzędzia, będą włączane dopiero po Twojej zgodzie, a ta polityka zostanie zaktualizowana.</p></div></article>
-    <article class="legal rounded-3xl bg-sky-200 p-6 text-ink shadow-soft sm:p-8"><h2 class="font-display text-lg font-semibold text-ocean">3. Zasoby zewnętrzne bez plików cookie</h2><div class="mt-3 text-[0.95rem] leading-relaxed"><p>Po otwarciu strony Twoja przeglądarka pobiera czcionki z serwerów Google Fonts oraz style z cdn.tailwindcss.com. To nie są pliki cookie, ale te usługi otrzymują techniczne dane żądania, w tym adres IP. Szczegóły znajdziesz w <a href="privacy.html">polityce prywatności</a>.</p>
+<p>Analityczne pliki cookie (Google Analytics 4 i Microsoft Clarity) są zapisywane <strong>dopiero po Twojej zgodzie</strong>. Marketingowych plików cookie ani reklam obecnie nie używamy: ta kategoria jedynie przekazuje Twój wybór usługom Google (sygnały ad_storage, ad_user_data, ad_personalization).</p></div></article>
+    <article class="legal rounded-3xl bg-sky-200 p-6 text-ink shadow-soft sm:p-8"><h2 class="font-display text-lg font-semibold text-ocean">3. Zasoby zewnętrzne bez plików cookie</h2><div class="mt-3 text-[0.95rem] leading-relaxed"><p>Na potrzeby statystyk po otwarciu strony Twoja przeglądarka pobiera skrypt Google Analytics z serwerów Google (googletagmanager.com), dlatego Google widzi techniczne dane żądania, w tym adres IP. Dopóki nie wyrazisz zgody, analityczne pliki cookie nie są zapisywane, a Google otrzymuje wyłącznie zanonimizowane sygnały techniczne (Google Consent Mode v2). Skrypt Microsoft Clarity (clarity.ms) jest ładowany dopiero po Twojej zgodzie.</p>
+<p>Po otwarciu strony Twoja przeglądarka pobiera czcionki z serwerów Google Fonts oraz style z cdn.tailwindcss.com. To nie są pliki cookie, ale te usługi otrzymują techniczne dane żądania, w tym adres IP. Szczegóły znajdziesz w <a href="privacy.html">polityce prywatności</a>. Jeśli język Twojej przeglądarki nie jest obsługiwany przez stronę, to aby zaproponować odpowiednią wersję językową, przeglądarka łączy się z usługami określania kraju po adresie IP (api.country.is, ipwho.is): otrzymują one Twój adres IP.</p>
 <p>Gdy klikasz linki do mwrlife.com, WhatsApp, Telegrama i innych stron, trafiasz do środowiska ich właścicieli, gdzie obowiązują ich własne zasady dotyczące plików cookie.</p></div></article>
     <article class="legal rounded-3xl bg-sky-200 p-6 text-ink shadow-soft sm:p-8"><h2 class="font-display text-lg font-semibold text-ocean">4. Kategorie i Twój wybór</h2><div class="mt-3 text-[0.95rem] leading-relaxed"><ul>
 <li><strong>Niezbędne:</strong> potrzebne do działania strony i zapamiętania Twojego wyboru. Nie wymagają zgody i nie można ich wyłączyć.</li>
-<li><strong>Analityczne:</strong> pokazują, jak odwiedzający korzystają ze strony. Tylko za Twoją zgodą.</li>
-<li><strong>Marketingowe:</strong> potrzebne do spersonalizowanych reklam. Tylko za Twoją zgodą.</li>
+<li><strong>Analityczne:</strong> pokazują, jak odwiedzający korzystają ze strony (Google Analytics 4, Microsoft Clarity). Tylko za Twoją zgodą.</li>
+<li><strong>Marketingowe:</strong> sterują sygnałami zgody dla usług Google (ad_storage, ad_user_data, ad_personalization). Reklam obecnie nie wyświetlamy. Tylko za Twoją zgodą.</li>
 </ul>
 <p>Odmowa nie ogranicza dostępu do strony. Pliki cookie możesz zaakceptować, odrzucić lub dostosować w oknie przy pierwszej wizycie, a decyzję zmienić w dowolnym momencie.</p>
 <p><button type="button" data-cookie-settings class="min-h-[44px] rounded-full bg-ocean px-5 py-2 text-sm font-semibold text-gold hover:bg-deep">Otwórz ustawienia cookies</button></p></div></article>
