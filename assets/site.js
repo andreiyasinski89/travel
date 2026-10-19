@@ -10,6 +10,7 @@
   "Как это работает": "Як це працює",
   "Контакты": "Контакти",
   "Тест": "Тест",
+  "Почему MWR": "Чому MWR",
   "Клуб умных<br>путешествий": "Клуб розумних<br>подорожей",
   "Язык": "Мова",
   "Основная навигация": "Основна навігація",
@@ -43,6 +44,7 @@
   "Как это работает": "Jak to działa",
   "Контакты": "Kontakt",
   "Тест": "Quiz",
+  "Почему MWR": "Dlaczego MWR",
   "Клуб умных<br>путешествий": "Klub Inteligentnych<br>Podróży",
   "Язык": "Język",
   "Основная навигация": "Nawigacja główna",
@@ -76,6 +78,7 @@
   "Как это работает": "So funktioniert’s",
   "Контакты": "Kontakt",
   "Тест": "Quiz",
+  "Почему MWR": "Warum MWR",
   "Клуб умных<br>путешествий": "Club für kluges<br>Reisen",
   "Язык": "Sprache",
   "Основная навигация": "Hauptnavigation",
@@ -109,6 +112,7 @@
   "Как это работает": "Cómo funciona",
   "Контакты": "Contacto",
   "Тест": "Test",
+  "Почему MWR": "Por qué MWR",
   "Клуб умных<br>путешествий": "Club de Viajes<br>Inteligentes",
   "Язык": "Idioma",
   "Основная навигация": "Navegación principal",
@@ -157,7 +161,7 @@
   /* ---------- header & footer ---------- */
   const links = [
     ['index.html', T('Главная', 'Home')], ['about.html', T('О клубе', 'About')], ['programs.html', T('Программы', 'Programs')],
-    ['destinations.html', T('Направления', 'Destinations')], ['how.html', T('Как это работает', 'How it works')], ['quiz.html', T('Тест', 'Quiz')], ['contacts.html', T('Контакты', 'Contacts')]
+    ['destinations.html', T('Направления', 'Destinations')], ['how.html', T('Как это работает', 'How it works')], ['why-mwr.html', T('Почему MWR', 'Why MWR')], ['quiz.html', T('Тест', 'Quiz')], ['contacts.html', T('Контакты', 'Contacts')]
   ];
   let page = location.pathname.split('/').pop();
   page = !page ? 'index.html' : (/\.html$/.test(page) ? page : page + '.html');
@@ -186,16 +190,16 @@
   <header class="fixed inset-x-0 top-0 z-50">
     <div class="mx-auto mt-3 flex max-w-6xl items-center justify-between rounded-2xl glass px-4 py-2.5 shadow-soft sm:px-5" style="width:calc(100% - 1.5rem)">
       ${logo}
-      <nav class="hidden items-center gap-1 text-sm font-medium text-ocean lg:flex" aria-label="${T('Основная навигация', 'Main navigation')}">
-        ${navLinks('whitespace-nowrap rounded-full px-1.5 py-2 text-[13px] transition hover:bg-gold/60 xl:px-3 xl:text-sm', 'bg-gold')}
+      <nav class="hidden items-center gap-1 text-sm font-medium text-ocean xl:flex" aria-label="${T('Основная навигация', 'Main navigation')}">
+        ${navLinks('whitespace-nowrap rounded-full px-1.5 py-2 text-[13px] transition hover:bg-gold/60', 'bg-gold')}
       </nav>
       ${langSwitch}
-      <a href="https://www.mwrlife.com/ayasinski/join" target="_blank" rel="noopener noreferrer" class="hidden whitespace-nowrap rounded-full bg-ocean px-4 py-2.5 text-sm font-semibold text-gold transition hover:bg-deep lg:inline-block xl:px-5">${T('Вступить в клуб', 'Join the club')}</a>
-      <button id="menuBtn" class="grid h-11 w-11 place-items-center rounded-xl text-ocean lg:hidden" aria-label="${T('Открыть меню', 'Open menu')}" aria-expanded="false" aria-controls="mobileMenu">
+      <a href="https://www.mwrlife.com/ayasinski/join" target="_blank" rel="noopener noreferrer" class="hidden whitespace-nowrap rounded-full bg-ocean px-4 py-2.5 text-sm font-semibold text-gold transition hover:bg-deep xl:inline-block">${T('Вступить в клуб', 'Join the club')}</a>
+      <button id="menuBtn" class="grid h-11 w-11 place-items-center rounded-xl text-ocean xl:hidden" aria-label="${T('Открыть меню', 'Open menu')}" aria-expanded="false" aria-controls="mobileMenu">
         <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
-    <div id="mobileMenu" class="mx-3 mt-2 hidden rounded-2xl glass p-3 shadow-soft lg:hidden">
+    <div id="mobileMenu" class="mx-3 mt-2 hidden rounded-2xl glass p-3 shadow-soft xl:hidden">
       ${navLinks('block rounded-xl px-4 py-3 font-medium text-ocean', 'bg-gold')}
       <a href="https://www.mwrlife.com/ayasinski/join" target="_blank" rel="noopener noreferrer" class="mt-2 block rounded-full bg-ocean px-5 py-3 text-center font-semibold text-gold">${T('Вступить в клуб', 'Join the club')}</a>
     </div>

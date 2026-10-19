@@ -228,6 +228,8 @@
       else if (host === 'wa.me' || host === 'whatsapp.com' || /\.whatsapp\.com$/.test(host)) name = 'click_whatsapp';
     }
     if (name) track(name, { link_url: String(a.href).slice(0, 200), link_location: where(a) });
+    var ge = a.closest('[data-ga-event]');          // any button can name its own GA4 event
+    if (ge) track(ge.getAttribute('data-ga-event'), { link_location: where(ge) });
 
     var to = a.getAttribute('hreflang');
     if (to && href !== '#' && to !== LANG) {
