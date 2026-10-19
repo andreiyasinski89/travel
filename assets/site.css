@@ -111,3 +111,39 @@ details[open] .chev { transform: rotate(180deg); }
 
 /* quiz form: dark fields even when the browser autofills them */
 #quizForm input:-webkit-autofill { -webkit-box-shadow: 0 0 0 100px #0B3C5D inset; -webkit-text-fill-color: #BAE6FD; caret-color: #BAE6FD; }
+
+/* why-mwr.html: route design */
+.why-h1 { opacity: 0; }
+.why-h1.ready { opacity: 1; }
+.why-w { display: inline-block; opacity: 0; transform: translateY(.6em) rotate(3deg); filter: blur(6px); animation: whyWord .8s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: calc(var(--i, 0) * 90ms + 150ms); }
+@keyframes whyWord { to { opacity: 1; transform: none; filter: none; } }
+.why-ticket { filter: drop-shadow(0 14px 16px rgba(8,41,63,.28)); transition: transform .35s cubic-bezier(.2,.7,.2,1), filter .35s; }
+.why-ticket:hover { transform: translateY(-6px) rotate(-.6deg); filter: drop-shadow(0 24px 22px rgba(8,41,63,.36)); }
+.why-ticket > div {
+  -webkit-mask: radial-gradient(circle 11px at 0 var(--notch, 88px), #0000 97%, #000), radial-gradient(circle 11px at 100% var(--notch, 88px), #0000 97%, #000);
+  -webkit-mask-composite: source-in;
+  mask: radial-gradient(circle 11px at 0 var(--notch, 88px), #0000 97%, #000), radial-gradient(circle 11px at 100% var(--notch, 88px), #0000 97%, #000);
+  mask-composite: intersect;
+}
+.why-ticket:hover .why-ic { animation: wiggle .7s ease-in-out; }
+.why-node { box-shadow: 0 0 0 4px #0B3C5D; }
+.why-node::after { content: ""; position: absolute; inset: 0; border-radius: 9999px; background: #F5B83D; opacity: 0; }
+.why-node.in::after { animation: pulseRing 1.6s ease-out 2; }
+.why-station { animation: whyBob 4s ease-in-out infinite; }
+@keyframes whyBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+.why-price { display: inline-block; border-radius: .5rem; background: rgba(245,184,61,.22); padding: 0 .35rem; font-weight: 700; color: #F5B83D; font-variant-numeric: tabular-nums; }
+.why-stamp { opacity: 0; transform: rotate(-10deg) scale(2.2); }
+.reveal.in .why-stamp { animation: whyStamp .7s cubic-bezier(.2,.9,.3,1.2) .35s forwards; }
+@keyframes whyStamp { 0% { opacity: 0; transform: rotate(-24deg) scale(2.4); } 60% { opacity: 1; transform: rotate(-6deg) scale(.9); } 100% { opacity: 1; transform: rotate(-10deg) scale(1); } }
+.why-cue-dot { animation: whyCue 1.8s ease-in-out infinite; }
+@keyframes whyCue { 0% { transform: translateY(0); opacity: 1; } 70% { transform: translateY(9px); opacity: 0; } 100% { transform: translateY(0); opacity: 0; } }
+.why-pulse { position: relative; animation: whyRing 2.6s ease-out infinite; }
+.why-pulse-em { animation-name: whyRingEm; animation-delay: 1.3s; }
+@keyframes whyRing { 0% { box-shadow: 0 0 0 0 rgba(245,184,61,.55); } 70%, 100% { box-shadow: 0 0 0 22px rgba(245,184,61,0); } }
+@keyframes whyRingEm { 0% { box-shadow: 0 0 0 0 rgba(16,185,129,.55); } 70%, 100% { box-shadow: 0 0 0 22px rgba(16,185,129,0); } }
+@media (prefers-reduced-motion: reduce) {
+  .why-w { opacity: 1; transform: none; filter: none; animation: none; }
+  .why-station, .why-cue-dot, .why-pulse, .why-node.in::after { animation: none; }
+  .why-stamp { opacity: 1; transform: rotate(-10deg); animation: none !important; }
+  .why-ticket:hover { transform: none; }
+}
