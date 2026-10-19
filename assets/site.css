@@ -99,10 +99,10 @@ details[open] .chev { transform: rotate(180deg); }
 @media (prefers-reduced-motion: reduce) { [data-at] { opacity: 1; transform: none; } }
 
 /* cookie banner switches: no white native checkboxes */
-#cookieBanner input[type=checkbox], #quizForm input[type=checkbox] { appearance: none; -webkit-appearance: none; border: 2px solid #BAE6FD; border-radius: .45rem; background: transparent center / 80% no-repeat; cursor: pointer; }
-#cookieBanner input[type=checkbox]:checked, #quizForm input[type=checkbox]:checked { background-color: #F5B83D; border-color: #F5B83D; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B3C5D' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12.5 4.5 4.5L19 7.5'/%3E%3C/svg%3E"); }
-#cookieBanner input[type=checkbox]:disabled, #quizForm input[type=checkbox]:disabled { opacity: .6; cursor: default; }
-#cookieBanner input[type=checkbox]:focus-visible, #quizForm input[type=checkbox]:focus-visible { outline: 3px solid #F5B83D; outline-offset: 2px; }
+#cookieBanner input[type=checkbox], #quizForm input[type=checkbox], #reviewForm input[type=checkbox] { appearance: none; -webkit-appearance: none; border: 2px solid #BAE6FD; border-radius: .45rem; background: transparent center / 80% no-repeat; cursor: pointer; }
+#cookieBanner input[type=checkbox]:checked, #quizForm input[type=checkbox]:checked, #reviewForm input[type=checkbox]:checked { background-color: #F5B83D; border-color: #F5B83D; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B3C5D' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12.5 4.5 4.5L19 7.5'/%3E%3C/svg%3E"); }
+#cookieBanner input[type=checkbox]:disabled, #quizForm input[type=checkbox]:disabled, #reviewForm input[type=checkbox]:disabled { opacity: .6; cursor: default; }
+#cookieBanner input[type=checkbox]:focus-visible, #quizForm input[type=checkbox]:focus-visible, #reviewForm input[type=checkbox]:focus-visible { outline: 3px solid #F5B83D; outline-offset: 2px; }
 
 /* quiz screens */
 .quiz-in { animation: quizIn .35s ease both; }
@@ -110,7 +110,7 @@ details[open] .chev { transform: rotate(180deg); }
 @media (prefers-reduced-motion: reduce) { .quiz-in { animation: none; } }
 
 /* quiz form: dark fields even when the browser autofills them */
-#quizForm input:-webkit-autofill { -webkit-box-shadow: 0 0 0 100px #0B3C5D inset; -webkit-text-fill-color: #BAE6FD; caret-color: #BAE6FD; }
+#quizForm input:-webkit-autofill, #reviewForm input:-webkit-autofill, #reviewForm textarea:-webkit-autofill { -webkit-box-shadow: 0 0 0 100px #0B3C5D inset; -webkit-text-fill-color: #BAE6FD; caret-color: #BAE6FD; }
 
 /* why-mwr.html: route design */
 .why-h1 { opacity: 0; }
@@ -147,3 +147,11 @@ details[open] .chev { transform: rotate(180deg); }
   .why-stamp { opacity: 1; transform: rotate(-10deg); animation: none !important; }
   .why-ticket:hover { transform: none; }
 }
+
+/* review form: star rating (DOM order 5..1, shown 1..5) */
+.rv-stars { display: inline-flex; flex-direction: row-reverse; gap: .15rem; }
+.rv-stars input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.rv-stars label { cursor: pointer; color: rgba(186,230,253,.3); transition: color .15s, transform .15s; }
+.rv-stars label:hover, .rv-stars label:hover ~ label, .rv-stars input:checked ~ label { color: #F5B83D; }
+.rv-stars label:hover { transform: scale(1.12); }
+.rv-stars input:focus-visible + label { outline: 3px solid #F5B83D; outline-offset: 2px; border-radius: .4rem; }
