@@ -183,22 +183,7 @@
       </div>
     </div>
     <div data-track id="revTrack" class="snap-row -mx-4 mt-10 flex gap-5 overflow-x-auto px-4 pb-6 sm:mx-0 sm:px-0" tabindex="0" aria-label="Member reviews"></div>
-    <div class="mt-4 text-center sm:text-left"><button type="button" data-review-toggle aria-expanded="false" aria-controls="review" class="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-ocean px-8 py-3 font-semibold text-gold shadow-soft transition hover:-translate-y-0.5 hover:bg-deep"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>Leave a review</button></div>
-    <div id="review" hidden class="mt-6 max-w-2xl scroll-mt-28">
-      <p class="text-lg text-ink">Tell us what you think of the club. Reviews are published only after moderation and with your consent.</p>
-      <form id="reviewForm" novalidate class="mt-5 rounded-3xl bg-ocean p-6 text-pale shadow-soft ring-1 ring-pale/20 sm:p-9" data-ok="Thank you! Your review has been sent for moderation." data-err-fill="Please enter your name and write a review (at least 10 characters)." data-err-consent="Please tick the consent box." data-err-net="Could not send. Check your connection and try again." data-sending="Sending…">
-      <div class="grid gap-4 sm:grid-cols-2">
-        <label class="block text-sm font-semibold">Name<input type="text" name="name" required maxlength="80" autocomplete="given-name" class="mt-1 block min-h-[48px] w-full rounded-xl bg-deep px-4 py-3 font-normal text-pale ring-1 ring-pale/30 transition placeholder:text-pale/60 focus:outline-none focus:ring-2 focus:ring-gold"></label>
-        <label class="block text-sm font-semibold">City (optional)<input type="text" name="city" maxlength="80" autocomplete="address-level2" class="mt-1 block min-h-[48px] w-full rounded-xl bg-deep px-4 py-3 font-normal text-pale ring-1 ring-pale/30 transition placeholder:text-pale/60 focus:outline-none focus:ring-2 focus:ring-gold"></label>
-      </div>
-      <fieldset class="mt-5"><legend class="text-sm font-semibold">Rating</legend><div class="rv-stars mt-2"><input type="radio" id="rvStar5" name="rating" value="5"><label for="rvStar5" title="5 out of 5"><span class="sr-only">5 out of 5</span><svg viewBox="0 0 24 24" class="h-9 w-9" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></label><input type="radio" id="rvStar4" name="rating" value="4"><label for="rvStar4" title="4 out of 5"><span class="sr-only">4 out of 5</span><svg viewBox="0 0 24 24" class="h-9 w-9" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></label><input type="radio" id="rvStar3" name="rating" value="3"><label for="rvStar3" title="3 out of 5"><span class="sr-only">3 out of 5</span><svg viewBox="0 0 24 24" class="h-9 w-9" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></label><input type="radio" id="rvStar2" name="rating" value="2"><label for="rvStar2" title="2 out of 5"><span class="sr-only">2 out of 5</span><svg viewBox="0 0 24 24" class="h-9 w-9" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></label><input type="radio" id="rvStar1" name="rating" value="1"><label for="rvStar1" title="1 out of 5"><span class="sr-only">1 out of 5</span><svg viewBox="0 0 24 24" class="h-9 w-9" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></label></div></fieldset>
-      <label class="mt-5 block text-sm font-semibold">Your review<textarea name="text" required rows="5" maxlength="1500" class="mt-1 block min-h-[48px] w-full rounded-xl bg-deep px-4 py-3 font-normal text-pale ring-1 ring-pale/30 transition placeholder:text-pale/60 focus:outline-none focus:ring-2 focus:ring-gold resize-y"></textarea></label>
-      <div style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Website<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
-      <label class="mt-5 flex cursor-pointer items-start gap-3 text-sm"><input type="checkbox" name="consent" class="mt-0.5 h-6 w-6 shrink-0"><span>I agree to my review being published on the site and to the processing of my data (<a class="underline underline-offset-2 hover:text-gold" href="privacy.html" target="_blank" rel="noopener">Privacy policy</a>)</span></label>
-      <p data-err role="alert" hidden class="mt-4 rounded-xl bg-gold px-4 py-2 text-sm font-semibold text-ocean"></p>
-      <button type="submit" class="mt-5 inline-flex min-h-[52px] w-full items-center justify-center rounded-full bg-gold px-6 py-3 font-semibold text-ocean shadow-gold transition hover:-translate-y-0.5 hover:bg-gold-dark disabled:cursor-not-allowed disabled:opacity-60">Send review</button>
-    </form>
-    </div>
+    <div class="mt-4 text-center sm:text-left"><a href="contacts.html#review" class="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-ocean px-8 py-3 font-semibold text-gold shadow-soft transition hover:-translate-y-0.5 hover:bg-deep"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>Leave a review</a></div>
   </div>
 </section>
 
@@ -258,6 +243,5 @@
     </figure>`).join('');
 </script>
 <script src="../assets/site.js"></script>
-<script src="../assets/review.js"></script>
 </body>
 </html>

@@ -1,27 +1,13 @@
-/* "Leave a review" form in the reviews section of the home page (all language versions); the button of the section opens it.
+/* "Leave a review" form of the Contacts page (all language versions); the "Leave a review" button of the home page links to contacts.html#review.
    The review is e-mailed to the site owner through FormSubmit (same service as the contact form) and is NOT published automatically:
    the owner reads it and publishes it by hand. Texts come from data-* attributes of the form, so every language keeps the same markup. */
 (function () {
   'use strict';
-  // the form lives inside the reviews section: the button opens and closes it
-  var tgl = document.querySelector('[data-review-toggle]'), panel = document.getElementById('review');
-  function setOpen(open, focus) {
-    if (!panel || !tgl) return;
-    panel.hidden = !open; tgl.setAttribute('aria-expanded', open ? 'true' : 'false');
-    if (!open) return;
-    panel.classList.remove('quiz-in'); void panel.offsetWidth; panel.classList.add('quiz-in');
-    var first = panel.querySelector('input[name=name]');
-    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    if (focus && first) first.focus({ preventScroll: true });
-  }
-  if (tgl && panel) {
-    tgl.addEventListener('click', function () { setOpen(panel.hidden, true); });
-    if (location.hash === '#review') setOpen(true, false);
-    window.addEventListener('hashchange', function () { if (location.hash === '#review') setOpen(true, false); });
-  }
-
   var f = document.getElementById('reviewForm');
   if (!f) return;
+
+  // opened from the home page (contacts.html#review): make sure the form is on screen once the page is laid out
+  if (location.hash === '#review') window.addEventListener('load', function () { var s = document.getElementById('review'); if (s) s.scrollIntoView(); });
 
   var ENDPOINT = 'https://formsubmit.co/ajax/andrei.jasinski@gmail.com';
   var LANG = (document.documentElement.lang || 'ru').slice(0, 2).toUpperCase();
