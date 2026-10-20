@@ -1,6 +1,6 @@
 html { scroll-behavior: smooth; }
-body { background: #7FD3F2; color: #0B2535; font-family: Onest, system-ui, sans-serif; overflow-x: hidden; }
-h1, h2, h3, .font-display { font-family: Unbounded, sans-serif; }
+body { background: #7FD3F2; color: #0B2535; font-family: Onest, 'Noto Sans SC', 'Noto Sans Devanagari', system-ui, sans-serif; overflow-x: hidden; }
+h1, h2, h3, .font-display { font-family: Unbounded, 'Noto Sans SC', 'Noto Sans Devanagari', sans-serif; }
 
 /* section backgrounds: no white anywhere */
 .bg-sky-grad   { background: linear-gradient(160deg, #7FD3F2 0%, #8FE3E6 55%, #A6F0C4 100%); }
@@ -155,3 +155,10 @@ details[open] .chev { transform: rotate(180deg); }
 .rv-stars label:hover, .rv-stars label:hover ~ label, .rv-stars input:checked ~ label { color: #F5B83D; }
 .rv-stars label:hover { transform: scale(1.12); }
 .rv-stars input:focus-visible + label { outline: 3px solid #F5B83D; outline-offset: 2px; border-radius: .4rem; }
+
+/* Chinese and Hindi: no letter-spacing (it breaks the connected Devanagari script and looks gappy in Chinese), roomier line height */
+:lang(zh) [class*="tracking-"], :lang(hi) [class*="tracking-"] { letter-spacing: 0 !important; text-transform: none !important; }
+:lang(zh) h1, :lang(zh) h2, :lang(zh) h3, :lang(zh) .font-display { font-weight: 700; }
+:lang(hi) h1, :lang(hi) h2, :lang(hi) h3, :lang(hi) .font-display { font-weight: 700; line-height: 1.35; }
+:lang(hi) body, :lang(hi) p, :lang(hi) li, :lang(hi) td { line-height: 1.7; }
+:lang(zh) p, :lang(zh) li, :lang(zh) td { line-height: 1.8; }

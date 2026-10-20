@@ -8,8 +8,8 @@ tailwind.config = {
         ink: '#0B2535', muted: '#24475E'
       },
       fontFamily: {
-        display: ['Unbounded', 'sans-serif'],
-        sans: ['Onest', 'system-ui', 'sans-serif']
+        display: ['Unbounded', 'Noto Sans SC', 'Noto Sans Devanagari', 'sans-serif'],
+        sans: ['Onest', 'Noto Sans SC', 'Noto Sans Devanagari', 'system-ui', 'sans-serif']
       },
       boxShadow: {
         soft: '0 12px 40px -12px rgba(11,60,93,.35)',

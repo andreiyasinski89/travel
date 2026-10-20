@@ -9,8 +9,9 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/"/>  </url>
   <url>
     <loc>https://clever-travel.club/en/</loc>
     <lastmod>2026-10-20</lastmod>
@@ -20,8 +21,9 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/"/>  </url>
   <url>
     <loc>https://clever-travel.club/uk/</loc>
     <lastmod>2026-10-20</lastmod>
@@ -31,8 +33,9 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/"/>  </url>
   <url>
     <loc>https://clever-travel.club/pl/</loc>
     <lastmod>2026-10-20</lastmod>
@@ -42,8 +45,9 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/"/>  </url>
   <url>
     <loc>https://clever-travel.club/de/</loc>
     <lastmod>2026-10-20</lastmod>
@@ -53,8 +57,9 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/"/>  </url>
   <url>
     <loc>https://clever-travel.club/es/</loc>
     <lastmod>2026-10-20</lastmod>
@@ -64,272 +69,417 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/zh/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/hi/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/"/>  </url>
   <url>
     <loc>https://clever-travel.club/about.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/about.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/about.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/about.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/about.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/about.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/about.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/about.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/en/about.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/about.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/about.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/about.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/about.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/about.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/about.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/about.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/uk/about.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/about.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/about.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/about.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/about.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/about.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/about.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/about.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/pl/about.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/about.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/about.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/about.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/about.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/about.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/about.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/about.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/de/about.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/about.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/about.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/about.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/about.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/about.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/about.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/about.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/es/about.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/about.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/about.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/about.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/about.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/about.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/about.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/about.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/zh/about.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/about.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/hi/about.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/about.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/programs.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/programs.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/programs.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/programs.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/programs.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/programs.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/programs.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/programs.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/programs.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/en/programs.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/programs.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/programs.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/programs.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/programs.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/programs.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/programs.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/programs.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/programs.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/uk/programs.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/programs.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/programs.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/programs.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/programs.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/programs.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/programs.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/programs.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/programs.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/pl/programs.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/programs.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/programs.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/programs.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/programs.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/programs.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/programs.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/programs.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/programs.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/de/programs.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/programs.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/programs.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/programs.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/programs.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/programs.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/programs.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/programs.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/programs.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/es/programs.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/programs.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/programs.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/programs.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/programs.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/programs.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/programs.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/programs.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/programs.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/zh/programs.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/programs.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/hi/programs.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/programs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/programs.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/destinations.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/destinations.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/destinations.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/destinations.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/en/destinations.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/destinations.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/destinations.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/destinations.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/uk/destinations.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/destinations.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/destinations.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/destinations.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/pl/destinations.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/destinations.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/destinations.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/destinations.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/de/destinations.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/destinations.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/destinations.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/destinations.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/es/destinations.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/destinations.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/destinations.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/destinations.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/destinations.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/zh/destinations.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/destinations.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/hi/destinations.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/destinations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/destinations.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/how.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/how.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/how.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/how.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/how.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/how.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/how.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/how.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/how.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/how.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/how.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/en/how.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/how.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/how.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/how.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/how.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/how.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/how.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/how.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/how.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/how.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/how.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/uk/how.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/how.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/how.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/how.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/how.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/how.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/how.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/how.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/how.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/how.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/how.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/pl/how.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/how.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/how.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/how.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/how.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/how.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/how.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/how.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/how.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/how.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/how.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/de/how.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/how.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/how.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/how.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/how.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/how.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/how.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/how.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/how.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/how.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/how.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/es/how.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/how.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/how.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/how.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/how.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/how.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/how.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/how.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/how.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/how.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/how.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/zh/how.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/how.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/how.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/how.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/how.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/how.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/how.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/how.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/how.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/how.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/hi/how.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/how.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/how.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/how.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/how.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/how.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/how.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/how.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/how.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/how.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/contacts.html</loc>
     <lastmod>2026-10-20</lastmod>
@@ -339,8 +489,9 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/contacts.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/contacts.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/contacts.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/contacts.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/contacts.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/en/contacts.html</loc>
     <lastmod>2026-10-20</lastmod>
@@ -350,8 +501,9 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/contacts.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/contacts.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/contacts.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/contacts.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/contacts.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/uk/contacts.html</loc>
     <lastmod>2026-10-20</lastmod>
@@ -361,8 +513,9 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/contacts.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/contacts.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/contacts.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/contacts.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/contacts.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/pl/contacts.html</loc>
     <lastmod>2026-10-20</lastmod>
@@ -372,8 +525,9 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/contacts.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/contacts.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/contacts.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/contacts.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/contacts.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/de/contacts.html</loc>
     <lastmod>2026-10-20</lastmod>
@@ -383,8 +537,9 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/contacts.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/contacts.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/contacts.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/contacts.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/contacts.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/es/contacts.html</loc>
     <lastmod>2026-10-20</lastmod>
@@ -394,8 +549,33 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/contacts.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/contacts.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/contacts.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/contacts.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/contacts.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/zh/contacts.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/contacts.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/hi/contacts.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/contacts.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/privacy.html</loc>
     <lastmod>2026-10-20</lastmod>
@@ -405,8 +585,9 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/privacy.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/privacy.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/en/privacy.html</loc>
     <lastmod>2026-10-20</lastmod>
@@ -416,8 +597,9 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/privacy.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/privacy.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/uk/privacy.html</loc>
     <lastmod>2026-10-20</lastmod>
@@ -427,8 +609,9 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/privacy.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/privacy.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/pl/privacy.html</loc>
     <lastmod>2026-10-20</lastmod>
@@ -438,8 +621,9 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/privacy.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/privacy.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/de/privacy.html</loc>
     <lastmod>2026-10-20</lastmod>
@@ -449,8 +633,9 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/privacy.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/privacy.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/es/privacy.html</loc>
     <lastmod>2026-10-20</lastmod>
@@ -460,204 +645,319 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/privacy.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/privacy.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/zh/privacy.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/privacy.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/hi/privacy.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/privacy.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/cookies.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/cookies.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/cookies.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/en/cookies.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/cookies.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/cookies.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/uk/cookies.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/cookies.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/cookies.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/pl/cookies.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/cookies.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/cookies.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/de/cookies.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/cookies.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/cookies.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/es/cookies.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/cookies.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/cookies.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/zh/cookies.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/cookies.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/hi/cookies.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/cookies.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/quiz.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/quiz.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/quiz.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/quiz.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/en/quiz.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/quiz.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/quiz.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/quiz.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/uk/quiz.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/quiz.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/quiz.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/quiz.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/pl/quiz.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/quiz.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/quiz.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/quiz.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/de/quiz.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/quiz.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/quiz.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/quiz.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/es/quiz.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/quiz.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/quiz.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/quiz.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/quiz.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/zh/quiz.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/quiz.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/hi/quiz.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/quiz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/quiz.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/why-mwr.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/why-mwr.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/why-mwr.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/why-mwr.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/en/why-mwr.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/why-mwr.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/why-mwr.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/why-mwr.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/uk/why-mwr.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/why-mwr.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/why-mwr.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/why-mwr.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/pl/why-mwr.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/why-mwr.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/why-mwr.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/why-mwr.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/de/why-mwr.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/why-mwr.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/why-mwr.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/why-mwr.html"/>  </url>
   <url>
     <loc>https://clever-travel.club/es/why-mwr.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/why-mwr.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/why-mwr.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/why-mwr.html"/>
-  </url>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/why-mwr.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/zh/why-mwr.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/why-mwr.html"/>  </url>
+  <url>
+    <loc>https://clever-travel.club/hi/why-mwr.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://clever-travel.club/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clever-travel.club/en/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://clever-travel.club/de/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clever-travel.club/es/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/why-mwr.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clever-travel.club/why-mwr.html"/>  </url>
 </urlset>

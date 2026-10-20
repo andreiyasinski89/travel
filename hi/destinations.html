@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<script src="../assets/consent.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>डेस्टिनेशन — स्मार्ट ट्रैवल क्लब</title>
+<meta name="description" content="स्मार्ट ट्रैवल क्लब के डेस्टिनेशन का इंटरैक्टिव नक्शा: समुद्र तट, शहर, पहाड़ और क्रूज़।">
+<link rel="canonical" href="https://clever-travel.club/hi/destinations.html">
+<link rel="alternate" hreflang="ru" href="https://clever-travel.club/destinations.html">
+<link rel="alternate" hreflang="en" href="https://clever-travel.club/en/destinations.html">
+<link rel="alternate" hreflang="uk" href="https://clever-travel.club/uk/destinations.html">
+<link rel="alternate" hreflang="pl" href="https://clever-travel.club/pl/destinations.html">
+<link rel="alternate" hreflang="de" href="https://clever-travel.club/de/destinations.html">
+<link rel="alternate" hreflang="es" href="https://clever-travel.club/es/destinations.html">
+<link rel="alternate" hreflang="zh" href="https://clever-travel.club/zh/destinations.html">
+<link rel="alternate" hreflang="hi" href="https://clever-travel.club/hi/destinations.html">
+<link rel="alternate" hreflang="x-default" href="https://clever-travel.club/destinations.html">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=2">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png?v=2">
+<link rel="shortcut icon" href="../favicon.ico?v=2">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/tw.js"></script>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="antialiased">
+<div id="site-header"></div>
+<main>
+
+<section class="relative overflow-hidden bg-teal-grad px-4 pb-14 pt-36 sm:px-6">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div class="a-cloud h-12 w-32" style="top:20%;--t:60s;--dl:-5s"><span data-art="cloud"></span></div>
+    <div class="a-plane h-8 w-20" style="top:48%;--t:28s"><span data-art="plane"></span></div>
+  </div>
+  <div class="relative mx-auto max-w-6xl">
+    <p class="reveal text-sm font-semibold uppercase tracking-widest text-ocean">डेस्टिनेशन</p>
+    <h1 class="reveal mt-4 max-w-3xl text-3xl font-bold leading-tight text-ocean sm:text-5xl" style="--d:80ms">इस बार कहाँ चलें?</h1>
+    <p class="reveal mt-6 max-w-2xl text-lg text-ink" style="--d:160ms">नक्शे पर कोई बिंदु या छुट्टी का प्रकार चुनें। ये केवल उदाहरण हैं, क्लब का कैटलॉग पूरी दुनिया को कवर करता है।</p>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="bg-ocean-grad px-4 pb-20 pt-10 sm:px-6">
+  <div class="mx-auto max-w-6xl">
+    <div class="flex flex-wrap gap-2" role="group" aria-label="छुट्टी के प्रकार से फ़िल्टर" id="filters"></div>
+    <div class="relative mt-6 overflow-hidden rounded-3xl bg-deep shadow-soft ring-1 ring-pale/20">
+      <svg id="map" viewBox="0 0 1000 500" class="block h-auto w-full" role="img" aria-label="डेस्टिनेशन वाला विश्व नक्शा">
+        <defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#BAE6FD" stroke-opacity=".08"/></pattern></defs>
+        <rect width="1000" height="500" fill="url(#grid)"/>
+        <g id="land" fill="#10B981" fill-opacity=".55" stroke="#A6F0C4" stroke-opacity=".7" stroke-width="1.5" stroke-linejoin="round"></g>
+        <g id="pins"></g>
+      </svg>
+      <div id="infoCard" class="absolute bottom-3 left-3 right-3 rounded-2xl bg-gold p-4 text-ocean shadow-gold sm:right-auto sm:max-w-sm" role="status"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CARDS -->
+<section class="bg-sunset px-4 py-20 sm:px-6 lg:py-28">
+  <div class="mx-auto max-w-6xl">
+    <h2 class="reveal text-2xl font-bold text-ocean sm:text-4xl">आपके अगले रूट के लिए आइडिया</h2>
+    <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" id="cards"></div>
+  </div>
+</section>
+
+<section class="bg-azure-grad px-4 py-20 text-center sm:px-6">
+  <h2 class="reveal text-2xl font-bold text-ocean sm:text-4xl">कुछ ख़ास चाहिए?</h2>
+  <p class="reveal mt-4 text-ink" style="--d:80ms">क्यूरेटर को बताइए कि आप क्या चाहते हैं, और वह आपके लिए अलग रूट बना देगा।</p>
+  <a href="contacts.html" class="reveal mt-8 inline-flex min-h-[52px] items-center rounded-full bg-gold px-10 py-3 font-semibold text-ocean shadow-gold transition hover:-translate-y-0.5 hover:bg-gold-dark" style="--d:160ms">क्यूरेटर से संपर्क करें</a>
+</section>
+</main>
+<div id="site-footer"></div>
+
+<script>
+  /* simple stylized map: continent outlines in lon/lat coordinates */
+  const P = ([lo, la]) => [(lo + 180) / 360 * 1000, (90 - la) / 180 * 500];
+  const land = {
+    na: [[-168,66],[-140,70],[-95,72],[-80,70],[-62,60],[-55,50],[-67,44],[-76,35],[-81,25],[-97,26],[-97,18],[-87,21],[-83,10],[-78,8],[-92,15],[-105,22],[-117,32],[-124,40],[-125,49],[-140,59],[-153,58],[-165,60]],
+    gl: [[-55,60],[-45,60],[-20,70],[-25,82],[-60,82],[-72,76]],
+    sa: [[-78,8],[-62,11],[-50,2],[-35,-6],[-39,-20],[-48,-27],[-58,-38],[-65,-42],[-68,-55],[-74,-50],[-72,-30],[-70,-18],[-81,-5]],
+    eu: [[-10,36],[-9,43],[-2,47],[-5,50],[5,53],[8,57],[5,62],[15,69],[28,71],[40,67],[40,56],[30,46],[28,41],[23,37],[12,38],[3,43],[-6,36]],
+    af: [[-17,21],[-10,30],[-5,36],[10,37],[32,31],[35,28],[43,12],[51,12],[40,-3],[40,-15],[33,-26],[20,-35],[14,-22],[12,-5],[9,4],[-8,4],[-17,14]],
+    as: [[36,36],[35,28],[43,13],[55,17],[58,24],[67,25],[73,18],[78,8],[80,15],[90,22],[98,16],[100,5],[104,1],[109,12],[108,21],[122,30],[122,40],[130,42],[142,52],[160,60],[178,65],[170,68],[140,73],[100,77],[60,70],[40,67],[40,56],[30,46],[28,41]],
+    au: [[114,-22],[122,-18],[131,-12],[142,-11],[146,-19],[153,-27],[150,-37],[140,-38],[130,-32],[115,-34]]
+  };
+  document.getElementById('land').innerHTML = Object.values(land).map(pts => `<polygon points="${pts.map(p => P(p).map(n => n.toFixed(1)).join(',')).join(' ')}"/>`).join('');
+
+  const dest = [
+    ['लिस्बन', 'city', [-9, 39], 'गर्म समुद्री शहर: ट्राम, समुद्र किनारे की सैरगाहें और यूरोप की सबसे बढ़िया बेकरी।'],
+    ['दुबई', 'city', [55, 25], 'गगनचुंबी इमारतें, रेगिस्तान और समुद्र तट, एक ही यात्रा में।'],
+    ['बाली', 'beach', [115, -8], 'धान की सीढ़ीदार खेती, सर्फ़िंग और शांत रिट्रीट।'],
+    ['टोक्यो', 'city', [139, 36], 'विरोधाभासों का शहर: तकनीक से लेकर प्राचीन मंदिरों तक।'],
+    ['रोम', 'city', [12, 42], 'अनंत शहर: हर क़दम पर इतिहास।'],
+    ['मालदीव', 'beach', [73, 4], 'फ़िरोज़ी लैगून और पानी के ऊपर बने विला।'],
+    ['न्यूयॉर्क', 'city', [-74, 41], 'वह शहर जो कभी नहीं सोता: संग्रहालय, शो और खान-पान।'],
+    ['इस्तांबुल', 'city', [29, 41], 'दो महाद्वीपों के बीच का पुल और समृद्ध खान-पान।'],
+    ['केप टाउन', 'mount', [18, -34], 'टेबल माउंटेन, समुद्र और वाइन वैली।'],
+    ['रियो डी जेनेरो', 'beach', [-43, -23], 'कार्निवल की लय, समुद्र तट और शहर के ऊपर पहाड़।'],
+    ['रेकजाविक', 'mount', [-22, 64], 'गीज़र, झरने और उत्तरी रोशनी।'],
+    ['सिडनी', 'cruise', [151, -34], 'खाड़ी, ऑपरा हाउस और समुद्री सैर।'],
+    ['भूमध्यसागरीय क्रूज़', 'cruise', [10, 38], 'एक ही यात्रा में कई देश, बिना ट्रांसफ़र के।'],
+    ['कैरिबियन', 'cruise', [-75, 15], 'गर्म समुद्र, हरे द्वीप और रेतीले समुद्र तट।'],
+    ['बहामास', 'cruise', [-77, 25], 'फ़िरोज़ी पानी और दर्जनों छोटे द्वीप।'],
+    ['नॉर्वे के फ़ियोर्ड', 'cruise', [5, 61], 'चट्टानी तट, झरने और पहाड़ों के बीच शांत पानी।'],
+    ['बाल्टिक सागर', 'cruise', [20, 58], 'उत्तरी यूरोप के पुराने बंदरगाह शहर।'],
+    ['अलास्का', 'cruise', [-146, 59], 'ग्लेशियर, पहाड़ और उत्तर की जंगली प्रकृति।'],
+    ['हवाई द्वीप', 'cruise', [-157, 21], 'ज्वालामुखी, झरने और समुद्री तट।'],
+    ['एजियन सागर', 'cruise', [25, 38], 'यूनानी द्वीप और ढलानों पर बसे पत्थर के गाँव।'],
+    ['कैनरी द्वीप', 'cruise', [-15, 28], 'साल भर नरम मौसम और ज्वालामुखीय नज़ारे।'],
+    ['लाल सागर', 'cruise', [38, 20], 'प्रवाल भित्तियाँ और तैराकी व गोताख़ोरी के लिए गर्म पानी।'],
+    ['नील', 'cruise', [32, 26], 'मिस्र के प्राचीन मंदिरों के पास से नदी क्रूज़।'],
+    ['सेशेल्स', 'cruise', [55, -5], 'ग्रेनाइट की चट्टानें, ताड़ के पेड़ और शांत महासागर।'],
+    ['दक्षिण-पूर्व एशिया', 'cruise', [108, 8], 'उष्णकटिबंधीय द्वीप, जीवंत बाज़ार और स्थानीय खान-पान।'],
+    ['जापान', 'cruise', [132, 32], 'बंदरगाह शहर, गर्म झरने और साकुरा के खिलने का मौसम।'],
+    ['ग्रेट बैरियर रीफ़', 'cruise', [148, -17], 'ऑस्ट्रेलिया के तट पर धरती की सबसे बड़ी प्रवाल प्रणाली।'],
+    ['न्यूज़ीलैंड', 'cruise', [174, -41], 'फ़ियोर्ड, पहाड़ और समुद्र के किनारे हरी घाटियाँ।'],
+    ['फ़्रेंच पोलिनेशिया', 'cruise', [-149, -17], 'प्रशांत महासागर के बीच लैगून और द्वीप।'],
+    ['अमेज़न', 'cruise', [-60, -3], 'दुनिया के सबसे बड़े वर्षावन से होकर नदी क्रूज़।'],
+    ['पैटागोनिया और टिएरा डेल फ़्यूगो', 'cruise', [-70, -54], 'महाद्वीप का छोर: ग्लेशियर, जलडमरूमध्य और पहाड़।'],
+    ['अंटार्कटिका', 'cruise', [-60, -66], 'हिमखंड, पेंगुइन और ध्रुवीय नज़ारे।']
+  ];
+  const typeName = { all: 'सभी', beach: 'समुद्र तट', city: 'शहर', mount: 'पहाड़ और प्रकृति', cruise: 'क्रूज़' };
+  const typeBg = { beach: 'bg-azure-grad', city: 'bg-gold-grad', mount: 'bg-mint-grad', cruise: 'bg-teal-grad' };
+  const art = { beach: 'balloon', city: 'plane', mount: 'balloon', cruise: 'ship' };
+  let filter = 'all', selected = null;
+
+  const pinsG = document.getElementById('pins'), info = document.getElementById('infoCard');
+
+  function renderPins() {
+    pinsG.innerHTML = dest.map((d, i) => {
+      const [x, y] = P(d[2]), on = filter === 'all' || d[1] === filter, sel = selected === i;
+      return `<g class="cursor-pointer" tabindex="${on ? 0 : -1}" role="button" aria-label="${d[0]}" data-i="${i}" style="opacity:${on ? 1 : .15};transition:opacity .3s">
+        ${sel ? `<circle cx="${x}" cy="${y}" r="18" fill="#F5B83D" opacity=".35"><animate attributeName="r" values="8;24" dur="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0" dur="1.6s" repeatCount="indefinite"/></circle>` : ''}
+        <circle cx="${x}" cy="${y}" r="${sel ? 9 : 6.5}" fill="${sel ? '#F5B83D' : '#A6F0C4'}" stroke="#0B3C5D" stroke-width="2.5"/>
+        <circle cx="${x}" cy="${y}" r="16" fill="transparent"/></g>`;
+    }).join('');
+  }
+  function selectDest(i) {
+    selected = i; const d = dest[i];
+    renderPins();
+    info.innerHTML = `<p class="font-display text-lg font-semibold">${d[0]}</p><p class="mt-1 text-sm">${d[3]}</p><a href="contacts.html" class="mt-3 inline-block rounded-full bg-ocean px-4 py-2 text-sm font-semibold text-gold">मुझे यहाँ जाना है</a>`;
+  }
+  pinsG.addEventListener('click', e => { const g = e.target.closest('[data-i]'); if (g) selectDest(+g.dataset.i); });
+  pinsG.addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target.dataset.i) { e.preventDefault(); selectDest(+e.target.dataset.i); } });
+
+  function renderFilters() {
+    document.getElementById('filters').innerHTML = Object.entries(typeName).map(([k, v]) =>
+      `<button data-f="${k}" class="min-h-[44px] rounded-full px-5 py-2 text-sm font-semibold transition ${filter === k ? 'tab-active' : 'bg-pale/20 text-pale hover:bg-pale/30'}" aria-pressed="${filter === k}">${v}</button>`).join('');
+  }
+  document.getElementById('filters').addEventListener('click', e => { const b = e.target.closest('[data-f]'); if (!b) return; filter = b.dataset.f; renderFilters(); renderPins(); renderCards(); });
+
+  function renderCards() {
+    document.getElementById('cards').innerHTML = dest.map((d, i) => ({ d, i })).filter(({ d }) => filter === 'all' || d[1] === filter).map(({ d, i }, n) => `
+      <article class="reveal in overflow-hidden rounded-3xl bg-ocean text-pale shadow-soft transition hover:-translate-y-1.5" style="--d:${n * 50}ms">
+        <div class="relative h-36 ${typeBg[d[1]]}"><div class="a-float absolute bottom-3 left-5 h-14 w-24" style="--dl:-${n}s"><span data-art="${art[d[1]]}"></span></div><span class="absolute right-4 top-4 rounded-full bg-ocean px-3 py-1 text-xs font-semibold text-gold">${typeName[d[1]]}</span></div>
+        <div class="p-6"><h3 class="text-lg font-semibold text-gold">${d[0]}</h3><p class="mt-2 text-sm">${d[3]}</p><button data-show="${i}" class="mt-4 rounded-full border border-gold px-4 py-2 text-sm font-semibold text-gold transition hover:bg-gold hover:text-ocean">नक्शे पर दिखाएँ</button></div>
+      </article>`).join('');
+    document.querySelectorAll('#cards [data-art]').forEach(el => el.innerHTML = window.__ART ? window.__ART[el.dataset.art] : '');
+  }
+  document.getElementById('cards').addEventListener('click', e => { const b = e.target.closest('[data-show]'); if (!b) return; selectDest(+b.dataset.show); document.getElementById('map').scrollIntoView({ behavior: 'smooth', block: 'center' }); });
+
+  renderFilters(); renderPins(); renderCards();
+  info.innerHTML = '<p class="font-medium">डेस्टिनेशन देखने के लिए नक्शे पर किसी बिंदु पर क्लिक करें।</p>';
+</script>
+<script src="../assets/site.js"></script>
+<script>renderCards();</script>
+</body>
+</html>

@@ -16,6 +16,42 @@
   var MAX_AGE = 365 * 24 * 60 * 60 * 1000;      // the choice is remembered for 12 months
 
   var TXT = {
+    zh: {
+      "aria": "Cookie 设置",
+      "title": "我们重视你的隐私",
+      "desc": "我们使用 cookie 和类似技术。必要类 cookie 保证网站正常运行。分析类 cookie（Google Analytics、Microsoft Clarity）帮助我们了解你如何使用网站，仅在你同意后启用。详情：",
+      "cookiePolicy": "Cookie 政策",
+      "and": "和",
+      "privacyPolicy": "隐私政策",
+      "nec": "必要",
+      "necD": "网站运行和保存你的选择所必需。始终开启。",
+      "an": "分析",
+      "anD": "Google Analytics 和 Microsoft Clarity：访问统计、点击和页面滚动。",
+      "mk": "营销",
+      "mkD": "Google 服务的同意信号。我们目前不在网站上展示广告。",
+      "accept": "接受",
+      "decline": "拒绝",
+      "more": "自定义",
+      "save": "保存选择"
+    },
+    hi: {
+      "aria": "Cookie सेटिंग",
+      "title": "हम आपकी निजता को महत्व देते हैं",
+      "desc": "हम cookie और इसी तरह की तकनीकों का उपयोग करते हैं। आवश्यक cookie वेबसाइट को चलाने के लिए हैं। विश्लेषण वाली cookie (Google Analytics, Microsoft Clarity) यह समझने में मदद करती हैं कि आप साइट का उपयोग कैसे करते हैं, और केवल आपकी सहमति से चालू होती हैं। विवरण:",
+      "cookiePolicy": "cookie नीति",
+      "and": "और",
+      "privacyPolicy": "गोपनीयता नीति",
+      "nec": "आवश्यक",
+      "necD": "वेबसाइट के काम करने और आपका चुनाव सहेजने के लिए ज़रूरी। हमेशा चालू।",
+      "an": "विश्लेषण",
+      "anD": "Google Analytics और Microsoft Clarity: विज़िट के आँकड़े, क्लिक और पेज स्क्रॉल।",
+      "mk": "मार्केटिंग",
+      "mkD": "Google सेवाओं के लिए सहमति के संकेत। हम फ़िलहाल साइट पर विज्ञापन नहीं दिखाते।",
+      "accept": "स्वीकार करें",
+      "decline": "अस्वीकार करें",
+      "more": "कस्टमाइज़ करें",
+      "save": "चुनाव सहेजें"
+    },
     ru: {
       aria: 'Настройки cookie', title: 'Мы ценим вашу приватность',
       desc: 'Мы используем cookie и похожие технологии. Необходимые нужны для работы сайта. Аналитические (Google Analytics, Microsoft Clarity) помогают понять, как вы пользуетесь сайтом, и включаются только с вашего согласия. Подробнее:',
