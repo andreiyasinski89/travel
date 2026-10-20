@@ -1,6 +1,7 @@
 /* "Leave a review" form of the Contacts page (all language versions); the "Leave a review" button of the home page links to contacts.html#review.
-   The review is e-mailed to the site owner through FormSubmit (same service as the contact form) and is NOT published automatically:
-   the owner reads it and publishes it by hand. Texts come from data-* attributes of the form, so every language keeps the same markup. */
+   The review is appended to the Google Sheet through the same Google Apps Script web app as the quiz leads (parameter form=review).
+   It is NOT published automatically: the owner reads it in the sheet and publishes it by hand.
+   Texts come from data-* attributes of the form, so every language keeps the same markup. */
 (function () {
   'use strict';
   var f = document.getElementById('reviewForm');
@@ -9,8 +10,8 @@
   // opened from the home page (contacts.html#review): make sure the form is on screen once the page is laid out
   if (location.hash === '#review') window.addEventListener('load', function () { var s = document.getElementById('review'); if (s) s.scrollIntoView(); });
 
-  var ENDPOINT = 'https://formsubmit.co/ajax/andrei.jasinski@gmail.com';
-  var LANG = (document.documentElement.lang || 'ru').slice(0, 2).toUpperCase();
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbzOHnNYF11QajbuW1K91f7YRMzxkn09bLJ7j450FTnG4tXCXwzK1l5VVrp1GhqwJ-8gdQ/exec';
+  var LANG = (document.documentElement.lang || 'ru').slice(0, 2);
   var err = f.querySelector('[data-err]'), btn = f.querySelector('button[type=submit]'), sending = false;
   var el = function (n) { return f.elements[n]; };
 
@@ -30,29 +31,23 @@
 
   f.addEventListener('submit', function (e) {
     e.preventDefault();
-    if (sending) return;
-    var name = el('name').value.trim().slice(0, 80), city = el('city').value.trim().slice(0, 80), text = el('text').value.trim().slice(0, 1500);
+    if (sending) return;                                                   // no double submission (also stays locked after success)
+    var name = el('name').value.trim().slice(0, 80), city = el('city').value.trim().slice(0, 80), review = el('review').value.trim().slice(0, 1500);
+    var hp = el('website').value;
     var checked = f.querySelector('input[name=rating]:checked'), rating = checked ? checked.value : '';
     err.hidden = true;
-    if (!name || text.length < 10) { fail(f.getAttribute('data-err-fill'), !name ? el('name') : el('text')); return; }
-    if (!el('consent').checked) { fail(f.getAttribute('data-err-consent'), el('consent')); return; }
+    if (!name || review.length < 10) { fail(f.getAttribute('data-err-fill'), !name ? el('name') : el('review')); return; }
+    if (!el('consent').checked) { fail(f.getAttribute('data-err-consent'), el('consent')); return; }   // nothing is sent without consent
 
     sending = true; btn.disabled = true; var label = btn.textContent; btn.textContent = f.getAttribute('data-sending');
-    if (el('_honey').value) { done(false); return; }                      // bot: pretend it worked, send nothing
+    if (hp) { done(false); return; }                                       // bot: pretend it worked, send nothing
 
-    fetch(ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        'Имя': name, 'Город': city || '—', 'Оценка': rating ? rating + ' / 5' : '—', 'Отзыв': text,
-        'Согласие на публикацию': 'да', 'Язык сайта': LANG,
-        _subject: 'Новый отзыв на сайте: Клуб умных путешествий', _template: 'table', _captcha: 'false'
-      })
-    }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) {
-      if (!r.ok || String(j.success) === 'false') throw new Error('send failed');
-      done(true, rating);
-    }); }).catch(function () {
-      sending = false; btn.disabled = false; btn.textContent = label; fail(f.getAttribute('data-err-net'));
-    });
+    // POST application/x-www-form-urlencoded, no-cors: Apps Script answers with a redirect we cannot read, a network failure rejects
+    var body = new URLSearchParams();
+    body.append('form', 'review'); body.append('name', name); body.append('city', city); body.append('rating', rating);
+    body.append('review', review); body.append('website', hp); body.append('lang', LANG);
+    fetch(ENDPOINT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
+      .then(function () { done(true, rating); })
+      .catch(function () { sending = false; btn.disabled = false; btn.textContent = label; fail(f.getAttribute('data-err-net')); });
   });
 })();
