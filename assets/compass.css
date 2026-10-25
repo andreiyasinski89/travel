@@ -1,0 +1,85 @@
+/* Compass style shared by the floating presentation button and the presentation section (assets/presentation.js builds the SVG).
+   Colours mirror the site palette in assets/tw.js: ocean, deep, gold, sand, aqua. */
+:root {
+  --cmp-ocean: #0B3C5D; --cmp-deep: #08293F; --cmp-gold: #F5B83D; --cmp-gold-dark: #E0A220;
+  --cmp-sand: #FBD775; --cmp-aqua: #8FE3E6; --cmp-teal: #5BC9D9;
+}
+
+/* ---------- the compass itself: <span class="cmp"><svg class="cmp-svg">…</svg></span> ---------- */
+.cmp { position: relative; display: inline-grid; place-items: center; width: var(--cmp-size, 64px); height: var(--cmp-size, 64px); flex: none; border-radius: 9999px; }
+.cmp-svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.cmp-face  { fill: var(--cmp-ocean); stroke: var(--cmp-gold); stroke-width: 3.4; }
+.cmp-inner { fill: var(--cmp-deep); }
+.cmp-ticks { stroke: var(--cmp-gold); stroke-width: 1.15; stroke-linecap: round; fill: none; }
+.cmp-ticks-major { stroke-width: 1.9; }
+.cmp-rose  { fill: var(--cmp-aqua); opacity: .28; }
+.cmp-rose2 { fill: var(--cmp-aqua); opacity: .16; }
+.cmp-l { font: 700 8.6px/1 Onest, system-ui, sans-serif; text-anchor: middle; fill: var(--cmp-aqua); letter-spacing: 0; text-transform: none; }
+.cmp-l-n { fill: var(--cmp-gold); }
+.cmp-needle { transform-box: view-box; transform-origin: 50px 50px; animation: cmpSway 6s ease-in-out infinite; }
+.cmp-north { fill: var(--cmp-aqua); stroke: var(--cmp-teal); stroke-width: .7; stroke-linejoin: round; }
+.cmp-south { fill: var(--cmp-gold); stroke: var(--cmp-gold-dark); stroke-width: .7; stroke-linejoin: round; }
+.cmp-hub   { fill: var(--cmp-gold); }
+.cmp-hub-dot { fill: var(--cmp-ocean); }
+
+/* the needle swings about ±15° for a moment, then rests for a few seconds */
+@keyframes cmpSway {
+  0%, 50%, 100% { transform: rotate(0deg); }
+  8%  { transform: rotate(15deg); }
+  20% { transform: rotate(-13deg); }
+  32% { transform: rotate(8deg); }
+  42% { transform: rotate(-4deg); }
+}
+
+/* ---------- pulsing ring around a compass button ---------- */
+.cmp-pulse::before { content: ""; position: absolute; inset: 0; border-radius: 9999px; pointer-events: none; animation: cmpPulse 2.6s ease-out infinite; }
+@keyframes cmpPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(91, 201, 217, .65); }
+  70%, 100% { box-shadow: 0 0 0 18px rgba(91, 201, 217, 0); }
+}
+
+/* ---------- floating button (right bottom corner) ---------- */
+.pf-btn { --cmp-size: 64px; position: fixed; right: 20px; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); z-index: 40; display: block;
+  width: var(--cmp-size); height: var(--cmp-size); border-radius: 9999px; text-decoration: none; transition: bottom .25s ease, transform .25s cubic-bezier(.3, 1.5, .5, 1); }
+.pf-btn .cmp { box-shadow: 0 8px 22px -4px rgba(8, 41, 63, .55); }
+.pf-btn:hover, .pf-btn:focus-visible { transform: scale(1.1); }
+.pf-btn:focus-visible { outline: 3px solid var(--cmp-gold); outline-offset: 4px; }
+.pf-tip { position: absolute; right: calc(100% + 14px); top: 50%; margin-top: -18px; pointer-events: none; opacity: 0; transform: translateX(14px); white-space: nowrap;
+  border-radius: 9999px; background: var(--cmp-ocean); color: var(--cmp-gold); padding: 9px 18px; box-shadow: 0 8px 22px -4px rgba(8, 41, 63, .5), 0 0 0 1.5px rgba(245, 184, 61, .55);
+  font: 600 14px/1.25 Onest, "Noto Sans SC", "Noto Sans Devanagari", system-ui, sans-serif; transition: opacity .25s ease, transform .3s cubic-bezier(.2, .8, .3, 1); }
+@media (hover: hover) { .pf-btn:hover .pf-tip, .pf-btn:focus-visible .pf-tip { opacity: 1; transform: none; } }
+.pf-btn.is-peek .pf-tip { opacity: 1; transform: none; }          /* phones: shown by the script for a few seconds */
+@media (max-width: 640px) { .pf-btn { --cmp-size: 56px; right: 16px; } .pf-tip { font-size: 13px; padding: 8px 14px; } }
+
+/* ---------- hover: the needle turns to the north ---------- */
+.cmp-host:hover .cmp-needle, .cmp-host:focus-visible .cmp-needle { animation: none; transform: rotate(0deg); transition: transform .7s cubic-bezier(.3, 1.9, .5, 1); }
+
+/* ---------- presentation section on the home page ---------- */
+.pres-btn { --cmp-size: 40px; display: inline-flex; align-items: center; gap: 14px; min-height: 64px; padding: 10px 30px 10px 12px; border-radius: 9999px; text-decoration: none;
+  background: linear-gradient(135deg, var(--cmp-sand), var(--cmp-gold)); color: var(--cmp-ocean); font-weight: 700; font-size: 1.125rem; line-height: 1.25;
+  box-shadow: 0 10px 30px -8px rgba(224, 162, 32, .7); transition: transform .25s ease, box-shadow .3s ease; }
+.pres-btn:hover, .pres-btn:focus-visible { transform: translateY(-2px); box-shadow: 0 0 0 5px rgba(245, 184, 61, .28), 0 14px 44px -6px rgba(245, 184, 61, .9); }
+.pres-btn:focus-visible { outline: 3px solid var(--cmp-aqua); outline-offset: 4px; }
+.pres-card { display: block; position: relative; border-radius: 1.5rem; padding: 10px; background: linear-gradient(160deg, rgba(143, 227, 230, .22), rgba(245, 184, 61, .22));
+  box-shadow: 0 0 0 1.5px rgba(245, 184, 61, .55), 0 24px 60px -16px rgba(0, 0, 0, .55); transition: transform .35s cubic-bezier(.2, .7, .2, 1), box-shadow .35s ease; }
+.pres-card:hover, .pres-card:focus-visible { transform: translateY(-4px) rotate(-.6deg); box-shadow: 0 0 0 1.5px var(--cmp-gold), 0 30px 70px -14px rgba(245, 184, 61, .5); }
+.pres-card:focus-visible { outline: 3px solid var(--cmp-aqua); outline-offset: 4px; }
+.pres-play { position: absolute; left: 50%; top: 50%; width: 76px; height: 76px; margin: -38px 0 0 -38px; display: grid; place-items: center; border-radius: 9999px;
+  background: linear-gradient(135deg, var(--cmp-sand), var(--cmp-gold)); color: var(--cmp-ocean); box-shadow: 0 10px 30px -6px rgba(224, 162, 32, .8); transition: transform .3s cubic-bezier(.3, 1.5, .5, 1); }
+.pres-play::before { content: ""; position: absolute; inset: 0; border-radius: 9999px; animation: presPlay 2.2s ease-out infinite; }
+.pres-card:hover .pres-play { transform: scale(1.12); }
+@keyframes presPlay { 0% { box-shadow: 0 0 0 0 rgba(245, 184, 61, .6); } 80%, 100% { box-shadow: 0 0 0 22px rgba(245, 184, 61, 0); } }
+.pres-chip { display: inline-block; border-radius: 9999px; padding: 4px 11px; font-size: .75rem; font-weight: 700; letter-spacing: .06em; color: var(--cmp-gold);
+  background: rgba(143, 227, 230, .12); box-shadow: inset 0 0 0 1px rgba(143, 227, 230, .4); }
+.pres-chip-more { color: var(--cmp-aqua); }
+
+/* ---------- reduced motion: a static compass, nothing moves ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .cmp-needle { animation: none; }
+  .cmp-pulse::before, .pres-play::before { animation: none; }
+  .pf-btn, .pf-tip, .pres-btn, .pres-card, .pres-play { transition: none; }
+  .pf-btn:hover, .pf-btn:focus-visible, .pres-btn:hover, .pres-card:hover { transform: none; }
+  .cmp-host:hover .cmp-needle, .cmp-host:focus-visible .cmp-needle { transition: none; }
+}
+/* the Chinese/Hindi rules of site.css must not stretch the letters of the compass */
+:lang(zh) .cmp-l, :lang(hi) .cmp-l { letter-spacing: 0; }
