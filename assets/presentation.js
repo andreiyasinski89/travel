@@ -43,13 +43,12 @@
 
   /* ---------- floating button ---------- */
   var a = document.createElement('a');
-  a.className = 'pf-btn cmp-host'; a.id = 'presentationFab';
+  a.className = 'pf-btn'; a.id = 'presentationFab';
   a.href = URL; a.target = '_blank'; a.rel = 'noopener';
   a.setAttribute('aria-label', text);
-  a.innerHTML = '<span class="pf-tip" aria-hidden="true"></span><span class="cmp cmp-pulse" data-compass style="--cmp-size:100%"></span>';
+  a.innerHTML = '<span class="pf-tip" aria-hidden="true"></span><span class="play-btn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></svg></span>';
   a.querySelector('.pf-tip').textContent = text;
   document.body.appendChild(a);
-  fill(a);
 
   /* ---------- GA4: any element with data-presentation="<location>" (the floating button is 'floating_button') ---------- */
   a.setAttribute('data-presentation', 'floating_button');

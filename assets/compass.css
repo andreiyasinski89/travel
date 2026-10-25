@@ -3,7 +3,21 @@
 :root {
   --cmp-ocean: #0B3C5D; --cmp-deep: #08293F; --cmp-gold: #F5B83D; --cmp-gold-dark: #E0A220;
   --cmp-sand: #FBD775; --cmp-aqua: #8FE3E6; --cmp-teal: #5BC9D9;
+  /* the round gold "play" button: the big one in the presentation card and the floating one use the same values */
+  --play-bg: linear-gradient(135deg, var(--cmp-sand), var(--cmp-gold));
+  --play-fg: var(--cmp-ocean);
+  --play-halo: rgba(245, 184, 61, .38);        /* semi-transparent gold ring around the circle */
+  --play-halo-w: 6px;
+  --play-glow: 0 10px 30px -6px rgba(224, 162, 32, .8);
+  --play-pulse: rgba(245, 184, 61, .6);
 }
+
+/* ---------- gold play button: <span class="play-btn"><svg>…</svg></span> ---------- */
+.play-btn { position: relative; display: grid; place-items: center; border-radius: 9999px; background: var(--play-bg); color: var(--play-fg);
+  box-shadow: var(--play-glow), 0 0 0 var(--play-halo-w) var(--play-halo); transition: transform .3s cubic-bezier(.3, 1.5, .5, 1), box-shadow .3s ease; }
+.play-btn svg { width: 46%; height: 46%; margin-left: 6%; fill: currentColor; }   /* nudged right: the optical centre of a triangle */
+.play-btn::before { content: ""; position: absolute; inset: 0; border-radius: 9999px; pointer-events: none; animation: playPulse 3.2s ease-out infinite; }
+@keyframes playPulse { 0% { box-shadow: 0 0 0 0 var(--play-pulse); } 55%, 100% { box-shadow: 0 0 0 22px rgba(245, 184, 61, 0); } }
 
 /* ---------- the compass itself: <span class="cmp"><svg class="cmp-svg">…</svg></span> ---------- */
 .cmp { position: relative; display: inline-grid; place-items: center; width: var(--cmp-size, 64px); height: var(--cmp-size, 64px); flex: none; border-radius: 9999px; }
@@ -39,9 +53,10 @@
 }
 
 /* ---------- floating button (right bottom corner) ---------- */
-.pf-btn { --cmp-size: 64px; position: fixed; right: 20px; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); z-index: 40; display: block;
+.pf-btn { --cmp-size: 60px; position: fixed; right: 20px; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); z-index: 40; display: block;
   width: var(--cmp-size); height: var(--cmp-size); border-radius: 9999px; text-decoration: none; transition: bottom .25s ease, transform .25s cubic-bezier(.3, 1.5, .5, 1); }
-.pf-btn .cmp { box-shadow: 0 8px 22px -4px rgba(8, 41, 63, .55); }
+.pf-btn .play-btn { width: 100%; height: 100%; }
+.pf-btn:hover .play-btn, .pf-btn:focus-visible .play-btn { --play-halo: rgba(245, 184, 61, .65); --play-glow: 0 14px 38px -4px rgba(245, 184, 61, .95); }
 .pf-btn:hover, .pf-btn:focus-visible { transform: scale(1.1); }
 .pf-btn:focus-visible { outline: 3px solid var(--cmp-gold); outline-offset: 4px; }
 .pf-tip { position: absolute; right: calc(100% + 14px); top: 50%; margin-top: -18px; pointer-events: none; opacity: 0; transform: translateX(14px); white-space: nowrap;
@@ -64,11 +79,8 @@
   box-shadow: 0 0 0 1.5px rgba(245, 184, 61, .55), 0 24px 60px -16px rgba(0, 0, 0, .55); transition: transform .35s cubic-bezier(.2, .7, .2, 1), box-shadow .35s ease; }
 .pres-card:hover, .pres-card:focus-visible { transform: translateY(-4px) rotate(-.6deg); box-shadow: 0 0 0 1.5px var(--cmp-gold), 0 30px 70px -14px rgba(245, 184, 61, .5); }
 .pres-card:focus-visible { outline: 3px solid var(--cmp-aqua); outline-offset: 4px; }
-.pres-play { position: absolute; left: 50%; top: 50%; width: 76px; height: 76px; margin: -38px 0 0 -38px; display: grid; place-items: center; border-radius: 9999px;
-  background: linear-gradient(135deg, var(--cmp-sand), var(--cmp-gold)); color: var(--cmp-ocean); box-shadow: 0 10px 30px -6px rgba(224, 162, 32, .8); transition: transform .3s cubic-bezier(.3, 1.5, .5, 1); }
-.pres-play::before { content: ""; position: absolute; inset: 0; border-radius: 9999px; animation: presPlay 2.2s ease-out infinite; }
-.pres-card:hover .pres-play { transform: scale(1.12); }
-@keyframes presPlay { 0% { box-shadow: 0 0 0 0 rgba(245, 184, 61, .6); } 80%, 100% { box-shadow: 0 0 0 22px rgba(245, 184, 61, 0); } }
+.pres-play { position: absolute; left: 50%; top: 50%; width: 76px; height: 76px; margin: -38px 0 0 -38px; }
+.pres-card:hover .pres-play { transform: scale(1.12); --play-halo: rgba(245, 184, 61, .65); --play-glow: 0 14px 38px -4px rgba(245, 184, 61, .95); }
 .pres-chip { display: inline-block; border-radius: 9999px; padding: 4px 11px; font-size: .75rem; font-weight: 700; letter-spacing: .06em; color: var(--cmp-gold);
   background: rgba(143, 227, 230, .12); box-shadow: inset 0 0 0 1px rgba(143, 227, 230, .4); }
 .pres-chip-more { color: var(--cmp-aqua); }
@@ -76,8 +88,8 @@
 /* ---------- reduced motion: a static compass, nothing moves ---------- */
 @media (prefers-reduced-motion: reduce) {
   .cmp-needle { animation: none; }
-  .cmp-pulse::before, .pres-play::before { animation: none; }
-  .pf-btn, .pf-tip, .pres-btn, .pres-card, .pres-play { transition: none; }
+  .cmp-pulse::before, .play-btn::before { animation: none; }
+  .pf-btn, .pf-tip, .pres-btn, .pres-card, .play-btn { transition: none; }
   .pf-btn:hover, .pf-btn:focus-visible, .pres-btn:hover, .pres-card:hover { transform: none; }
   .cmp-host:hover .cmp-needle, .cmp-host:focus-visible .cmp-needle { transition: none; }
 }
