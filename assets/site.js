@@ -404,7 +404,7 @@
   /* ---------- MLM CRM: every request from the contact form and the quiz also goes to the CRM ---------- */
   // Public key of the "clever-travel.club" form in MLM CRM (Settings → Lead capture). It is not a password:
   // it only lets this site send requests into that one form. Empty = do not send to the CRM.
-  const CRM_FORM_KEY = '';
+  const CRM_FORM_KEY = '75G3ePcfJL2LlBg55n5-xTSU';
   const CRM_URL = CRM_FORM_KEY ? 'https://mlmcrm.app/api/public/leads/' + CRM_FORM_KEY : '';
   /** Sends one request to MLM CRM; resolves to true when the CRM accepted it. Never throws. */
   window.clubToCrm = function (fields) {
