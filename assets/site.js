@@ -401,7 +401,24 @@
     c.querySelector('[data-next]').onclick = () => track.scrollBy({ left: step(), behavior: 'smooth' });
   });
 
-  /* ---------- contact form: send to e-mail (FormSubmit), mailto as fallback ---------- */
+  /* ---------- MLM CRM: every request from the contact form and the quiz also goes to the CRM ---------- */
+  // Public key of the "clever-travel.club" form in MLM CRM (Settings → Lead capture). It is not a password:
+  // it only lets this site send requests into that one form. Empty = do not send to the CRM.
+  const CRM_FORM_KEY = '';
+  const CRM_URL = CRM_FORM_KEY ? 'https://mlmcrm.app/api/public/leads/' + CRM_FORM_KEY : '';
+  /** Sends one request to MLM CRM; resolves to true when the CRM accepted it. Never throws. */
+  window.clubToCrm = function (fields) {
+    if (!CRM_URL) return Promise.resolve(false);
+    const body = new URLSearchParams();
+    const q = new URLSearchParams(location.search);
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'ref'].forEach(k => { const v = q.get(k); if (v) body.append(k, v.slice(0, 100)); });
+    Object.entries(fields).forEach(([k, v]) => { if (v != null && v !== '') body.append(k, String(v)); });
+    body.append('lang', LANG.toUpperCase());
+    body.append('page', location.pathname);
+    return fetch(CRM_URL, { method: 'POST', body, credentials: 'omit', keepalive: true }).then(r => r.ok).catch(() => false);
+  };
+
+  /* ---------- contact form: send to e-mail (FormSubmit) and MLM CRM, mailto as fallback ---------- */
   const FORM_ENDPOINT = 'https://formsubmit.co/ajax/andrei.jasinski@gmail.com';
   document.querySelectorAll('form[data-mail]').forEach(f => f.addEventListener('submit', async e => {
     e.preventDefault();
@@ -414,6 +431,8 @@
     err.classList.add('hidden');
     if (f._honey && f._honey.value) return; // honeypot (spam trap)
     const label = btn.textContent; btn.disabled = true; btn.textContent = T('Отправляем…', 'Sending…');
+    // Both at once: the request counts as sent when the e-mail or the CRM took it.
+    const toCrm = window.clubToCrm({ name, contact, message: msg, consent: 'yes', form: 'Форма «Контакты»' });
     try {
       const r = await fetch(FORM_ENDPOINT, {
         method: 'POST',
@@ -421,15 +440,21 @@
         body: JSON.stringify({ 'Имя': name, 'Контакт': contact, 'Сообщение': msg || '—', 'Согласие с политикой': 'да', 'Язык сайта': LANG.toUpperCase(), _subject: 'Заявка в Клуб умных путешествий', _template: 'table', _captcha: 'false' })
       });
       const j = await r.json().catch(() => ({}));
-      if (!r.ok || String(j.success) === 'false') throw new Error('send failed');
+      if (!r.ok || String(j.success) === 'false') throw new Error('mail failed');
+    } catch (x) {
+      if (!(await toCrm)) { sendFailed(); return; }
+    }
+    try {
       ok.textContent = T('Спасибо! Заявка отправлена, мы свяжемся с вами.', 'Thank you! Your request has been sent. We will get back to you.');
       ok.classList.remove('hidden'); f.reset();
       window.dispatchEvent(new CustomEvent('club-form-submit', { detail: { form: 'contact', method: 'formsubmit' } }));
-    } catch (x) {
+    } finally { btn.disabled = false; btn.textContent = label; }
+    function sendFailed() {
+      btn.disabled = false; btn.textContent = label;
       const body = `${T('Имя', 'Name')}: ${name}\n${T('Контакт', 'Contact')}: ${contact}\n${T('Пожелания', 'Wishes')}: ${msg || '—'}`;
       window.dispatchEvent(new CustomEvent('club-form-submit', { detail: { form: 'contact', method: 'mailto' } }));
       location.href = 'mailto:andrei.jasinski@gmail.com?subject=' + encodeURIComponent(T('Заявка в Клуб умных путешествий', 'Application to the Smart Travel Club')) + '&body=' + encodeURIComponent(body);
-    } finally { btn.disabled = false; btn.textContent = label; }
+    }
   }));
 
   /* ---------- language dropdown ---------- */

@@ -512,6 +512,12 @@
     body.append('type', L.r[key][1]);
     for (var i = 0; i < TOTAL; i++) body.append('q' + (i + 1), L.q[i][1][answers[i]] || '');
     body.append('lang', LANG);
+    // A copy goes to MLM CRM (nothing happens while its key in site.js is empty).
+    if (typeof window.clubToCrm === 'function') {
+      var crm = { name: name, contact: contact, consent: 'yes', form: 'Квиз', message: 'Результат квиза: ' + L.r[key][1] };
+      for (var j = 0; j < TOTAL; j++) crm['Q' + (j + 1) + ' ' + L.q[j][0]] = L.q[j][1][answers[j]] || '';
+      window.clubToCrm(crm);
+    }
     fetch(LEAD_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
       .then(function () { done(true); })
       .catch(function () { sending = false; btn.disabled = false; btn.textContent = F.send; formError(F.errNet); });
